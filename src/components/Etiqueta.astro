@@ -1,0 +1,14 @@
+---
+interface Props {
+	img: string;
+  text: string;
+  link: string;
+}
+
+const { img, text, link} = Astro.props;
+---
+
+<a href = {link} class="rounded-lg border border-black flex gap-2 py-1 px-2 justify-center items-center transform transition-transform hover:scale-110">
+  <img class="h-4 w-4" src={img} alt="">
+  <p class="text-sm">{text}</p>
+</a>

@@ -1,0 +1,29 @@
+---
+import Etiqueta from './Etiqueta.astro';
+---
+
+<header class="w-full h-screen flex justify-center items-center">
+  <div class="w-auto max-w-72 sm:max-w-2xl flex max-sm:flex-col justify-center items-center gap-5">
+    <div>
+      <figure class="w-44 h-44 sm:w-52 sm:h-52 rounded-full border-4 border-green-400 overflow-hidden relative">
+        <img
+          src="../../public/pp.png"
+          alt=""
+          class="object-cover w-64 h-64 sm:w-80 sm:h-80 absolute top-[-60px] left-[-4px] sm:top-[-76px]"
+        >
+      </figure>
+    </div>
+    <div class="flex flex-col gap-5">
+      <h1 class="text-4xl font-onest font-bold text-green-400"><span class="text-black">¡Hola! Soy </span>Víctor López</h1>
+      <h2 class="text-xl font-onest font-semibold">Desarrollador Web Frontend y Especialista en Inteligencia Artificial</h2>
+      <h3 class="font-onest font-light text-sm">Transformando ideas en realidad con <span class="text-green-400">soluciones creativas</span> y de calidad en el <span class="text-green-400">desarrollo frontend</span> y la <span class="text-green-400">inteligencia artificial</span></h3>
+      <div class="flex gap-4">
+        <Etiqueta img="../../public/github-icon.svg" text='GitHub' link='https://github.com/VictorWKey'/>
+        <Etiqueta img="../../public/linkedin-icon.svg" text='Linkedin' link = 'https://www.linkedin.com/in/victor-angel-lopez-romero-556605245/'/>
+        <Etiqueta img="../../public/x-icon.svg" text='Twitter' link='https://twitter.com/victorwkey'/>
+      </div>
+      <button class="bg-green-400 text-white px-4 py-2 rounded-lg text-md font-semibold transform transition-transform hover:scale-110">Descargar CV</button>
+    </div>
+  </div>
+</header>
+
