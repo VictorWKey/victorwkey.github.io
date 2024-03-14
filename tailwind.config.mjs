@@ -6,7 +6,12 @@ export default {
 			fontFamily: {
         'sans': ['Montserrat', 'sans-serif'],
 				'onest': ['Onest', 'sans-serif']
-      }
+      },
+			colors: {
+				primary: {
+					DEFAULT: '#68d391'
+				}
+			}
 		},
 	},
 	plugins: [],
