@@ -187,5 +187,26 @@
     "category" : "tool",
     "color": "",
     "description": ""
+  },
+  {
+    "name" : "npm",
+    "logo": "",
+    "category" : "tool",
+    "color": "",
+    "description": ""
+  },
+  {
+    "name" : "VSC",
+    "logo": "",
+    "category" : "tool",
+    "color": "",
+    "description": ""
+  },
+  {
+    "name" : "Markdown",
+    "logo": "",
+    "category" : "tool",
+    "color": "",
+    "description": ""
   }
 ]

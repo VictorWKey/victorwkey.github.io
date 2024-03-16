@@ -1,252 +1,212 @@
----
-import Algebra from "../icons/Algebra.astro"
-import Anaconda from "../icons/Anaconda.astro"
-import TreatmentMissing from "../icons/TreatmentMissing.astro"
-import ExploratoryData from "../icons/ExploratoryData.astro"
-import LinearAlgebra from "../icons/LinearAlgebra.astro"
-import Calculus from "../icons/Calculus.astro"
-import Probability from "../icons/Probability.astro"
-import Statistics from "../icons/Statistics.astro"
-import Seaborn from "../icons/Seaborn.astro"
-import Matplotlib from "../icons/Matplotlib.astro"
-import NumPy from "../icons/NumPy.astro"
-import Pandas from "../icons/Pandas.astro"
-import Scipy from "../icons/Scipy.astro"
-import SkLearn from "../icons/SkLearn.astro"
-import ML from "../icons/ML.astro"
-import Astro from "../icons/Astro.astro"
-import CSS from "../icons/CSS.astro"
-import HTML from "../icons/HTML.astro"
-import JavaScript from "../icons/JavaScript.astro"
-import Python from "../icons/Python.astro"
-import React from "../icons/React.astro"
-import Tailwind from "../icons/Tailwind.astro"
-import TypeScript from "../icons/TypeScript.astro"
-import MySQL from "../icons/MySQL.astro"
-import PostgreSQL from "../icons/PostgreSQL.astro"
-import Git from "../icons/Git.astro"
-import Linux from "../icons/Linux.astro"
-import NPM from "../icons/NPM.astro"
-import VSC from "../icons/VSC.astro"
-import Markdown from "../icons/Markdown.astro"
-
-const ICONS = [
+export const ICONS = [
   {
     name : "JavaScript",
-    logo: JavaScript,
+    logo: "",
     category : "web",
     color: "",
     description: ""
   },
   {
     name : "HTML",
-    logo: HTML,
+    logo: "",
     category : "web",
     color: "",
     description: ""
   },
   {
     name : "CSS",
-    logo: CSS,
+    logo: "",
     category : "web",
     color: "",
     description: ""
   },
   {
     name : "React",
-    logo: React,
+    logo: "",
     category : "web",
     color: "",
     description: ""
   },
   {
     name : "Astro",
-    logo: Astro,
+    logo: "",
     category : "web",
     color: "",
     description: ""
   },
   {
     name : "Tailwind CSS",
-    logo: Tailwind,
+    logo: "",
     category : "web",
     color: "",
     description: ""
   },
   {
     name : "TypeScript",
-    logo: TypeScript,
+    logo: "",
     category : "web",
     color: "",
     description: ""
   },
   {
     name : "Python",
-    logo: Python,
+    logo: "",
     category : "ia",
     color: "",
     description: ""
   },
   {
     name : "Machine Learning",
-    logo: ML,
+    logo: "",
     category : "ia",
     color: "",
     description: ""
   },
   {
     name : "scikit-learn",
-    logo: SkLearn,
+    logo: "",
     category : "ia",
     color: "",
     description: ""
   },
   {
     name : "SciPy",
-    logo: Scipy,
+    logo: "",
     category : "ia",
     color: "",
     description: ""
   },
   {
     name : "Pandas",
-    logo: Pandas,
+    logo: "",
     category : "ia",
     color: "",
     description: ""
   },
   {
     name : "Numpy",
-    logo: NumPy,
+    logo: "",
     category : "ia",
     color: "",
     description: ""
   },
   {
     name : "Matplotlib",
-    logo: Matplotlib,
+    logo: "",
     category : "ia",
     color: "",
     description: ""
   },
   {
     name : "Seaborn",
-    logo: Seaborn,
+    logo: "",
     category : "ia",
     color: "",
     description: ""
   },
   {
     name : "Algebra",
-    logo: Algebra,
+    logo: "",
     category : "ia",
     color: "",
     description: ""
   },
   {
     name : "Statistics",
-    logo: Statistics,
+    logo: "",
     category : "ia",
     color: "",
     description: ""
   },
   {
     name : "Probability",
-    logo: Probability,
+    logo: "",
     category : "ia",
     color: "",
     description: ""
   },
   {
     name : "Calculus",
-    logo: Calculus,
+    logo: "",
     category : "ia",
     color: "",
     description: ""
   },
   {
     name : "Linear Algebra",
-    logo: LinearAlgebra,
+    logo: "",
     category : "ia",
     color: "",
     description: ""
   },
   {
     name : "Exploratory data analysis",
-    logo: ExploratoryData,
+    logo: "",
     category : "ia",
     color: "",
     description: ""
   },
   {
     name : "Treatment of missing data",
-    logo: TreatmentMissing,
+    logo: "",
     category : "ia",
     color: "",
     description: ""
   },
   {
     name : "MySQL",
-    logo: MySQL,
+    logo: "",
     category : "db",
     color: "",
     description: ""
   },
   {
     name : "PostgreSQL",
-    logo: PostgreSQL,
+    logo: "",
     category : "db",
     color: "",
     description: ""
   },
   {
     name : "Git",
-    logo: Git,
+    logo: "",
     category : "tool",
     color: "",
     description: ""
   },
   {
     name : "Linux/WSL",
-    logo: Linux,
+    logo: "",
     category : "tool",
     color: "",
     description: ""
   },
   {
     name : "Conda",
-    logo: Anaconda,
+    logo: "",
     category : "tool",
     color: "",
     description: ""
   },
   {
     name : "npm",
-    logo: NPM,
+    logo: "",
     category : "tool",
     color: "",
     description: ""
   },
   {
     name : "VSC",
-    logo: VSC,
+    logo: "",
     category : "tool",
     color: "",
     description: ""
   },
   {
     name : "Markdown",
-    logo: Markdown,
+    logo: "",
     category : "tool",
     color: "",
     description: ""
   }
 ]
----
-
-<section class="w-full h-screen flex flex-col items-center text-primary ">
-  <h1 class="py-8 text-4xl font-bold">Habilidades</h1>
-  <div>
-    
-  </div>
-</section>
