@@ -1,0 +1,79 @@
+---
+import ProjectCard from './ProjectCard.astro'
+
+const PROJECTS = [
+  {
+    title: "TODOs list",
+    desc: "Una aplicacion donde puedes agregar, eliminar, completar y buscar tareas que tengas por hacer",
+    technologies: []
+  }
+]
+
+const TAGS = {
+  JavaScript : {
+    name : "JavaScript",
+    logo: "../../public/icons/JavaScript.svg",
+    category : "web",
+    color: "",
+    description: ""
+  },
+  HTML: {
+    name : "HTML",
+    logo: "../../public/icons/HTML.svg",
+    category : "web",
+    color: "",
+    description: ""
+  },
+  {
+    name : "CSS",
+    logo: "../../public/icons/CSS.svg",
+    category : "web",
+    color: "",
+    description: ""
+  },
+  {
+    name : "React",
+    logo: "../../public/icons/React.svg",
+    category : "web",
+    color: "",
+    description: ""
+  },
+  {
+    name : "Astro",
+    logo: "../../public/icons/Astro.svg",
+    category : "web",
+    color: "",
+    description: ""
+  },
+  {
+    name : "Tailwind CSS",
+    logo: "../../public/icons/Tailwind.svg",
+    category : "web",
+    color: "",
+    description: ""
+  },
+  {
+    name : "TypeScript",
+    logo: "../../public/icons/TypeScript.svg",
+    category : "web",
+    color: "",
+    description: ""
+  },
+  {
+    name : "Python",
+    logo: "../../public/icons/Python.svg",
+    category : "ia",
+    color: "",
+    description: ""
+  }
+}
+
+
+---
+
+<section id="projects" class="w-full h-auto flex flex-col items-center pt-8 text-primary mr-">
+  <h1 class="pt-8 pb-6 text-4xl font-bold">Proyectos</h1>
+  <div class="w-auto max-w-4xl">
+    <ProjectCard title="TODOs List" desc = "Una aplicacion donde puedes agregar, eliminar, completar y buscar tareas que tengas por hacer" technologies = {['js', 'react']} img=""/>
+  </div>
+</section>
