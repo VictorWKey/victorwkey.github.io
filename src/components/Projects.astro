@@ -1,14 +1,6 @@
 ---
 import ProjectCard from './ProjectCard.astro'
 
-const PROJECTS = [
-  {
-    title: "TODOs list",
-    desc: "Una aplicacion donde puedes agregar, eliminar, completar y buscar tareas que tengas por hacer",
-    technologies: []
-  }
-]
-
 const TAGS = {
   JavaScript : {
     name : "JavaScript",
@@ -24,42 +16,42 @@ const TAGS = {
     color: "",
     description: ""
   },
-  {
+  CSS:{
     name : "CSS",
     logo: "../../public/icons/CSS.svg",
     category : "web",
     color: "",
     description: ""
   },
-  {
+  React: {
     name : "React",
     logo: "../../public/icons/React.svg",
     category : "web",
     color: "",
     description: ""
   },
-  {
+  Astro: {
     name : "Astro",
     logo: "../../public/icons/Astro.svg",
     category : "web",
     color: "",
     description: ""
   },
-  {
+  Tailwind: {
     name : "Tailwind CSS",
     logo: "../../public/icons/Tailwind.svg",
     category : "web",
     color: "",
     description: ""
   },
-  {
+  TypeScript: {
     name : "TypeScript",
     logo: "../../public/icons/TypeScript.svg",
     category : "web",
     color: "",
     description: ""
   },
-  {
+  Python:{
     name : "Python",
     logo: "../../public/icons/Python.svg",
     category : "ia",
@@ -68,12 +60,42 @@ const TAGS = {
   }
 }
 
+const PROJECTS = [
+  {
+    title: "TODO´s App",
+    desc: "Aplicación de lista de tareas donde puedes agregar, eliminar, marcar como completadas y buscar tareas pendientes.",
+    technologies: [TAGS.JavaScript.logo, TAGS.HTML.logo, TAGS.CSS.logo, TAGS.React.logo],
+    img: "../../public/imgs/project-todos.png",
+    webSite: "https://victorwkey.github.io/CheckLove-TODOs-Machine/",
+    repository: "https://github.com/VictorWKey/CheckLove-TODOs-Machine"
+  },
+  {
+    title: "Fronted for e-commerce",
+    desc: "Frontend de una tienda en línea con funciones completas, incluyendo órdenes, carrito de compras y filtros.",
+    technologies: [TAGS.JavaScript.logo, TAGS.HTML.logo, TAGS.CSS.logo, TAGS.React.logo, TAGS.Tailwind.logo],
+    img: "../../public/imgs/project-fronted.png",
+    webSite: "https://shop-app-w-react.netlify.app/",
+    repository: "https://github.com/VictorWKey/fronted-shop-react-app"
+  }
+]
+
+
+
 
 ---
 
-<section id="projects" class="w-full h-auto flex flex-col items-center pt-8 text-primary mr-">
-  <h1 class="pt-8 pb-6 text-4xl font-bold">Proyectos</h1>
-  <div class="w-auto max-w-4xl">
-    <ProjectCard title="TODOs List" desc = "Una aplicacion donde puedes agregar, eliminar, completar y buscar tareas que tengas por hacer" technologies = {['js', 'react']} img=""/>
+<section id="projects" class="w-full sm:h-screen flex flex-col items-center pt-8 text-primary mr-">
+  <h1 class="pt-8 pb-10 text-4xl font-bold z-10">Proyectos</h1>
+  <div class="w-auto max-w-4xl flex flex-col gap-5 items-center justify-center z-10">
+    {PROJECTS.map((project: object) => (
+      <ProjectCard 
+        title = {project.title} 
+        desc = {project.desc} 
+        technologies = {project.technologies} 
+        webSite={project.webSite} 
+        repository = {project.repository} 
+        img={project.img}
+      />
+    ))}
   </div>
 </section>

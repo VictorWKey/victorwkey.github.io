@@ -1,25 +1,29 @@
 ---
-const {title, desc, technologies, img} = Astro.props;
+const {title, desc, technologies, img, webSite, repository} = Astro.props;
 ---
 
-<div class="flex flex-wrap border border-black">
-  <figure class="w-72 border h-52 border-black rounded-lg">
-    <img src={img} alt="">
+<div class="flex flex-col sm:flex-row bg-white rounded-2xl sm:w-auto w-full">
+  <figure class="w-80 border h-56 rounded-2xl overflow-hidden">
+    <img class="object-cover" src={img} alt={title}>
   </figure>
-  <div class="flex flex-col justify-between p-4 w-96 ">
-    <div class="flex flex-col">
+  <div class="flex flex-col justify-between px-4 py-2 w-80 h-56">
+    <div class="flex flex-col gap-2">
       <h1 class="font-bold text-2xl text-black">{title}</h1>
-      <p class="ttext-pretty text-black">{desc}</p>
+      <p class="text-pretty text-black text-sm">{desc}</p>
       <!-- Tecnologias usadas -->
       <div class="flex gap-4">
         {technologies.map((technologie: string) =>(
-          <p>{technologie}</p>
+          <img class="size-6" src={technologie}>
         ))}
       </div>
     </div>
-    <div class="flex gap-2">
-      <button class="py-2 px-4 sm:px-6 bg-primary text-white rounded-lg text-xs sm:text-md font-bold transform transition-transform hover:scale-110">Repositorio</button>
-      <button class="py-2 px-4 sm:px-6 bg-primary text-white rounded-lg text-xs sm:text-md font-bold transform transition-transform hover:scale-110">Ver sitio web</button>
+    <div class="flex gap-3">
+      <a href={repository} class="py-2 px-4 sm:px-6 bg-black text-white rounded-lg text-sm sm:text-md font-bold transform transition-transform hover:scale-110 flex gap-2" target="_blank" rel="noopener">
+        Repositorio
+      </a>
+      <a href={webSite} class="py-2 px-4 sm:px-6 bg-primary text-white rounded-lg text-sm sm:text-md font-bold transform transition-transform hover:scale-110" target="_blank" rel="noopener">
+        Ver sitio web
+      </a>
     </div>
   </div>
 </div>

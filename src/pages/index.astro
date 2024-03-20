@@ -1,22 +1,26 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Navbar from '../components/Navbar.astro';
 import Header from '../components/Header.astro';
 import Skills from '../components/Skills.astro';
 import AboutMe from '../components/AboutMe.astro';
 import Projects from '../components/Projects.astro';
+import Navbar from '../components/Navbar.jsx';
+import MovilMenu from '../components/MovilMenu.jsx';
 ---
 
 <Layout
-	title="Portfolio de Victor Lopez - Desarrollador Web y Especialista en Inteligencia Artificial"
-	description="¡Contrata a Víctor López para llevar tus proyectos al siguiente nivel! Como desarrollador frontend y especialista en inteligencia artificial, ofrezco soluciones creativas y funcionales que destacan en el mercado digital. Con una habilidad excepcional para integrar la IA en interfaces intuitivas y estéticamente atractivas, estoy comprometido a superar tus expectativas y contribuir al éxito de tu proyecto. ¡Contáctame hoy mismo y descubre cómo podemos hacer realidad tus ideas!"
+title="Portfolio de Victor Lopez - Desarrollador Web y Especialista en Inteligencia Artificial"
+description="¡Contrata a Víctor López para llevar tus proyectos al siguiente nivel! Como desarrollador frontend y especialista en inteligencia artificial, ofrezco soluciones creativas y funcionales que destacan en el mercado digital. Con una habilidad excepcional para integrar la IA en interfaces intuitivas y estéticamente atractivas, estoy comprometido a superar tus expectativas y contribuir al éxito de tu proyecto. ¡Contáctame hoy mismo y descubre cómo podemos hacer realidad tus ideas!"
 >
-	<Navbar/>
+	<Navbar client:load/>
+	<MovilMenu client:load/>
 	<Header/>
 	<Projects/>
 	<Skills/>
 	<AboutMe/>
 </Layout>
+
+
 
 <style>
 </style>

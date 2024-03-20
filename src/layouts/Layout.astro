@@ -22,7 +22,7 @@ const { description,  title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
-		<div class="background"></div>
+		<div class="fixed h-full w-full bg-white"><div class="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)]"></div></div>
 		<slot />
 	</body>
 </html>
@@ -35,7 +35,7 @@ const { description,  title } = Astro.props;
   	font-family: 'Onest Variable', sans-serif;
 	}
 
-	.background {
+	/* .background {
     position: absolute;
     top: 0;
     left: 0;
@@ -45,5 +45,5 @@ const { description,  title } = Astro.props;
     background-size: 14px 24px;
 		background-attachment: fixed;
     mask-image: radial-gradient(ellipse 80% 50% at 50% 0%, #000 70%, transparent 110%);
-}
+} */
 </style>

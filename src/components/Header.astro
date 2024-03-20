@@ -1,12 +1,11 @@
 ---
 import Etiqueta from './Etiqueta.astro';
-import Badge from './Badge.astro';
 ---
 
-<main id="top" class="w-full h-screen flex justify-center items-center">
+<main id="top" class="w-full h-screen flex justify-center items-center ">
   <div class="w-auto max-w-xs sm:max-w-4xl flex max-sm:flex-col justify-center items-center gap-6">
     <div>
-      <figure class="w-44 h-44 sm:size-52 rounded-full border-4 border-primary overflow-hidden relative">
+      <figure class="w-44 h-44 sm:size-52 rounded-full border-4 border-primary overflow-hidden relative bg-white">
         <img
           src="../../imgs/pp.png"
           alt="Foto de Victor"
@@ -14,18 +13,29 @@ import Badge from './Badge.astro';
         >
       </figure>
     </div>
-    <div class="flex flex-col gap-6">
+    <div class="flex flex-col gap-6 z-10">
       <div class="flex gap-4 items-center flex-wrap">
-        <h1 class="text-4xl font-bold text-primary gap-2 text-pretty"><span class="text-black">Hey, soy </span>Víctor López </h1>
-        <div><Badge url = 'https://www.linkedin.com/in/victor-angel-lopez-romero-556605245/'>Disponible para trabajar</Badge></div>
+        <h1 class="text-3xl sm:text-4xl font-bold text-primary gap-2 text-pretty"><span class="text-black">Hey, soy </span>Víctor López </h1>
+        <div><a 
+          href="https://www.linkedin.com/in/victor-angel-lopez-romero-556605245/'"
+          class="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-blue-400 border border-blue-400"
+          target="_blank"
+          rel="noopener"
+        >
+          Disponible para trabajar
+        </a></div>
       </div>
       
-      <h2 class="text-2xl font-semibold text-pretty">Especialista en Inteligencia Artificial y Desarrollador Web Frontend</h2>
-      <h3 class="font-light text-xl text-pretty">De Guanajuato, México. Transformando ideas en realidad con <span class="text-primary ">soluciones creativas</span> y de calidad en la <span class="text-primary">inteligencia artificial</span> y el <span class="text-primary">desarrollo frontend</span> </h3>
+      <h2 class="text-xl sm:text-2xl font-semibold text-pretty">Especialista en Inteligencia Artificial y Desarrollador Web Frontend</h2>
+      <h3 class="font-light text-base sm:text-xl text-pretty">De Guanajuato, México. Transformando ideas en realidad con <span class="text-primary ">soluciones creativas</span> y de calidad en la <span class="text-primary">inteligencia artificial</span> y el <span class="text-primary">desarrollo frontend</span> </h3>
       <div class="flex gap-3 sm:gap-4 flex-wrap">
-        <Etiqueta img="../../media-icons/github-icon.svg" text='GitHub' link='https://github.com/VictorWKey'/>
-        <Etiqueta img="../../media-icons/linkedin-icon.svg" text='Linkedin' link = 'https://www.linkedin.com/in/victor-angel-lopez-romero-556605245/'/>
-        <button class="py-2 px-4 sm:px-6 bg-primary text-white rounded-lg text-xs sm:text-md font-bold transform transition-transform hover:scale-110">Descargar CV</button>
+        <Etiqueta img="../../public/icons/GitHub.svg" text='GitHub' link='https://github.com/VictorWKey'/>
+        <Etiqueta img="../../public/icons/LinkedInBlack.svg" text='Linkedin' link = 'https://www.linkedin.com/in/victor-angel-lopez-romero-556605245/'/>
+        <Etiqueta img="../../public/icons/Mail.svg" text='victorwkey@gmail.com'/>
+        <a class="py-2 px-4 sm:px-6 bg-primary text-white rounded-lg text-sm font-bold transform transition-transform hover:scale-110 flex gap-1 items-center justify-center cursor-pointer">
+          <img class="size-4" src="../../public/icons/Download.svg" alt="">
+          <p>Descargar CV</p>
+        </a>
       </div>
     </div>
   </div>
