@@ -1,3 +1,4 @@
+import Menu from '../icons/Menu.jsx';
 import { isMovilMenuOpen } from '../movilMenu.js';
 
 
@@ -12,7 +13,9 @@ function Navbar() {
 
       <a href="#about-me"className="hidden sm:font-semibold sm:text-white sm:flex sm:cursor-pointer hover:text-gray-100">Sobre mi</a>
       <div onClick={() => isMovilMenuOpen.set(true)}>
-        <img className="flex sm:hidden size-8" src="../../public/icons/Menu.svg"/>
+        <div className='size-8 sm:hidden'>
+          <Menu/>
+        </div>
       </div>
     </nav>
   )
