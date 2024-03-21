@@ -1,5 +1,3 @@
-import React, { useState } from 'react'
-import { useStore } from '@nanostores/react';
 import { isMovilMenuOpen } from '../movilMenu.js';
 
 

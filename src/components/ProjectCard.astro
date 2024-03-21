@@ -12,8 +12,10 @@ const {title, desc, technologies, img, webSite, repository} = Astro.props;
       <p class="text-pretty text-black text-sm">{desc}</p>
       <!-- Tecnologias usadas -->
       <div class="flex gap-4">
-        {technologies.map((technologie: string) =>(
-          <img class="size-6" src={technologie}>
+        {technologies.map((Technologie: any) =>(
+          <div class="size-6">
+            <Technologie/>
+          </div>
         ))}
       </div>
     </div>

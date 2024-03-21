@@ -8,12 +8,3 @@ interface Props {
 const { img, text, link} = Astro.props;
 ---
 
-<a 
-  href = {link} 
-  class="rounded-3xl border border-black flex gap-2 py-1 px-2 sm:px-4 justify-center items-center transform transition-transform hover:scale-110 bg-white"
-  target="_blank"
-  rel="noopener"
->
-  <img class="size-4" src={img} alt="">
-  <p class="text-sm sm:text-md">{text}</p>
-</a>

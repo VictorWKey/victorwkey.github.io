@@ -1,5 +1,8 @@
 ---
-import Etiqueta from './Etiqueta.astro';
+import GitHub from '../icons/GitHub.astro'
+import LinkedInBlack from '../icons/LinkedInBlack.astro'
+import Download from '../icons/Download.astro'
+import Mail from '../icons/Mail.astro'
 ---
 
 <main id="top" class="w-full h-screen flex justify-center items-center ">
@@ -29,11 +32,47 @@ import Etiqueta from './Etiqueta.astro';
       <h2 class="text-xl sm:text-2xl font-semibold text-pretty">Especialista en Inteligencia Artificial y Desarrollador Web Frontend</h2>
       <h3 class="font-light text-base sm:text-xl text-pretty">De Guanajuato, México. Transformando ideas en realidad con <span class="text-primary ">soluciones creativas</span> y de calidad en la <span class="text-primary">inteligencia artificial</span> y el <span class="text-primary">desarrollo frontend</span> </h3>
       <div class="flex gap-3 sm:gap-4 flex-wrap">
-        <Etiqueta img="../../public/icons/GitHub.svg" text='GitHub' link='https://github.com/VictorWKey'/>
-        <Etiqueta img="../../public/icons/LinkedInBlack.svg" text='Linkedin' link = 'https://www.linkedin.com/in/victor-angel-lopez-romero-556605245/'/>
-        <Etiqueta img="../../public/icons/Mail.svg" text='victorwkey@gmail.com'/>
+        <!-- Etiquetas -->
+        <a
+          href = "https://github.com/VictorWKey"
+          class="rounded-3xl border border-black flex gap-2 py-1 px-2 sm:px-4 justify-center items-center transform transition-transform hover:scale-110 bg-white"
+          target="_blank"
+          rel="noopener"
+        >
+          <div class="size-4">
+            <GitHub/>
+          </div>
+          <p class="text-sm sm:text-md">GitHub</p>
+        </a>
+
+        <a
+        href = "https://www.linkedin.com/in/victor-angel-lopez-romero-556605245/"
+        class="rounded-3xl border border-black flex gap-2 py-1 px-2 sm:px-4 justify-center items-center transform transition-transform hover:scale-110 bg-white"
+        target="_blank"
+        rel="noopener"
+        >
+          <div class="size-4">
+            <LinkedInBlack/>
+          </div>
+          <p class="text-sm sm:text-md">GitHub</p>
+        </a>
+
+        <div
+        class="rounded-3xl border border-black flex gap-2 py-1 px-2 sm:px-4 justify-center items-center transform transition-transform hover:scale-110 bg-white"
+        >
+          <div class="size-4">
+            <Mail/>
+          </div>
+          <p class="text-sm sm:text-md">victorwkey@gmail.com</p>
+        </div>
+
+        <!-- <Etiqueta img="../../public/icons/LinkedInBlack.svg" text='Linkedin' link = 'https://www.linkedin.com/in/victor-angel-lopez-romero-556605245/'/>
+        <Etiqueta img="../../public/icons/Mail.svg" text='victorwkey@gmail.com'/> -->
+
         <a href="https://drive.google.com/file/d/1N_u4NNxHQxmAhXspvhdTElcWujv5lAns/view?usp=sharing" class="py-2 px-4 sm:px-6 bg-primary text-white rounded-lg text-sm font-bold transform transition-transform hover:scale-110 flex gap-1 items-center justify-center cursor-pointer" target="_blank" rel="noopener">
-          <img class="size-4" src="../../public/icons/Download.svg" alt="">
+          <div class="size-4">
+            <Download/>
+          </div>
           <p>Descargar CV</p>
         </a>
       </div>
