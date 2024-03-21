@@ -1,226 +1,230 @@
 ---
 import SkillsContainer from "./SkillsContainer.astro"
 import Skill from "./Skill.astro"
+import JavaScript from "../icons/JavaScript.astro"
 
-const SKILLS = [
-  {
+const SKILLS = {
+  JavaScript: {
     name : "JavaScript",
-    logo: "../../public/icons/JavaScript.svg",
+    logo: JavaScript,
     category : "web",
     color: "",
     description: ""
   },
-  {
+  HTML: {
     name : "HTML",
     logo: "../../public/icons/HTML.svg",
     category : "web",
     color: "",
     description: ""
   },
-  {
+  CSS: {
     name : "CSS",
     logo: "../../public/icons/CSS.svg",
     category : "web",
     color: "",
     description: ""
   },
-  {
+  React: {
     name : "React",
     logo: "../../public/icons/React.svg",
     category : "web",
     color: "",
     description: ""
   },
-  {
+  Astro: {
     name : "Astro",
     logo: "../../public/icons/Astro.svg",
     category : "web",
     color: "",
     description: ""
   },
-  {
+  Tailwind: {
     name : "Tailwind CSS",
     logo: "../../public/icons/Tailwind.svg",
     category : "web",
     color: "",
     description: ""
   },
-  {
+  TypeScript: {
     name : "TypeScript",
     logo: "../../public/icons/TypeScript.svg",
     category : "web",
     color: "",
     description: ""
   },
-  {
+  Python: {
     name : "Python",
     logo: "../../public/icons/Python.svg",
     category : "ia",
     color: "",
     description: ""
   },
-  {
+  MachineLearning: {
     name : "Machine Learning",
     logo: "../../public/icons/ML.svg",
     category : "ia",
     color: "",
     description: ""
   },
-  {
+  scikitlearn: {
     name : "scikit-learn",
     logo: "../../public/icons/SkLearn.svg",
     category : "ia",
     color: "",
     description: ""
   },
-  {
+  SciPy: {
     name : "SciPy",
     logo: "../../public/icons/Scipy.svg",
     category : "ia",
     color: "",
     description: ""
   },
-  {
+  Pandas: {
     name : "Pandas",
     logo: "../../public/icons/Pandas.svg",
     category : "ia",
     color: "",
     description: ""
   },
-  {
+  Numpy: {
     name : "Numpy",
     logo: "../../public/icons/NumPy.svg",
     category : "ia",
     color: "",
     description: ""
   },
-  {
+  Matplotlib: {
     name : "Matplotlib",
     logo: "../../public/icons/Matplotlib.svg",
     category : "ia",
     color: "",
     description: ""
   },
-  {
+  Seaborn: {
     name : "Seaborn",
     logo: "../../public/icons/Seaborn.svg",
     category : "ia",
     color: "",
     description: ""
   },
-  {
+  Algebra: {
     name : "Algebra",
     logo: "../../public/icons/Algebra.svg",
     category : "ia",
     color: "",
     description: ""
   },
-  {
+  Statistics: {
     name : "Statistics",
     logo: "../../public/icons/Statistics.svg",
     category : "ia",
     color: "",
     description: ""
   },
-  {
+  Probability: {
     name : "Probability",
     logo: "../../public/icons/Probability.svg",
     category : "ia",
     color: "",
     description: ""
   },
-  {
+  Calculus: {
     name : "Calculus",
     logo: "../../public/icons/Calculus.svg",
     category : "ia",
     color: "",
     description: ""
   },
-  {
+  LinearAlgebra: {
     name : "Linear Algebra",
     logo: "../../public/icons/LinearAlgebra.svg",
     category : "ia",
     color: "",
     description: ""
   },
-  {
+  ExploratoryDataAnalysis: {
     name : "Exploratory Data Analysis",
     logo: "../../public/icons/ExploratoryData.svg",
     category : "ia",
     color: "",
     description: ""
   },
-  {
+  TreatmentOfMissingData: {
     name : "Treatment of Missing Data",
     logo: "../../public/icons/TreatmentMissing.svg",
     category : "ia",
     color: "",
     description: ""
   },
-  {
+  MySQL: {
     name : "MySQL",
     logo: "../../public/icons/MySQL.svg",
     category : "db",
     color: "",
     description: ""
   },
-  {
+  PostgreSQL: {
     name : "PostgreSQL",
     logo: "../../public/icons/PostgreSQL.svg",
     category : "db",
     color: "",
     description: ""
   },
-  {
+  Git: {
     name : "Git",
     logo: "../../public/icons/Git.svg",
     category : "tool",
     color: "",
     description: ""
   },
-  {
+  Linux: {
     name : "Linux/WSL",
     logo: "../../public/icons/Linux.svg",
     category : "tool",
     color: "",
     description: ""
   },
-  {
+  Conda: {
     name : "Conda",
     logo: "../../public/icons/Anaconda.svg",
     category : "tool",
     color: "",
     description: ""
   },
-  {
+  npm: {
     name : "npm",
     logo: "../../public/icons/NPM.svg",
     category : "tool",
     color: "",
     description: ""
   },
-  {
+  VSC: {
     name : "VSC",
     logo: "../../public/icons/VSC.svg",
     category : "tool",
     color: "",
     description: ""
   },
-  {
+  Markdown: {
     name : "Markdown",
     logo: "../../public/icons/Markdown.svg",
     category : "tool",
     color: "",
     description: ""
   }
-]
+}
+
+
 
 ---
 
 <section id="skills" class="w-full h-auto flex flex-col items-center pt-8 text-primary mr-6 z-10">
   <h1 class="pt-8 pb-6 text-4xl font-bold z-10">Habilidades</h1>
+  <SKILLS.JavaScript.logo />
   <div class="w-full max-w-3xl flex flex-col flex-wrap justify-center z-10 text-pretty">
-    <SkillsContainer title="Inteligencia Artificial">
+    <!-- <SkillsContainer title="Inteligencia Artificial">
       {
         SKILLS.filter(skill => skill.category === "ia").map(skill => (
           <Skill logoPath={skill.logo} logoName={skill.name}/>
@@ -247,6 +251,6 @@ const SKILLS = [
           <Skill logoPath={skill.logo} logoName={skill.name}/>
         ))
       }
-    </SkillsContainer>
+    </SkillsContainer> -->
   </div>
 </section>
