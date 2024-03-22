@@ -13,11 +13,13 @@ const { description,  title } = Astro.props;
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content={description}/>
+		<meta property="og:image" content="../../fb-image.png">
+		<meta property="twitter:image" content="../../fb-image.png">
 		<meta name="viewport" content="width=device-width" />
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap" rel="stylesheet">
-		<link rel="icon" type="image/svg+xml" href="../../img/pp.png" />
+		<link rel="icon" type="image/svg+xml" href="../../img/pp-official-circular.png" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
