@@ -15,6 +15,7 @@ import Pandas from "../icons/Pandas.astro";
 import NumPy from "../icons/NumPy.astro";
 import Matplotlib from "../icons/Matplotlib.astro";
 import Seaborn from "../icons/Seaborn.astro";
+import HuggingFace from "../icons/HuggingFace.astro";
 import Algebra from "../icons/Algebra.astro";
 import Statistics from "../icons/Statistics.astro";
 import Probability from "../icons/Probability.astro";
@@ -137,6 +138,13 @@ const SKILLS = {
     color: "",
     description: ""
   },
+  HuggingFace: {
+    name : "HuggingFace",
+    logo: HuggingFace,
+    category : "ia",
+    color: "",
+    description: ""
+  },
   Algebra: {
     name : "Algebra",
     logo: Algebra,
@@ -249,10 +257,10 @@ const SKILLS = {
 ---
 
 <section id="skills" class="w-full h-auto flex flex-col items-center pt-8 text-primary mr-6 z-10">
-  <h1 class="pt-8 pb-6 text-4xl font-bold z-10">Habilidades</h1>
+  <h1 class="pt-8 pb-6 text-4xl font-bold z-10">Skills</h1>
   <!-- [<SKILLS.JavaScript.logo />, <SKILLS.HTML.logo />] -->
   <div class="w-full max-w-3xl flex flex-col flex-wrap justify-center z-10 text-pretty">
-    <SkillsContainer title="Inteligencia Artificial">
+    <SkillsContainer title="Data and Machine Learning">
       {
         Object.values(SKILLS).filter(skill => skill.category === "ia").map((skill) => (
           <div class="bg-gray-50 size-24 flex flex-col gap-2 p-2 rounded-lg border-2 border-gray-200 justify-center items-center">
@@ -264,7 +272,7 @@ const SKILLS = {
         ))
       }
     </SkillsContainer>
-    <SkillsContainer title="Desarrollo Web">
+    <SkillsContainer title="Web Development">
       {
         Object.values(SKILLS).filter(skill => skill.category === "web").map((skill) => (
           <div class="bg-gray-50 size-24 flex flex-col gap-2 p-2 rounded-lg border-2 border-gray-200 justify-center items-center">
@@ -276,7 +284,7 @@ const SKILLS = {
         ))
       }
     </SkillsContainer>
-    <SkillsContainer title="Herramientas">
+    <SkillsContainer title="Tools">
       {
         Object.values(SKILLS).filter(skill => skill.category === "tool").map((skill) => (
           <div class="bg-gray-50 size-24 flex flex-col gap-2 p-2 rounded-lg border-2 border-gray-200 justify-center items-center">
@@ -288,7 +296,7 @@ const SKILLS = {
         ))
       }
     </SkillsContainer>
-    <SkillsContainer title="Bases de Datos">
+    <SkillsContainer title="Databases">
       {
         Object.values(SKILLS).filter(skill => skill.category === "db").map((skill) => (
           <div class="bg-gray-50 size-24 flex flex-col gap-2 p-2 rounded-lg border-2 border-gray-200 justify-center items-center">
