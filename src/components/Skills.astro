@@ -7,15 +7,21 @@ import ReactLogo from "../icons/ReactLogo.astro";
 import AstroLogo from "../icons/AstroLogo.astro";
 import Tailwind from "../icons/Tailwind.astro";
 import TypeScript from "../icons/TypeScript.astro";
+import FastAPI from "../icons/FastAPI.astro";
+import Flutter from "../icons/Flutter.astro";
 import Python from "../icons/Python.astro";
 import ML from "../icons/ML.astro";
+import Tensorflow from "../icons/Tensorflow.astro";
+import Pytorch from "../icons/Pytorch.astro";
+import Keras from "../icons/Keras.astro";
+import AWS from "../icons/AWS.astro";
+import HuggingFace from "../icons/HuggingFace.astro";
 import SkLearn from "../icons/SkLearn.astro";
 import SciPy from "../icons/Scipy.astro";
 import Pandas from "../icons/Pandas.astro";
 import NumPy from "../icons/NumPy.astro";
 import Matplotlib from "../icons/Matplotlib.astro";
 import Seaborn from "../icons/Seaborn.astro";
-import HuggingFace from "../icons/HuggingFace.astro";
 import Algebra from "../icons/Algebra.astro";
 import Statistics from "../icons/Statistics.astro";
 import Probability from "../icons/Probability.astro";
@@ -75,6 +81,20 @@ const SKILLS = {
     color: "",
     description: ""
   },
+  FastAPI: {
+    name : "FastAPI",
+    logo: FastAPI,
+    category : "web",
+    color: "",
+    description: ""
+  },
+  Flutter: {
+    name : "Flutter",
+    logo: Flutter,
+    category : "web",
+    color: "",
+    description: ""
+  },
   Astro: {
     name : "Astro",
     logo: AstroLogo,
@@ -89,9 +109,30 @@ const SKILLS = {
     color: "",
     description: ""
   },
-  MachineLearning: {
-    name : "Machine Learning",
-    logo: ML,
+  TensorFlow: {
+    name : "TensorFlow",
+    logo: Tensorflow,
+    category : "ia",
+    color: "",
+    description: ""
+  },
+  Pytorch: {
+    name : "Pytorch",
+    logo: Pytorch,
+    category : "ia",
+    color: "",
+    description: ""
+  },
+  Keras: {
+    name : "Keras",
+    logo: Keras,
+    category : "ia",
+    color: "",
+    description: ""
+  },
+  AWS: {
+    name : "AWS",
+    logo: AWS,
     category : "ia",
     color: "",
     description: ""
@@ -141,6 +182,13 @@ const SKILLS = {
   HuggingFace: {
     name : "HuggingFace",
     logo: HuggingFace,
+    category : "ia",
+    color: "",
+    description: ""
+  },
+  MachineLearning: {
+    name : "Machine Learning",
+    logo: ML,
     category : "ia",
     color: "",
     description: ""
@@ -216,7 +264,7 @@ const SKILLS = {
     description: ""
   },
   Linux: {
-    name : "Linux/WSL",
+    name : "Linux",
     logo: Linux,
     category : "tool",
     color: "",
@@ -225,13 +273,6 @@ const SKILLS = {
   Conda: {
     name : "Conda",
     logo: Anaconda,
-    category : "tool",
-    color: "",
-    description: ""
-  },
-  npm: {
-    name : "npm",
-    logo: NPM,
     category : "tool",
     color: "",
     description: ""
@@ -272,7 +313,7 @@ const SKILLS = {
         ))
       }
     </SkillsContainer>
-    <SkillsContainer title="Web Development">
+    <SkillsContainer title="Software Development">
       {
         Object.values(SKILLS).filter(skill => skill.category === "web").map((skill) => (
           <div class="bg-gray-50 size-24 flex flex-col gap-2 p-2 rounded-lg border-2 border-gray-200 justify-center items-center">
