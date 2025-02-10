@@ -1,14 +1,16 @@
 ---
 import GitHub from '../icons/GitHub.astro'
 import LinkedInBlack from '../icons/LinkedInBlack.astro'
+import LinkedInWhite from '../icons/LinkedInWhite.astro'
 import Download from '../icons/Download.astro'
-import Mail from '../icons/Mail.astro'
+import EmailWhite from '../icons/EmailWhite.astro'
+import GitHubWhite from '../icons/GitHubWhite.astro'
 ---
 
 <main id="top" class="w-full sm:h-screen flex justify-center items-center pt-24 sm:pt-0">
   <div class="w-auto max-w-xs sm:max-w-4xl flex max-sm:flex-col justify-center items-center gap-6">
     <div>
-      <figure class="w-44 h-44 sm:size-52 rounded-full border-4 border-primary overflow-hidden relative bg-white">
+      <figure class="w-44 h-44 sm:size-52 rounded-full border-4 border-primary overflow-hidden relative bg-none">
         <img
           src="../../img/pp-official.jpeg"
           alt="Foto de Victor"
@@ -18,11 +20,11 @@ import Mail from '../icons/Mail.astro'
     </div>
     <div class="flex flex-col gap-6 z-10">
       <div class="flex gap-4 items-center flex-wrap">
-        <h1 class="text-3xl sm:text-4xl font-bold text-primary gap-2 text-pretty"><span class="text-black">Hey, I am </span>Victor Ángel López</h1>
+        <h1 class="text-3xl sm:text-4xl font-bold text-primary gap-2 text-pretty"><span class="text-white">Hey, I am </span>Victor Ángel López</h1>
 
         <div><a
           href="https://www.linkedin.com/in/victor-angel-lopez-romero-556605245/'"
-          class="bg-green-100 text-green-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-green-900 dark:text-green-300"
+          class="bg-green-100 text-green-900 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-green-900 dark:text-green-300"
           target="_blank"
           rel="noopener"
         >
@@ -30,43 +32,43 @@ import Mail from '../icons/Mail.astro'
         </a></div>
       </div>
       
-      <h2 class="text-xl sm:text-2xl font-semibold text-pretty">Data and Machine Learning Specialist</h2>
+      <h2 class="text-xl sm:text-2xl font-semibold text-pretty text-white">Data and Machine Learning Specialist</h2>
 
-      <h3 class="font-light text-base sm:text-xl text-pretty">From Guanajuato, Mexico. Turning ideas into reality with <span class="text-primary">creative</span> and high-quality solutions in <span class="text-primary">artificial intelligence</span>, from data collection and processing to model creation and deployment in an attractive way.</h3>
+      <h3 class="font-light text-base sm:text-xl text-pretty text-white">From Guanajuato, Mexico. Turning ideas into reality with <span class="text-primary">creative</span> and high-quality solutions in <span class="text-primary">artificial intelligence</span>, from data collection and processing to model creation and deployment in an attractive way.</h3>
 
       <div class="flex gap-3 sm:gap-4 flex-wrap">
         <!-- Etiquetas -->
         <a
           href = "https://github.com/VictorWKey"
-          class="rounded-3xl border border-black flex gap-2 py-1 px-2 sm:px-4 justify-center items-center transform transition-transform hover:scale-110 bg-white"
+          class="rounded-3xl border-2 border-primary flex gap-2 py-1 px-2 sm:px-4 justify-center items-center transform transition-transform hover:scale-110 bg-none"
           target="_blank"
           rel="noopener"
         >
           <div class="size-4">
-            <GitHub/>
+            <GitHubWhite/>
           </div>
-          <p class="text-sm sm:text-md">GitHub</p>
+          <p class="text-sm sm:text-md text-white">GitHub</p>
         </a>
 
         <a
         href = "https://www.linkedin.com/in/victor-angel-lopez-romero-556605245/"
-        class="rounded-3xl border border-black flex gap-2 py-1 px-2 sm:px-4 justify-center items-center transform transition-transform hover:scale-110 bg-white"
+        class="rounded-3xl border-2 border-primary flex gap-2 py-1 px-2 sm:px-4 justify-center items-center transform transition-transform hover:scale-110 bg-none"
         target="_blank"
         rel="noopener"
         >
           <div class="size-4">
-            <LinkedInBlack/>
+            <LinkedInWhite/>
           </div>
-          <p class="text-sm sm:text-md">LinkedIn</p>
+          <p class="text-sm sm:text-md text-white">LinkedIn</p>
         </a>
 
         <div
-        class="rounded-3xl border border-black flex gap-2 py-1 px-2 sm:px-4 justify-center items-center transform transition-transform hover:scale-110 bg-white"
+        class="rounded-3xl border-2 border-primary flex gap-2 py-1 px-2 sm:px-4 justify-center items-center transform transition-transform hover:scale-110 bg-none"
         >
           <div class="size-4">
-            <Mail/>
+            <EmailWhite/>
           </div>
-          <p class="text-sm sm:text-md">victorwkey@gmail.com</p>
+          <p class="text-sm sm:text-md text-white">victorwkey@gmail.com</p>
         </div>
 
         <!-- <Etiqueta img="../../public/icons/LinkedInBlack.svg" text='Linkedin' link = 'https://www.linkedin.com/in/victor-angel-lopez-romero-556605245/'/>

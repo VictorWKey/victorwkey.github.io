@@ -8,7 +8,6 @@ import AstroLogo from "../icons/AstroLogo.astro";
 import Tailwind from "../icons/Tailwind.astro";
 import TypeScript from "../icons/TypeScript.astro";
 import FastAPI from "../icons/FastAPI.astro";
-import Flutter from "../icons/Flutter.astro";
 import Python from "../icons/Python.astro";
 import ML from "../icons/ML.astro";
 import Tensorflow from "../icons/Tensorflow.astro";
@@ -26,11 +25,11 @@ import Algebra from "../icons/Algebra.astro";
 import Statistics from "../icons/Statistics.astro";
 import Probability from "../icons/Probability.astro";
 import Calculus from "../icons/Calculus.astro";
-import LinearAlgebra from "../icons/LinearAlgebra.astro";
 import ExploratoryData from "../icons/ExploratoryData.astro";
 import TreatmentMissing from "../icons/TreatmentMissing.astro";
 import MySQL from "../icons/MySQL.astro";
 import PostgreSQL from "../icons/PostgreSQL.astro";
+import MongoDB from "../icons/MongoDB.astro";
 import Git from "../icons/Git.astro";
 import Linux from "../icons/Linux.astro";
 import Anaconda from "../icons/Anaconda.astro";
@@ -88,13 +87,7 @@ const SKILLS = {
     color: "",
     description: ""
   },
-  Flutter: {
-    name : "Flutter",
-    logo: Flutter,
-    category : "web",
-    color: "",
-    description: ""
-  },
+
   Astro: {
     name : "Astro",
     logo: AstroLogo,
@@ -126,13 +119,6 @@ const SKILLS = {
   Keras: {
     name : "Keras",
     logo: Keras,
-    category : "ia",
-    color: "",
-    description: ""
-  },
-  AWS: {
-    name : "AWS",
-    logo: AWS,
     category : "ia",
     color: "",
     description: ""
@@ -179,6 +165,34 @@ const SKILLS = {
     color: "",
     description: ""
   },
+  MySQL: {
+    name : "MySQL",
+    logo: MySQL,
+    category : "ia",
+    color: "",
+    description: ""
+  },
+  PostgreSQL: {
+    name : "PostgreSQL",
+    logo: PostgreSQL,
+    category : "ia",
+    color: "",
+    description: ""
+  },
+  MongoDB: {
+    name : "MongoDB",
+    logo: MongoDB,
+    category : "ia",
+    color: "",
+    description: ""
+  },
+  AWS: {
+    name : "AWS",
+    logo: AWS,
+    category : "ia",
+    color: "",
+    description: ""
+  },
   HuggingFace: {
     name : "HuggingFace",
     logo: HuggingFace,
@@ -189,41 +203,6 @@ const SKILLS = {
   MachineLearning: {
     name : "Machine Learning",
     logo: ML,
-    category : "ia",
-    color: "",
-    description: ""
-  },
-  Algebra: {
-    name : "Algebra",
-    logo: Algebra,
-    category : "ia",
-    color: "",
-    description: ""
-  },
-  Statistics: {
-    name : "Statistics",
-    logo: Statistics,
-    category : "ia",
-    color: "",
-    description: ""
-  },
-  Probability: {
-    name : "Probability",
-    logo: Probability,
-    category : "ia",
-    color: "",
-    description: ""
-  },
-  Calculus: {
-    name : "Calculus",
-    logo: Calculus,
-    category : "ia",
-    color: "",
-    description: ""
-  },
-  LinearAlgebra: {
-    name : "Linear Algebra",
-    logo: LinearAlgebra,
     category : "ia",
     color: "",
     description: ""
@@ -242,52 +221,66 @@ const SKILLS = {
     color: "",
     description: ""
   },
-  MySQL: {
-    name : "MySQL",
-    logo: MySQL,
-    category : "db",
+  Statistics: {
+    name : "Statistics",
+    logo: Statistics,
+    category : "ia",
     color: "",
     description: ""
   },
-  PostgreSQL: {
-    name : "PostgreSQL",
-    logo: PostgreSQL,
-    category : "db",
+  Probability: {
+    name : "Probability",
+    logo: Probability,
+    category : "ia",
+    color: "",
+    description: ""
+  },
+  Algebra: {
+    name : "Linear Algebra",
+    logo: Algebra,
+    category : "ia",
+    color: "",
+    description: ""
+  },
+  Calculus: {
+    name : "Calculus",
+    logo: Calculus,
+    category : "ia",
     color: "",
     description: ""
   },
   Git: {
     name : "Git",
     logo: Git,
-    category : "tool",
+    category : "web",
     color: "",
     description: ""
   },
   Linux: {
     name : "Linux",
     logo: Linux,
-    category : "tool",
+    category : "web",
     color: "",
     description: ""
   },
   Conda: {
     name : "Conda",
     logo: Anaconda,
-    category : "tool",
+    category : "web",
     color: "",
     description: ""
   },
   VSC: {
     name : "VSC",
     logo: VSC,
-    category : "tool",
+    category : "web",
     color: "",
     description: ""
   },
   Markdown: {
     name : "Markdown",
     logo: Markdown,
-    category : "tool",
+    category : "web",
     color: "",
     description: ""
   }
@@ -316,30 +309,6 @@ const SKILLS = {
     <SkillsContainer title="Software Development">
       {
         Object.values(SKILLS).filter(skill => skill.category === "web").map((skill) => (
-          <div class="bg-gray-50 size-24 flex flex-col gap-2 p-2 rounded-lg border-2 border-gray-200 justify-center items-center">
-            <div class="size-8">
-              <skill.logo />
-            </div>
-            <p class="text-xs text-pretty text-black text-center font-light">{skill.name}</p>
-          </div>
-        ))
-      }
-    </SkillsContainer>
-    <SkillsContainer title="Tools">
-      {
-        Object.values(SKILLS).filter(skill => skill.category === "tool").map((skill) => (
-          <div class="bg-gray-50 size-24 flex flex-col gap-2 p-2 rounded-lg border-2 border-gray-200 justify-center items-center">
-            <div class="size-8">
-              <skill.logo />
-            </div>
-            <p class="text-xs text-pretty text-black text-center font-light">{skill.name}</p>
-          </div>
-        ))
-      }
-    </SkillsContainer>
-    <SkillsContainer title="Databases">
-      {
-        Object.values(SKILLS).filter(skill => skill.category === "db").map((skill) => (
           <div class="bg-gray-50 size-24 flex flex-col gap-2 p-2 rounded-lg border-2 border-gray-200 justify-center items-center">
             <div class="size-8">
               <skill.logo />
