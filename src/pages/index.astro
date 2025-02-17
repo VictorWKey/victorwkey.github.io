@@ -1,7 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
-import Skills from '../components/Skills.astro';
+import Skills from '../components/Skills.jsx';
 import AboutMe from '../components/AboutMe.astro';
 import Projects from '../components/Projects.astro';
 import Navbar from '../components/Navbar.jsx';
@@ -16,7 +16,7 @@ description="¡Contrata a Víctor López para llevar tus proyectos al siguiente 
 	<Navbar client:load/>
 	<MovilMenu client:load/>
 	<Header/>
-	<Projects/>
+	<!-- <Projects/> -->
 	<Skills/>
 	<AboutMe/>
 	<Footer/>

@@ -1,13 +1,13 @@
 ---
 import ProjectCard from './ProjectCard.astro'
-import JavaScript from "../icons/JavaScript.astro";
-import HTML from "../icons/HTML.astro";
-import CSS from "../icons/CSS.astro";
-import ReactLogo from "../icons/ReactLogo.astro";
-import AstroLogo from "../icons/AstroLogo.astro";
-import Tailwind from "../icons/Tailwind.astro";
-import TypeScript from "../icons/TypeScript.astro";
-import Python from "../icons/Python.astro";
+import JavaScript from "../icons/JavaScript";
+import HTML from "../icons/HTML";
+import CSS from "../icons/CSS.jsx";
+import ReactLogo from "../icons/ReactLogo.jsx";
+import AstroLogo from "../icons/AstroLogo.jsx";
+import Tailwind from "../icons/Tailwind.jsx";
+import TypeScript from "../icons/TypeScript.jsx";
+import Python from "../icons/Python.jsx";
 
 const TAGS = {
   JavaScript: {
@@ -76,15 +76,15 @@ const PROJECTS = [
     img: "../../img/project-todos.png",
     site: "https://victorwkey.github.io/CheckLove-TODOs-Machine/",
     repository: "https://github.com/VictorWKey/CheckLove-TODOs-Machine"
-  },
-  {
-    title: "Fronted for e-commerce",
-    desc: "Frontend de una tienda en línea con funciones completas, incluyendo órdenes, carrito de compras y filtros.",
-    technologies: [TAGS.JavaScript.logo, TAGS.HTML.logo, TAGS.CSS.logo, TAGS.React.logo, TAGS.Tailwind.logo],
-    img: "../../img/project-fronted.png",
-    site: "https://shop-app-w-react.netlify.app/",
-    repository: "https://github.com/VictorWKey/fronted-shop-react-app"
-  }
+    }  // },
+  // {
+  //   title: "Fronted for e-commerce",
+  //   desc: "Frontend de una tienda en línea con funciones completas, incluyendo órdenes, carrito de compras y filtros.",
+  //   technologies: [TAGS.JavaScript.logo, TAGS.HTML.logo, TAGS.CSS.logo, TAGS.React.logo, TAGS.Tailwind.logo],
+  //   img: "../../img/project-fronted.png",
+  //   site: "https://shop-app-w-react.netlify.app/",
+  //   repository: "https://github.com/VictorWKey/fronted-shop-react-app"
+  // }
 ]
 
 
@@ -92,7 +92,7 @@ const PROJECTS = [
 
 ---
 
-<section id="projects" class="w-full h-auto sm:h-screen flex flex-col items-center pt-8 text-primary mr-">
+<section id="projects" class="bg-white w-full h-auto sm:h-screen flex flex-col items-center pt-8 text-primary mr-">
   <h1 class="pt-8 pb-10 text-4xl font-bold z-10">Projects</h1>
   <div class="w-auto max-w-4xl flex flex-col 2xl:flex-row gap-8 sm:gap-5 items-center justify-center z-10">
     {PROJECTS.map((project) => (

@@ -9,7 +9,7 @@ function MovilMenu() {
   return (
     <div className={`z-50 w-80 h-screen bg-white fixed flex flex-col p-3 items-start border-r-2 border-black transition-transform duration-300 sm:hidden transform ${$isMovilMenuOpen ? 'translate-x-0' : '-translate-x-full'}`}>
       <div onClick={() => isMovilMenuOpen.set(false)} className='self-end mb-14'>
-        <div class='size-12'>
+        <div className='size-12'>
           <Close/>
         </div>
       </div>
