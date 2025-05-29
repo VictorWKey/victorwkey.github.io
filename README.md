@@ -1,54 +1,71 @@
-# Astro Starter Kit: Basics
+# 👋 Hi, I’m Víctor López  
+**AI Engineer | LLMs | Agents | RAG | Infrastructure Optimization**  
+*Building scalable, cost-efficient, and secure AI systems.*
 
-```sh
-npm create astro@latest -- --template basics
-```
+---
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+## 📚 About Me
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+I’m an AI Engineer passionate about building intelligent, scalable, and secure AI systems. With a full-stack background, I integrate advanced AI into robust web and mobile applications, ensuring high performance, seamless UX, and secure deployment on private infrastructure. My focus is on developing **cost-effective** and **production-ready** AI workflows for startups and enterprises alike. I quickly learn new concepts and keep up to date with the latest advancements in the AI field.
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+**Key Areas of Expertise:**
+- **Large Language Models (LLMs):** GPT (OpenAI), LLaMA (Meta), Claude (Anthropic), open-source (Hugging Face) and others.
+- **Retrieval-Augmented Generation (RAG):** Designing and integrating RAG pipelines to enhance context-aware responses.
+- **AI Agents & Multi-Agent Systems:** Building intelligent agents capable of tool use and complex reasoning.
+- **Fine-Tuning & Prompt Engineering:** Customizing models for specific tasks and optimizing prompt strategies.
+- **Model Optimization & Cost Efficiency:** Improving performance and reducing infrastructure costs on private and cloud environments.
 
-## 🚀 Project Structure
 
-Inside of your Astro project, you'll see the following folders and files:
+---
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+## 🛠️ Skills & Tech Stack  
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+### Programming 
+- **Python** 🐍: Core language for AI development, scripting, and prototyping.  
+- **TensorFlow** & **PyTorch**: Training, fine-tuning, and deploying deep learning models (NLP, vision, agents).  
+- **FastAPI**: Building high-performance APIs for serving ML models and AI agents.  
+- **SQL**: Managing and querying structured datasets for training and evaluation.  
+- **LangChain**: Orchestrating LLM pipelines, agents, and RAG systems.  
+- **Custom Tools**: Building vector search, embedding pipelines, and inference wrappers.
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+### Deployment & Infrastructure  
+- **Docker**  
+- **AWS Cloud Computing ☁️**
 
-Any static assets, like images, can be placed in the `public/` directory.
+### Full Stack Development  
+- **Frontend**: React ⚛️ | Astro | JavaScript | HTML/CSS  
+- **Backend**: FastAPI | Node.js  
 
-## 🧞 Commands
+---
 
-All commands are run from the root of the project, from a terminal:
+### 🚀 Projects
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+#### **FitCoachAI** – Workout Progress Tracker  
+FitCoachAI is a mobile app powered by a multi-tool, LLM-based agent that helps intermediate-level lifters track and analyze their training progress. The app features a **Simple RAG System** that infers missing details from past workouts, providing additional context for more accurate responses. It also uses **NL2SQL**, converting natural language queries into SQL commands for logging and updating workout data. The **QA system** allows users to ask about their training history and receive insights based on past sessions. FitCoachAI simplifies workout tracking, helping users stay focused on their fitness goals.
 
-## 👀 Want to learn more?
+---
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+## 📈 GitHub Stats  
+<div align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=victorwkey&show_icons=true&count_private=true&hide_border=true" />
+</div>
+
+---
+
+## 🌐 Let’s Connect  
+I'm open to collaborating on cutting-edge AI projects, sharing ideas, or exploring opportunities. Reach out through:
+
+- [LinkedIn](https://www.linkedin.com/in/victor-angel-lopez-556605245/)  
+- [GitHub](https://github.com/victorwkey)  
+- [X ](https://x.com/victorwkey)  
+- [Portfolio](https://victorwkey.com)
+
+---
+
+## 💬 Contact  
+📬 You can contact me via GitHub, LinkedIn, or email to discuss AI collaborations, job opportunities, or just to talk about LLMs, RAG, and AI systems.
+
+---
+
+🚀 *Let’s build the future of AI — powerful, optimized, and secure.*
+
