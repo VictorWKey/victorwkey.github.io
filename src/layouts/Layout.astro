@@ -23,8 +23,22 @@ const { description,  title } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body class="bg-[#121E30]">
-		<!-- <div class="fixed z-0 h-full w-full bg-white"><div class="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)]"></div></div> -->
+	<body class="min-h-screen relative overflow-x-hidden">
+		<!-- Fondo estático con gradiente y efectos -->
+		<div class="fixed inset-0 bg-gradient-to-br from-[#0a1628] via-[#121E30] to-[#1e3a5f] -z-10">
+			<!-- Círculos de luz estáticos -->
+			<div class="absolute top-20 left-1/4 w-96 h-96 bg-blue-500/20 rounded-full filter blur-3xl"></div>
+			<div class="absolute bottom-20 right-1/4 w-80 h-80 bg-purple-500/20 rounded-full filter blur-3xl"></div>
+			<div class="absolute top-1/2 left-20 w-64 h-64 bg-cyan-400/15 rounded-full filter blur-2xl"></div>
+			
+			<!-- Grid pattern overlay -->
+			<div class="absolute inset-0 opacity-20" 
+				 style="background-image: 
+				 		linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),
+				 		linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px);
+				 		background-size: 50px 50px;">
+			</div>
+		</div>
 		<slot />
 	</body>
 </html>
@@ -32,9 +46,13 @@ const { description,  title } = Astro.props;
 <style>
 	html {
 		scroll-behavior: smooth;
+		min-height: 100%;
 	}
 	body {
   	font-family: 'Onest Variable', sans-serif;
+		min-height: 100vh;
 	}
+
+	/* Código CSS limpio sin animaciones */
 
 </style>

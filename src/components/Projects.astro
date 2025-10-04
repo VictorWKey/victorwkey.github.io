@@ -8,83 +8,108 @@ import AstroLogo from "../icons/AstroLogo.jsx";
 import Tailwind from "../icons/Tailwind.jsx";
 import TypeScript from "../icons/TypeScript.jsx";
 import Python from "../icons/Python.jsx";
+import Tensorflow from "../icons/Tensorflow.jsx";
+import FastAPI from "../icons/FastAPI.jsx";
+import AWS from "../icons/AWS.jsx";
+import MongoDB from "../icons/MongoDB.jsx";
+import PostgreSQL from "../icons/PostgreSQL.jsx";
 
 const TAGS = {
   JavaScript: {
-    name : "JavaScript",
+    name: "JavaScript",
     logo: JavaScript,
-    category : "web",
-    color: "",
-    description: ""
+    category: "web"
   },
   HTML: {
-    name : "HTML",
+    name: "HTML",
     logo: HTML,
-    category : "web",
-    color: "",
-    description: ""
+    category: "web"
   },
   CSS: {
-    name : "CSS",
+    name: "CSS",
     logo: CSS,
-    category : "web",
-    color: "",
-    description: ""
+    category: "web"
   },
   React: {
-    name : "React",
+    name: "React",
     logo: ReactLogo,
-    category : "web",
-    color: "",
-    description: ""
+    category: "web"
   },
   Tailwind: {
-    name : "Tailwind",
+    name: "Tailwind",
     logo: Tailwind,
-    category : "web",
-    color: "",
-    description: ""
+    category: "web"
   },
   TypeScript: {
-    name : "TypeScript",
+    name: "TypeScript",
     logo: TypeScript,
-    category : "web",
-    color: "",
-    description: ""
+    category: "web"
   },
   Python: {
-    name : "Python",
+    name: "Python",
     logo: Python,
-    category : "web",
-    color: "",
-    description: ""
+    category: "ai"
   },
   Astro: {
-    name : "Astro",
+    name: "Astro",
     logo: AstroLogo,
-    category : "web",
-    color: "",
-    description: ""
+    category: "web"
+  },
+  TensorFlow: {
+    name: "TensorFlow",
+    logo: Tensorflow,
+    category: "ai"
+  },
+  FastAPI: {
+    name: "FastAPI",
+    logo: FastAPI,
+    category: "backend"
+  },
+  AWS: {
+    name: "AWS",
+    logo: AWS,
+    category: "cloud"
+  },
+  MongoDB: {
+    name: "MongoDB",
+    logo: MongoDB,
+    category: "database"
+  },
+  PostgreSQL: {
+    name: "PostgreSQL",
+    logo: PostgreSQL,
+    category: "database"
   }
 }
 
 const PROJECTS = [
   {
-    title: "TODO´s App",
-    desc: "Aplicación de lista de tareas donde puedes agregar, eliminar, marcar como completadas y buscar tareas pendientes.",
-    technologies: [TAGS.JavaScript.logo, TAGS.HTML.logo, TAGS.CSS.logo, TAGS.React.logo],
+    title: "AI-Powered Task Manager",
+    desc: "Intelligent task management system that uses machine learning to prioritize tasks, predict completion times, and suggest optimal scheduling based on user behavior patterns.",
+    technologies: [TAGS.Python.logo, TAGS.React.logo, TAGS.TensorFlow.logo, TAGS.FastAPI.logo, TAGS.PostgreSQL.logo],
     img: "../../img/project-todos.png",
-    site: "https://victorwkey.github.io/CheckLove-TODOs-Machine/",
-    repository: "https://github.com/VictorWKey/CheckLove-TODOs-Machine"
-    }  // },
-  // {
-  //   title: "Fronted for e-commerce",
-  //   desc: "Frontend de una tienda en línea con funciones completas, incluyendo órdenes, carrito de compras y filtros.",
-  //   technologies: [TAGS.JavaScript.logo, TAGS.HTML.logo, TAGS.CSS.logo, TAGS.React.logo, TAGS.Tailwind.logo],
-  //   img: "../../img/project-fronted.png",
-  //   site: "https://shop-app-w-react.netlify.app/",
-  //   repository: "https://github.com/VictorWKey/fronted-shop-react-app"
-  // }
+    site: "#",
+    repository: "#",
+    category: "AI Application"
+  },
+  {
+    title: "Smart Document Classifier",
+    desc: "ML-powered document classification system that automatically categorizes and extracts key information from various document types using NLP and computer vision techniques.",
+    technologies: [TAGS.Python.logo, TAGS.TensorFlow.logo, TAGS.FastAPI.logo, TAGS.React.logo, TAGS.AWS.logo],
+    img: "../../img/project-fronted.png",
+    site: "#",
+    repository: "#",
+    category: "Machine Learning"
+  },
+  {
+    title: "Real-time Analytics Dashboard",
+    desc: "Full-stack web application with real-time data visualization and predictive analytics. Features interactive charts, automated reports, and ML-driven insights for business intelligence.",
+    technologies: [TAGS.TypeScript.logo, TAGS.React.logo, TAGS.Python.logo, TAGS.MongoDB.logo, TAGS.AWS.logo],
+    img: "../../img/project-todos.png",
+    site: "#",
+    repository: "#",
+    category: "Full-Stack"
+  }
 ]
 
 
@@ -92,18 +117,28 @@ const PROJECTS = [
 
 ---
 
-<section id="projects" class="bg-white w-full h-auto sm:h-screen flex flex-col items-center pt-8 text-primary mr-">
-  <h1 class="pt-8 pb-10 text-4xl font-bold z-10">Projects</h1>
-  <div class="w-auto max-w-4xl flex flex-col 2xl:flex-row gap-8 sm:gap-5 items-center justify-center z-10">
-    {PROJECTS.map((project) => (
-      <ProjectCard 
-        title = {project.title} 
-        desc = {project.desc} 
-        technologies = {project.technologies} 
-        webSite={project.site} 
-        repository = {project.repository} 
-        img={project.img}
-      />
-    ))}
+<section id="projects" class="w-full min-h-screen flex flex-col items-center justify-center py-16 px-6 relative z-10">
+  <div class="w-full max-w-6xl">
+    <h1 class="text-4xl font-bold text-white text-center mb-4 z-10">Featured Projects</h1>
+    <p class="text-xl text-gray-300 text-center mb-12 max-w-3xl mx-auto">
+      Explore my latest AI-powered applications and software solutions that demonstrate the intersection of 
+      <span class="text-primary">artificial intelligence</span> and <span class="text-primary">modern web development</span>
+    </p>
+    
+    <div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8 items-start">
+      {PROJECTS.map((project, index) => (
+        <div class="transform hover:scale-105 transition-transform duration-300">
+          <ProjectCard 
+            title={project.title} 
+            desc={project.desc} 
+            technologies={project.technologies} 
+            webSite={project.site} 
+            repository={project.repository} 
+            img={project.img}
+            category={project.category}
+          />
+        </div>
+      ))}
+    </div>
   </div>
 </section>
