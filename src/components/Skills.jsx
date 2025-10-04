@@ -3,6 +3,7 @@ import JavaScript from "../icons/JavaScript.jsx";
 import HTML from "../icons/HTML.jsx";
 import CSS from "../icons/CSS.jsx";
 import ReactLogo from "../icons/ReactLogo.jsx";
+import NextJS from "../icons/NextJS.jsx";
 import AstroLogo from "../icons/AstroLogo.jsx";
 import Tailwind from "../icons/Tailwind.jsx";
 import TypeScript from "../icons/TypeScript.jsx";
@@ -11,6 +12,7 @@ import Python from "../icons/Python.jsx";
 import ML from "../icons/ML.jsx";
 import Tensorflow from "../icons/Tensorflow.jsx";
 import Pytorch from "../icons/Pytorch.jsx";
+import LangChain from "../icons/LangChain.jsx";
 import Keras from "../icons/Keras.jsx";
 import AWS from "../icons/AWS.jsx";
 import HuggingFace from "../icons/HuggingFace.jsx";
@@ -124,14 +126,16 @@ const SKILLS = {
   HTML: { name: "HTML", logo: () => <HTML />, category: "web" },
   CSS: { name: "CSS", logo: () => <CSS />, category: "web" },
   React: { name: "React", logo: () => <ReactLogo />, category: "web" },
+  NextJS: { name: "Next.js", logo: () => <NextJS />, category: "web" },
   Tailwind: { name: "Tailwind", logo: () => <Tailwind />, category: "web" },
   TypeScript: { name: "TypeScript", logo: () => <TypeScript />, category: "web" },
   FastAPI: { name: "FastAPI", logo: () => <FastAPI />, category: "web" },
   Astro: { name: "Astro", logo: () => <AstroLogo />, category: "web" },
   Python: { name: "Python", logo: () => <Python />, category: "ia" },
   TensorFlow: { name: "TensorFlow", logo: () => <Tensorflow />, category: "ia" },
-  Pytorch: { name: "Pytorch", logo: () => <Pytorch />, category: "ia" },
   Keras: { name: "Keras", logo: () => <Keras />, category: "ia" },
+  Pytorch: { name: "Pytorch", logo: () => <Pytorch />, category: "ia" },
+  LangChain: { name: "LangChain", logo: () => <LangChain />, category: "ia" },
   scikitlearn: { name: "scikit-learn", logo: () => <SkLearn />, category: "ia" },
   SciPy: { name: "SciPy", logo: () => <SciPy />, category: "ia" },
   Pandas: { name: "Pandas", logo: () => <Pandas />, category: "ia" },
