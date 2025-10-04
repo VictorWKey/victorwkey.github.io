@@ -61,31 +61,31 @@ const Modal = ({ isOpen, onClose, skill, certificates, onCertificateChange }) =>
   };
 
   return (
-    <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-70 flex justify-center items-center z-50">
-      <div className="relative bg-white p-8 rounded-lg max-w-screen-sm max-h-[90%] overflow-y-auto flex flex-col items-center">
+    <div className="fixed top-0 left-0 w-full h-full bg-black/80 backdrop-blur-sm flex justify-center items-center z-50 p-4">
+      <div className="relative bg-white/10 backdrop-blur-md border border-white/20 p-8 rounded-2xl max-w-2xl max-h-[90%] overflow-y-auto flex flex-col items-center">
         
         {/* Botón de Cerrar (X) en la esquina superior derecha */}
         <button 
           onClick={onClose} 
-          className="absolute top-4 right-4 text-2xl text-gray-600 hover:text-gray-900"
+          className="absolute top-4 right-4 text-2xl text-white hover:text-primary transition-colors duration-200"
         >
-          &times;
+          ✕
         </button>
 
-        <h2 className="text-2xl font-bold mb-4">{skill.name}</h2>
+        <h2 className="text-3xl font-bold mb-6 text-white text-center">{skill.name}</h2>
 
         {/* Flechas de navegación */}
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-6">
           <button 
             onClick={handlePrev}
-            className="p-2 rounded-full bg-gray-200 hover:bg-gray-300 transition duration-200"
+            className="p-3 rounded-full bg-white/20 hover:bg-white/30 text-white transition-all duration-200 hover:scale-110"
           >
-            &#8592; {/* Flecha izquierda */}
+            ←
           </button>
 
-          <div className="w-36 h-36">
+          <div className="w-48 h-48 bg-white/10 rounded-xl overflow-hidden">
             <img 
-              src={currentCertificate} // Mostrar la imagen del certificado actual
+              src={currentCertificate}
               alt={`Certificado ${currentCertificateIndex + 1}`}
               className="w-full h-full object-contain"
             />
@@ -93,10 +93,21 @@ const Modal = ({ isOpen, onClose, skill, certificates, onCertificateChange }) =>
 
           <button 
             onClick={handleNext}
-            className="p-2 rounded-full bg-gray-200 hover:bg-gray-300 transition duration-200"
+            className="p-3 rounded-full bg-white/20 hover:bg-white/30 text-white transition-all duration-200 hover:scale-110"
           >
-            &#8594; {/* Flecha derecha */}
+            →
           </button>
+        </div>
+
+        <div className="mt-4 flex gap-2">
+          {skillCertificates.map((_, index) => (
+            <div 
+              key={index}
+              className={`w-2 h-2 rounded-full transition-all duration-200 ${
+                index === currentCertificateIndex ? 'bg-primary' : 'bg-white/30'
+              }`}
+            />
+          ))}
         </div>
       </div>
     </div>
@@ -178,33 +189,40 @@ const SkillsSection = () => {
   };
 
   return (
-    <section id="skills" className="bg-white w-full h-auto flex flex-col items-center pt-8 text-primary mr-6 z-10">
-      <h1 className="pt-8 pb-6 text-4xl font-bold z-10">Skills</h1>
-      <div className="w-full max-w-3xl flex flex-col flex-wrap justify-center z-10 text-pretty">
-        <SkillsContainer title="Data and Machine Learning">
-          {Object.entries(SKILLS).filter(([_, skill]) => skill.category === "ia").map(([name, skill]) => (
-            <div
-              key={skill.name}
-              className="bg-none size-24 flex flex-col gap-2 p-2 rounded-lg justify-center items-center transition-transform duration-100 ease-in-out hover:scale-125 cursor-pointer"
-              onClick={() => handleSkillClick(skill)}
-            >
-              <div className="size-8">{skill.logo()}</div>
-              <p className="text-xs text-pretty text-black text-center font-light">{skill.name}</p>
-            </div>
-          ))}
-        </SkillsContainer>
-        <SkillsContainer title="Software Development">
-          {Object.entries(SKILLS).filter(([_, skill]) => skill.category === "web").map(([name, skill]) => (
-            <div
-              key={skill.name}
-              className="bg-none size-24 flex flex-col gap-2 p-2 rounded-lg justify-center items-center transition-transform duration-100 ease-in-out hover:scale-125 cursor-pointer"
-              onClick={() => handleSkillClick(skill)}
-            >
-              <div className="size-8">{skill.logo()}</div>
-              <p className="text-xs text-pretty text-black text-center font-light">{skill.name}</p>
-            </div>
-          ))}
-        </SkillsContainer>
+    <section id="skills" className="w-full h-auto flex flex-col items-center py-12 px-6 relative z-10">
+      <div className="w-full max-w-4xl">
+        <h1 className="text-4xl font-bold text-white text-center mb-3">Skills</h1>
+        <p className="text-lg text-gray-300 text-center mb-8 max-w-2xl mx-auto">
+          My expertise in <span className="text-primary">artificial intelligence</span> and <span className="text-primary">modern web development</span>
+        </p>
+        
+        <div className="space-y-6">
+          <SkillsContainer title="Data Science & Machine Learning">
+            {Object.entries(SKILLS).filter(([_, skill]) => skill.category === "ia").map(([name, skill]) => (
+              <div
+                key={skill.name}
+                className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl w-28 h-28 flex flex-col items-center justify-center gap-2 hover:bg-white/20 hover:scale-105 transition-all duration-200 cursor-pointer group p-3"
+                onClick={() => handleSkillClick(skill)}
+              >
+                <div className="size-8 group-hover:scale-110 transition-transform duration-200 flex-shrink-0">{skill.logo()}</div>
+                <p className="text-xs text-white text-center font-medium leading-tight overflow-hidden text-ellipsis">{skill.name}</p>
+              </div>
+            ))}
+          </SkillsContainer>
+          
+          <SkillsContainer title="Software Development">
+            {Object.entries(SKILLS).filter(([_, skill]) => skill.category === "web").map(([name, skill]) => (
+              <div
+                key={skill.name}
+                className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl w-28 h-28 flex flex-col items-center justify-center gap-2 hover:bg-white/20 hover:scale-105 transition-all duration-200 cursor-pointer group p-3"
+                onClick={() => handleSkillClick(skill)}
+              >
+                <div className="size-8 group-hover:scale-110 transition-transform duration-200 flex-shrink-0">{skill.logo()}</div>
+                <p className="text-xs text-white text-center font-medium leading-tight overflow-hidden text-ellipsis">{skill.name}</p>
+              </div>
+            ))}
+          </SkillsContainer>
+        </div>
       </div>
 
       {/* Modal */}
