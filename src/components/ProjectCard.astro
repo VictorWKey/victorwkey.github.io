@@ -1,8 +1,7 @@
 ---
 const {title, desc, technologies, img, webSite, repository, videoUrl, category, images} = Astro.props;
 
-// Check if we have multiple images for modal
-const hasMultipleImages = images && images.length > 1;
+// Check if we have images for modal
 const hasImages = images && images.length > 0;
 
 // Determine which buttons to show
@@ -135,7 +134,8 @@ const hasAnyLink = hasRepository || hasWebSite || hasVideo || hasImages;
   </div>
 </div>
 
-<script define:vars={{ title, videoUrl, webSite, hasImages, images }}>
+<script define:vars={{ title, videoUrl, webSite, hasImages, images }} is:inline>
+  // @ts-nocheck
   // Handle card click with priority: video > demo > images
   window.handleCardClick = function(projectTitle, video, demo, projectImages) {
     // Priority order: video > demo > images
