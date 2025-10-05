@@ -90,6 +90,7 @@ const TAGS = {
 }
 
 const PROJECTS = [
+  // Full-Stack Projects First
   {
     title: "AlineaDent - Dental Clinic Management System",
     desc: "Comprehensive dental clinic management system built with Next.js and Python/FastAPI. Manages patients, appointments, and dental treatments with visual calendar, integrated WhatsApp communication, AI conversation monitoring, and automatic report generation.",
@@ -98,6 +99,18 @@ const PROJECTS = [
     videoUrl: "https://youtu.be/BtYnzBaqjCY",
     category: "Full-Stack"
   },
+  {
+    title: "Work Orders Management System - Atta Montacargas",
+    desc: "Mobile application for work order management developed with React Native and FastAPI. It includes user role management, work order creation and tracking, automatic PDF generation, a real-time metrics dashboard, and a complete status management system.",
+    technologies: [TAGS.JavaScript, TAGS.HTML, TAGS.CSS, TAGS.React, TAGS.Python, TAGS.FastAPI],
+    img: "/img/attamontacargas-sistema.png",
+    images: [
+      { src: "/img/attamontacargas-sistema-foto1.png", alt: "Panel de gestión de órdenes" },
+      { src: "/img/attamontacargas-sistema-foto2.png", alt: "Generación de reportes PDF" }
+    ],
+    category: "Full-Stack"
+  },
+  // Frontend Projects Second
   {
     title: "Muscle Factory Gym Website",
     desc: "Informational gym website developed with Astro and React. Features service sections, supplement comparison tool with functional shopping cart, detailed product catalog, and comprehensive personal training information.",
@@ -115,17 +128,6 @@ const PROJECTS = [
     site: "https://shop-app-w-react.netlify.app/",
     repository: "https://github.com/VictorWKey/fronted-shop-react-app",
     category: "Frontend"
-  },
-  {
-    title: "Work Orders Management System - Atta Montacargas",
-    desc: "Mobile application for work order management developed with React Native and FastAPI. It includes user role management, work order creation and tracking, automatic PDF generation, a real-time metrics dashboard, and a complete status management system.",
-    technologies: [TAGS.JavaScript, TAGS.HTML, TAGS.CSS, TAGS.React, TAGS.Python, TAGS.FastAPI],
-    img: "/img/attamontacargas-sistema.png",
-    images: [
-      { src: "/img/attamontacargas-sistema-foto1.png", alt: "Panel de gestión de órdenes" },
-      { src: "/img/attamontacargas-sistema-foto2.png", alt: "Generación de reportes PDF" }
-    ],
-    category: "Full-Stack"
   }
 ]
 
