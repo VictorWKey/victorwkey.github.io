@@ -1,5 +1,6 @@
 ---
 import ProjectCard from './ProjectCard.astro'
+import ProjectImageModal from './ProjectImageModal.astro'
 import JavaScript from "../icons/JavaScript";
 import HTML from "../icons/HTML";
 import CSS from "../icons/CSS.jsx";
@@ -13,6 +14,7 @@ import FastAPI from "../icons/FastAPI.jsx";
 import AWS from "../icons/AWS.jsx";
 import MongoDB from "../icons/MongoDB.jsx";
 import PostgreSQL from "../icons/PostgreSQL.jsx";
+import NextJS from "../icons/NextJS.jsx";
 
 const TAGS = {
   JavaScript: {
@@ -79,49 +81,51 @@ const TAGS = {
     name: "PostgreSQL",
     logo: PostgreSQL,
     category: "database"
+  },
+  NextJS: {
+    name: "Next.js",
+    logo: NextJS,
+    category: "web"
   }
 }
 
 const PROJECTS = [
   {
-    title: "AI-Powered Task Manager",
-    desc: "Intelligent task management system that uses machine learning to prioritize tasks, predict completion times, and suggest optimal scheduling based on user behavior patterns.",
-    technologies: [TAGS.Python, TAGS.React, TAGS.TensorFlow, TAGS.FastAPI, TAGS.PostgreSQL],
-    img: "../../img/project-todos.png",
-    site: "https://ai-task-manager-demo.com",
-    repository: "https://github.com/victorwkey/ai-task-manager",
-    category: "AI Application"
-  },
-  {
-    title: "Smart Document Classifier",
-    desc: "ML-powered document classification system that automatically categorizes and extracts key information from various document types using NLP and computer vision techniques.",
-    technologies: [TAGS.Python, TAGS.TensorFlow, TAGS.FastAPI, TAGS.React, TAGS.AWS],
-    img: "../../img/project-fronted.png",
-    repository: "https://github.com/victorwkey/document-classifier",
-    category: "Machine Learning"
-  },
-  {
-    title: "Real-time Analytics Dashboard",
-    desc: "Full-stack web application with real-time data visualization and predictive analytics. Features interactive charts, automated reports, and ML-driven insights for business intelligence.",
-    technologies: [TAGS.TypeScript, TAGS.React, TAGS.Python, TAGS.MongoDB, TAGS.AWS],
-    img: "../../img/project-todos.png",
-    videoUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    title: "AlineaDent - Dental Clinic Management System",
+    desc: "Comprehensive dental clinic management system built with Next.js and Python/FastAPI. Manages patients, appointments, and dental treatments with visual calendar, integrated WhatsApp communication, AI conversation monitoring, and automatic report generation.",
+    technologies: [TAGS.JavaScript, TAGS.HTML, TAGS.CSS, TAGS.NextJS, TAGS.Tailwind, TAGS.Python, TAGS.FastAPI, TAGS.PostgreSQL],
+    img: "/img/alineadent-sistema.png",
+    videoUrl: "https://youtu.be/BtYnzBaqjCY",
     category: "Full-Stack"
   },
   {
-    title: "Computer Vision Art Generator",
-    desc: "AI-powered application that transforms photos into artistic masterpieces using deep learning models. Features style transfer, image enhancement, and custom filter creation.",
-    technologies: [TAGS.Python, TAGS.TensorFlow, TAGS.React],
-    img: "../../img/project-fronted.png",
-    site: "https://cv-art-generator.netlify.app",
-    category: "Computer Vision"
+    title: "Muscle Factory Gym Website",
+    desc: "Informational gym website developed with Astro and React. Features service sections, supplement comparison tool with functional shopping cart, detailed product catalog, and comprehensive personal training information.",
+    technologies: [TAGS.JavaScript, TAGS.HTML, TAGS.CSS, TAGS.Astro, TAGS.React, TAGS.Tailwind],
+    img: "/img/musclefactory-website.png",
+    site: "https://muscle-factory-website.vercel.app/",
+    repository: "https://github.com/VictorWKey/muscle-factory-website",
+    category: "Frontend"
   },
   {
-    title: "Private Research Project",
-    desc: "Confidential machine learning research project focused on natural language processing and sentiment analysis for enterprise applications. Results published in academic conferences.",
-    technologies: [TAGS.Python, TAGS.TensorFlow, TAGS.AWS],
-    img: "../../img/project-todos.png",
-    category: "Research"
+    title: "E-Commerce Frontend",
+    desc: "Modern e-commerce platform built with React and Tailwind CSS. Features interactive shopping cart, advanced filtering system, category navigation, detailed product views, and fully responsive design.",
+    technologies: [TAGS.JavaScript, TAGS.HTML, TAGS.CSS, TAGS.React, TAGS.Tailwind],
+    img: "/img/frontend-ecommerce.png",
+    site: "https://shop-app-w-react.netlify.app/",
+    repository: "https://github.com/VictorWKey/fronted-shop-react-app",
+    category: "Frontend"
+  },
+  {
+    title: "Work Orders Management System - Atta Montacargas",
+    desc: "Mobile application for work order management developed with React Native and FastAPI. It includes user role management, work order creation and tracking, automatic PDF generation, a real-time metrics dashboard, and a complete status management system.",
+    technologies: [TAGS.JavaScript, TAGS.HTML, TAGS.CSS, TAGS.React, TAGS.Python, TAGS.FastAPI],
+    img: "/img/attamontacargas-sistema.png",
+    images: [
+      { src: "/img/attamontacargas-sistema-foto1.png", alt: "Panel de gestión de órdenes" },
+      { src: "/img/attamontacargas-sistema-foto2.png", alt: "Generación de reportes PDF" }
+    ],
+    category: "Full-Stack"
   }
 ]
 
@@ -133,14 +137,51 @@ const PROJECTS = [
 <section id="projects" class="w-full min-h-screen flex flex-col items-center justify-center py-16 px-6 relative z-10">
   <div class="w-full max-w-6xl">
     <h1 class="text-4xl font-bold text-white text-center mb-4 z-10">Featured Projects</h1>
-    <p class="text-xl text-gray-300 text-center mb-12 max-w-3xl mx-auto">
-      Explore my latest AI-powered applications and software solutions that demonstrate the intersection of 
-      <span class="text-primary">artificial intelligence</span> and <span class="text-primary">modern web development</span>
+    <p class="text-xl text-gray-300 text-center mb-8 max-w-3xl mx-auto">
+      Explore my web development projects and applications ranging from business management systems to 
+      <span class="text-primary">e-commerce</span> and <span class="text-primary">informational websites</span>
     </p>
     
-    <div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8 items-start">
+    <!-- Filter Buttons -->
+    <div class="flex flex-wrap justify-center gap-4 mb-12">
+      <button 
+        class="filter-btn active px-6 py-3 rounded-full font-medium transition-all duration-300 border-2 hover:scale-105"
+        data-filter="all"
+      >
+        <span class="flex items-center gap-2">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+          </svg>
+          All Projects
+        </span>
+      </button>
+      <button 
+        class="filter-btn px-6 py-3 rounded-full font-medium transition-all duration-300 border-2 hover:scale-105"
+        data-filter="Frontend"
+      >
+        <span class="flex items-center gap-2">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+          </svg>
+          Frontend
+        </span>
+      </button>
+      <button 
+        class="filter-btn px-6 py-3 rounded-full font-medium transition-all duration-300 border-2 hover:scale-105"
+        data-filter="Full-Stack"
+      >
+        <span class="flex items-center gap-2">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path>
+          </svg>
+          Full-Stack
+        </span>
+      </button>
+    </div>
+    
+    <div id="projects-container" class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8 items-stretch">
       {PROJECTS.map((project, index) => (
-        <div class="transform hover:scale-105 transition-transform duration-300">
+        <div class={`project-item transform hover:scale-105 transition-all duration-500 h-full`} data-category={project.category}>
           <ProjectCard 
             title={project.title} 
             desc={project.desc} 
@@ -150,9 +191,102 @@ const PROJECTS = [
             videoUrl={project.videoUrl}
             img={project.img}
             category={project.category}
+            images={project.images}
           />
         </div>
       ))}
     </div>
   </div>
 </section>
+
+<!-- Project Images Modal -->
+<ProjectImageModal />
+
+<style>
+  /* Filter Button Styles */
+  .filter-btn {
+    background: rgba(255, 255, 255, 0.05);
+    color: rgba(255, 255, 255, 0.8);
+    border-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+  }
+
+  .filter-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border-color: rgba(255, 255, 255, 0.4);
+    transform: scale(1.05);
+  }
+
+  .filter-btn.active {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-color: #667eea;
+    box-shadow: 0 8px 32px rgba(102, 126, 234, 0.3);
+  }
+
+  .filter-btn.active:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 40px rgba(102, 126, 234, 0.4);
+  }
+
+  /* Project Animation */
+  .project-item {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  .project-item.hidden {
+    opacity: 0;
+    transform: scale(0.8);
+    pointer-events: none;
+    height: 0;
+    margin: 0;
+    overflow: hidden;
+  }
+
+  .project-item.show {
+    opacity: 1;
+    transform: scale(1);
+    pointer-events: auto;
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const projectItems = document.querySelectorAll('.project-item');
+    
+    // Filter functionality
+    filterButtons.forEach(button => {
+      button.addEventListener('click', function(event) {
+        const target = event.currentTarget as HTMLButtonElement;
+        const filter = target.getAttribute('data-filter');
+        
+        // Update active button
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        target.classList.add('active');
+        
+        // Filter projects with smooth animation
+        projectItems.forEach(item => {
+          const category = item.getAttribute('data-category');
+          
+          if (filter === 'all' || category === filter) {
+            // Show project
+            item.classList.remove('hidden');
+            item.classList.add('show');
+          } else {
+            // Hide project
+            item.classList.remove('show');
+            item.classList.add('hidden');
+          }
+        });
+      });
+    });
+    
+    // Initialize - show all projects
+    projectItems.forEach(item => {
+      item.classList.add('show');
+    });
+  });
+</script>

@@ -1,0 +1,303 @@
+---
+// Modal component for displaying project images
+---
+
+<div id="project-images-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/50 backdrop-blur-sm">
+  <div class="relative w-full h-full max-w-7xl max-h-[95vh] mx-2 sm:mx-4 flex flex-col">
+    {/* Header */}
+    <div class="flex items-center justify-between p-3 sm:p-6 bg-white/10 backdrop-blur-md rounded-t-2xl border-b border-white/10">
+      <div class="flex items-center space-x-2 sm:space-x-4 flex-1 min-w-0">
+        <h3 id="modal-title" class="text-white font-bold text-lg sm:text-2xl truncate"></h3>
+        <span id="modal-counter" class="text-gray-300 text-sm sm:text-lg bg-white/10 px-2 sm:px-3 py-1 rounded-full flex-shrink-0"></span>
+      </div>
+      
+      <button
+        onclick="closeProjectModal()"
+        class="p-2 sm:p-3 text-gray-300 hover:text-white hover:bg-white/20 rounded-xl transition-all duration-200 group flex-shrink-0"
+        aria-label="Close modal"
+      >
+        <svg class="w-5 h-5 sm:w-7 sm:h-7 group-hover:rotate-90 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+    </div>
+
+    {/* Content Container with Navigation */}
+    <div class="flex-1 flex items-center justify-center p-3 sm:p-6 relative">
+      {/* Navigation Arrows - Outside Image */}
+      <button
+        onclick="prevProjectImage()"
+        id="modal-prev-btn"
+        class="absolute left-1 sm:left-2 top-1/2 transform -translate-y-1/2 p-2 sm:p-3 bg-white/10 hover:bg-white/20 text-white rounded-full transition-all duration-200 hover:scale-110 group backdrop-blur-sm border border-white/20"
+        aria-label="Previous image"
+      >
+        <svg class="w-5 h-5 sm:w-6 sm:h-6 group-hover:-translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+        </svg>
+      </button>
+      
+      {/* Image Container with Zoom Support */}
+      <div class="flex-1 flex items-center justify-center mx-8 sm:mx-16 overflow-hidden">
+        <div id="image-zoom-container" class="max-w-full max-h-full overflow-auto touch-pan-x touch-pan-y">
+          <img
+            id="modal-main-image"
+            src=""
+            alt=""
+            class="max-w-full max-h-full object-contain rounded-lg shadow-2xl transition-transform duration-300"
+            style="touch-action: pan-x pan-y zoom-in; cursor: zoom-in;"
+          />
+        </div>
+      </div>
+      
+      <button
+        onclick="nextProjectImage()"
+        id="modal-next-btn"
+        class="absolute right-1 sm:right-2 top-1/2 transform -translate-y-1/2 p-2 sm:p-3 bg-white/10 hover:bg-white/20 text-white rounded-full transition-all duration-200 hover:scale-110 group backdrop-blur-sm border border-white/20"
+        aria-label="Next image"
+      >
+        <svg class="w-5 h-5 sm:w-6 sm:h-6 group-hover:translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+        </svg>
+      </button>
+    </div>
+
+    {/* Footer with Thumbnails */}
+    <div class="p-3 sm:p-6 bg-white/5 backdrop-blur-md rounded-b-2xl border-t border-white/10">
+      <div class="flex justify-center space-x-2 sm:space-x-3 max-w-full overflow-x-auto pb-2" id="modal-thumbnails">
+        <!-- Thumbnails will be populated dynamically -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Global variables for modal state
+  let currentModalImages = [];
+  let currentModalIndex = 0;
+  let currentModalTitle = '';
+
+  // Open project images modal
+  window.openProjectModal = function(title, images) {
+    currentModalImages = images || [];
+    currentModalIndex = 0;
+    currentModalTitle = title;
+    
+    if (currentModalImages.length === 0) return;
+    
+    const modal = document.getElementById('project-images-modal');
+    const titleElement = document.getElementById('modal-title');
+    const prevBtn = document.getElementById('modal-prev-btn');
+    const nextBtn = document.getElementById('modal-next-btn');
+    
+    // Set title
+    if (titleElement) titleElement.textContent = title;
+    
+    // Show/hide navigation buttons based on image count
+    if (currentModalImages.length <= 1) {
+      if (prevBtn) prevBtn.style.display = 'none';
+      if (nextBtn) nextBtn.style.display = 'none';
+    } else {
+      if (prevBtn) prevBtn.style.display = 'block';
+      if (nextBtn) nextBtn.style.display = 'block';
+    }
+    
+    // Show modal
+    if (modal) {
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      document.body.style.overflow = 'hidden';
+    }
+    
+    // Update content
+    updateModalContent();
+    createThumbnails();
+    setupImageZoom();
+    
+    // Add keyboard listeners
+    document.addEventListener('keydown', handleModalKeydown);
+  };
+
+  // Close project modal
+  window.closeProjectModal = function() {
+    const modal = document.getElementById('project-images-modal');
+    if (modal) {
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+      document.body.style.overflow = 'unset';
+    }
+    
+    // Remove keyboard listeners
+    document.removeEventListener('keydown', handleModalKeydown);
+  };
+
+  // Navigate to next image
+  window.nextProjectImage = function() {
+    if (currentModalImages.length > 1) {
+      currentModalIndex = (currentModalIndex + 1) % currentModalImages.length;
+      resetImageZoom();
+      updateModalContent();
+      setupImageZoom();
+    }
+  };
+
+  // Navigate to previous image
+  window.prevProjectImage = function() {
+    if (currentModalImages.length > 1) {
+      currentModalIndex = (currentModalIndex - 1 + currentModalImages.length) % currentModalImages.length;
+      resetImageZoom();
+      updateModalContent();
+      setupImageZoom();
+    }
+  };
+
+  // Go to specific image
+  window.goToProjectImage = function(index) {
+    if (index >= 0 && index < currentModalImages.length) {
+      currentModalIndex = index;
+      resetImageZoom();
+      updateModalContent();
+      setupImageZoom();
+    }
+  };
+
+  // Setup image zoom functionality
+  function setupImageZoom() {
+    const image = document.getElementById('modal-main-image');
+    if (!image) return;
+
+    // Double tap to zoom on mobile
+    let lastTap = 0;
+    image.addEventListener('touchend', function(e) {
+      const currentTime = new Date().getTime();
+      const tapLength = currentTime - lastTap;
+      if (tapLength < 500 && tapLength > 0) {
+        e.preventDefault();
+        toggleZoom();
+      }
+      lastTap = currentTime;
+    });
+
+    // Click to zoom on desktop
+    image.addEventListener('click', function(e) {
+      e.preventDefault();
+      toggleZoom();
+    });
+  }
+
+  // Toggle image zoom
+  function toggleZoom() {
+    const image = document.getElementById('modal-main-image');
+    const container = document.getElementById('image-zoom-container');
+    if (!image || !container) return;
+
+    const isCurrentlyZoomed = image.style.transform.includes('scale(2)');
+
+    if (isCurrentlyZoomed) {
+      // Zoom out
+      image.style.transform = 'scale(1)';
+      image.style.cursor = 'zoom-in';
+      container.style.overflow = 'hidden';
+    } else {
+      // Zoom in
+      image.style.transform = 'scale(2)';
+      image.style.cursor = 'zoom-out';
+      container.style.overflow = 'auto';
+    }
+  }
+
+  // Reset image zoom
+  function resetImageZoom() {
+    const image = document.getElementById('modal-main-image');
+    const container = document.getElementById('image-zoom-container');
+    if (image) {
+      image.style.transform = 'scale(1)';
+      image.style.cursor = 'zoom-in';
+    }
+    if (container) {
+      container.style.overflow = 'hidden';
+    }
+  }
+
+  // Update modal content (image and counter)
+  function updateModalContent() {
+    const mainImage = document.getElementById('modal-main-image');
+    const counterElement = document.getElementById('modal-counter');
+    
+    if (mainImage && currentModalImages[currentModalIndex]) {
+      const currentImage = currentModalImages[currentModalIndex];
+      mainImage.src = currentImage.src;
+      mainImage.alt = currentImage.alt || `${currentModalTitle} - Image ${currentModalIndex + 1}`;
+    }
+    
+    if (counterElement) {
+      counterElement.textContent = `${currentModalIndex + 1} of ${currentModalImages.length}`;
+    }
+    
+    // Update thumbnail selection
+    updateThumbnailSelection();
+  }
+
+  // Create thumbnail navigation
+  function createThumbnails() {
+    const thumbnailsContainer = document.getElementById('modal-thumbnails');
+    if (!thumbnailsContainer || currentModalImages.length <= 1) return;
+    
+    thumbnailsContainer.innerHTML = '';
+    
+    currentModalImages.forEach((image, index) => {
+      const thumbnailBtn = document.createElement('button');
+      thumbnailBtn.className = `flex-shrink-0 w-16 h-12 sm:w-20 sm:h-16 rounded-lg overflow-hidden border-2 transition-all duration-200 ${
+        index === currentModalIndex
+          ? 'border-primary ring-2 ring-primary/50 scale-105'
+          : 'border-gray-600 hover:border-gray-400 hover:scale-105'
+      }`;
+      thumbnailBtn.onclick = () => goToProjectImage(index);
+      
+      const thumbnailImg = document.createElement('img');
+      thumbnailImg.src = image.src;
+      thumbnailImg.alt = `Thumbnail ${index + 1}`;
+      thumbnailImg.className = 'w-full h-full object-cover';
+      
+      thumbnailBtn.appendChild(thumbnailImg);
+      thumbnailsContainer.appendChild(thumbnailBtn);
+    });
+  }
+
+  // Update thumbnail selection
+  function updateThumbnailSelection() {
+    const thumbnails = document.querySelectorAll('#modal-thumbnails button');
+    thumbnails.forEach((btn, index) => {
+      if (index === currentModalIndex) {
+        btn.className = btn.className.replace('border-gray-600 hover:border-gray-400', 'border-primary ring-2 ring-primary/50 scale-105');
+      } else {
+        btn.className = btn.className.replace('border-primary ring-2 ring-primary/50 scale-105', 'border-gray-600 hover:border-gray-400');
+      }
+    });
+  }
+
+  // Handle keyboard navigation
+  function handleModalKeydown(e) {
+    const modal = document.getElementById('project-images-modal');
+    if (!modal || modal.classList.contains('hidden')) return;
+    
+    switch(e.key) {
+      case 'Escape':
+        closeProjectModal();
+        break;
+      case 'ArrowLeft':
+        prevProjectImage();
+        break;
+      case 'ArrowRight':
+        nextProjectImage();
+        break;
+    }
+  }
+
+  // Close modal when clicking backdrop
+  document.addEventListener('click', (e) => {
+    const modal = document.getElementById('project-images-modal');
+    if (e.target === modal) {
+      closeProjectModal();
+    }
+  });
+</script>
