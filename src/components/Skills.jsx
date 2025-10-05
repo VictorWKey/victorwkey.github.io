@@ -193,10 +193,10 @@ const SkillsSection = () => {
   };
 
   return (
-    <section id="skills" className="w-full h-auto flex flex-col items-center py-12 px-6 relative z-10">
+    <section id="skills" className="w-full h-auto flex flex-col items-center py-12 px-6 relative z-10 scroll-mt-20">
       <div className="w-full max-w-4xl">
-        <h1 className="text-4xl font-bold text-white text-center mb-3">Skills</h1>
-        <p className="text-lg text-gray-300 text-center mb-8 max-w-2xl mx-auto">
+        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white text-center mb-3 pt-4">Skills</h1>
+        <p className="text-base sm:text-lg lg:text-xl text-gray-300 text-center mb-8 max-w-2xl mx-auto">
           My expertise in <span className="text-primary">artificial intelligence</span> and <span className="text-primary">modern web development</span>
         </p>
         
