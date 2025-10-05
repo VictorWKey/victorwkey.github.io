@@ -1,12 +1,12 @@
 <div align="center">
 
-![Header](https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6&height=200&section=header&text=Víctor%20López&fontSize=80&fontAlignY=35&animation=twinkling&fontColor=ffffff&desc=AI%20Software%20Engineer%20|%20Building%20Intelligent%20Systems&descAlignY=60&descAlign=50)
+![Header](https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=1,2,3,4,5&height=200&section=header&text=Víctor%20López&fontSize=80&fontAlignY=35&animation=twinkling&fontColor=ffffff&desc=AI%20Software%20Engineer%20|%20Building%20Intelligent%20Systems&descAlignY=60&descAlign=50)
 
 </div>
 
 <div align="center">
 
-[![Portfolio](https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://your-portfolio-link.com)
+[![Portfolio](https://img.shields.io/badge/Portfolio-4bbf6b?style=for-the-badge&logo=vercel&logoColor=white)](https://victorwkey.com)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/victor-angel-lopez-556605245/)
 [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/victorwkey)
 [![X](https://img.shields.io/badge/X-000000?style=for-the-badge&logo=x&logoColor=white)](https://x.com/victorwkey)
@@ -88,9 +88,9 @@ Open to collaborating on AI projects and exploring new opportunities.
 
 <div align="center">
 
-[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:your-email@example.com)
+[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:victorwkey@gmail.com)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/victor-angel-lopez-556605245/)
-[![Portfolio](https://img.shields.io/badge/Portfolio-FF7139?style=for-the-badge&logo=firefox&logoColor=white)](https://your-portfolio-link.com)
+[![Portfolio](https://img.shields.io/badge/Portfolio-4bbf6b?style=for-the-badge&logo=firefox&logoColor=white)](https://victorwkey.com)
 
 </div>
 
