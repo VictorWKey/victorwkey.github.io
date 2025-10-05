@@ -55,7 +55,7 @@ function MovilMenu() {
             onClick={() => handleNavigation('#projects')}
             className="w-full text-left block px-6 py-4 text-gray-700 hover:text-primary hover:bg-primary/5 transition-all duration-200 border-l-4 border-transparent hover:border-primary"
           >
-            <span className="text-base font-medium">Projects</span>
+            <span className="text-base font-medium">Experience</span>
           </button>
           
           <button

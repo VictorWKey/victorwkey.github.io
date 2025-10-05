@@ -24,7 +24,7 @@ function Navbar() {
           href="#projects" 
           className="group relative font-semibold text-white cursor-pointer transition-all duration-200 hover:text-white/90 py-2 px-4 rounded-full hover:bg-white/10"
         >
-          Projects
+          Experience
           <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-white transition-all duration-200 group-hover:w-full group-hover:left-0"></span>
         </a>
         
