@@ -1,71 +1,104 @@
-# 👋 Hi, I’m Víctor López  
-**AI Engineer | LLMs | Agents | RAG | Infrastructure Optimization**  
-*Building scalable, cost-efficient, and secure AI systems.*
-
----
-
-## 📚 About Me
-
-I’m an AI Engineer passionate about building intelligent, scalable, and secure AI systems. With a full-stack background, I integrate advanced AI into robust web and mobile applications, ensuring high performance, seamless UX, and secure deployment on private infrastructure. My focus is on developing **cost-effective** and **production-ready** AI workflows for startups and enterprises alike. I quickly learn new concepts and keep up to date with the latest advancements in the AI field.
-
-**Key Areas of Expertise:**
-- **Large Language Models (LLMs):** GPT (OpenAI), LLaMA (Meta), Claude (Anthropic), open-source (Hugging Face) and others.
-- **Retrieval-Augmented Generation (RAG):** Designing and integrating RAG pipelines to enhance context-aware responses.
-- **AI Agents & Multi-Agent Systems:** Building intelligent agents capable of tool use and complex reasoning.
-- **Fine-Tuning & Prompt Engineering:** Customizing models for specific tasks and optimizing prompt strategies.
-- **Model Optimization & Cost Efficiency:** Improving performance and reducing infrastructure costs on private and cloud environments.
-
-
----
-
-## 🛠️ Skills & Tech Stack  
-
-### Programming 
-- **Python** 🐍: Core language for AI development, scripting, and prototyping.  
-- **TensorFlow** & **PyTorch**: Training, fine-tuning, and deploying deep learning models (NLP, vision, agents).  
-- **FastAPI**: Building high-performance APIs for serving ML models and AI agents.  
-- **SQL**: Managing and querying structured datasets for training and evaluation.  
-- **LangChain**: Orchestrating LLM pipelines, agents, and RAG systems.  
-- **Custom Tools**: Building vector search, embedding pipelines, and inference wrappers.
-
-### Deployment & Infrastructure  
-- **Docker**  
-- **AWS Cloud Computing ☁️**
-
-### Full Stack Development  
-- **Frontend**: React ⚛️ | Astro | JavaScript | HTML/CSS  
-- **Backend**: FastAPI | Node.js  
-
----
-
-### 🚀 Projects
-
-#### **FitCoachAI** – Workout Progress Tracker  
-FitCoachAI is a mobile app powered by a multi-tool, LLM-based agent that helps intermediate-level lifters track and analyze their training progress. The app features a **Simple RAG System** that infers missing details from past workouts, providing additional context for more accurate responses. It also uses **NL2SQL**, converting natural language queries into SQL commands for logging and updating workout data. The **QA system** allows users to ask about their training history and receive insights based on past sessions. FitCoachAI simplifies workout tracking, helping users stay focused on their fitness goals.
-
----
-
-## 📈 GitHub Stats  
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=victorwkey&show_icons=true&count_private=true&hide_border=true" />
+
+![Header](https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6&height=200&section=header&text=Víctor%20López&fontSize=80&fontAlignY=35&animation=twinkling&fontColor=ffffff&desc=AI%20Software%20Engineer%20|%20Building%20Intelligent%20Systems&descAlignY=60&descAlign=50)
+
+</div>
+
+<div align="center">
+
+[![Portfolio](https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://your-portfolio-link.com)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/victor-angel-lopez-556605245/)
+[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/victorwkey)
+[![X](https://img.shields.io/badge/X-000000?style=for-the-badge&logo=x&logoColor=white)](https://x.com/victorwkey)
+
 </div>
 
 ---
 
-## 🌐 Let’s Connect  
-I'm open to collaborating on cutting-edge AI projects, sharing ideas, or exploring opportunities. Reach out through:
+## 🚀 About Me
 
-- [LinkedIn](https://www.linkedin.com/in/victor-angel-lopez-556605245/)  
-- [GitHub](https://github.com/victorwkey)  
-- [X ](https://x.com/victorwkey)  
-- [Portfolio](https://victorwkey.com)
+AI Software Engineer specialized in building intelligent, scalable systems. I combine full-stack development expertise with advanced AI capabilities to create production-ready solutions that solve real-world problems.
 
----
-
-## 💬 Contact  
-📬 You can contact me via GitHub, LinkedIn, or email to discuss AI collaborations, job opportunities, or just to talk about LLMs, RAG, and AI systems.
+**Core Focus:**
+- 🤖 **AI Integration:** LLMs, RAG systems, and intelligent agents
+- 🏗️ **Full-Stack Development:** Modern web applications with AI capabilities  
+- ⚡ **Performance Optimization:** Cost-efficient, scalable AI workflows
+- 🔒 **Secure Deployment:** Private infrastructure and cloud solutions
 
 ---
 
-🚀 *Let’s build the future of AI — powerful, optimized, and secure.*
+## 🛠️ Tech Stack
+
+**AI & Machine Learning**
+```
+LLMs • RAG • Agents • TensorFlow • PyTorch • LangChain • Hugging Face
+```
+
+**Backend Development**
+```  
+Python • FastAPI • Node.js • PostgreSQL • MongoDB • Docker • AWS
+```
+
+**Frontend Development**
+```
+React • Next.js • Astro • TypeScript • Tailwind CSS • JavaScript
+```
+
+---
+
+## 💼 Featured Projects
+
+### 🦷 AlineaDent - Dental Clinic Management System
+**Full-Stack Solution** | *Next.js • FastAPI • PostgreSQL*
+- Complete clinic management with appointment scheduling and patient records
+- AI-powered WhatsApp integration for automated communication
+- Visual calendar interface and automated report generation
+
+### 🏗️ Atta Montacargas - Work Orders Management  
+**Full-Stack Application** | *React Native • FastAPI*
+- Mobile work order management with role-based access control
+- Real-time metrics dashboard and automatic PDF generation
+- Complete workflow tracking and status management
+
+### 💪 Muscle Factory Gym Website
+**Frontend Project** | *Astro • React • Tailwind*
+- Modern gym website with service information and supplement catalog
+- Interactive shopping cart with product comparison tools
+- [Live Demo](https://muscle-factory-website.vercel.app/) • [Source Code](https://github.com/VictorWKey/muscle-factory-website)
+
+### 🛍️ E-Commerce Frontend Platform
+**Frontend Application** | *React • Tailwind CSS*
+- Modern e-commerce interface with advanced filtering system
+- Interactive shopping cart and responsive design
+- [Live Demo](https://shop-app-w-react.netlify.app/) • [Source Code](https://github.com/VictorWKey/fronted-shop-react-app)---
+
+---
+
+## � GitHub Stats
+
+<div align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=victorwkey&show_icons=true&count_private=true&hide_border=true&theme=tokyonight" />
+</div>
+
+---
+
+## 🤝 Let's Connect
+
+Open to collaborating on AI projects and exploring new opportunities.
+
+<div align="center">
+
+[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:your-email@example.com)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/victor-angel-lopez-556605245/)
+[![Portfolio](https://img.shields.io/badge/Portfolio-FF7139?style=for-the-badge&logo=firefox&logoColor=white)](https://your-portfolio-link.com)
+
+</div>
+
+---
+
+<div align="center">
+
+**Building the future of AI — one intelligent system at a time** 🚀
+
+</div>
 
