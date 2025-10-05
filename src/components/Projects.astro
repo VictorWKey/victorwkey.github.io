@@ -1,8 +1,8 @@
 ---
 import ProjectCard from './ProjectCard.astro'
 import ProjectImageModal from './ProjectImageModal.astro'
-import JavaScript from "../icons/JavaScript";
-import HTML from "../icons/HTML";
+import JavaScript from "../icons/JavaScript.jsx";
+import HTML from "../icons/HTML.jsx";
 import CSS from "../icons/CSS.jsx";
 import ReactLogo from "../icons/ReactLogo.jsx";
 import AstroLogo from "../icons/AstroLogo.jsx";
@@ -232,25 +232,15 @@ const PROJECTS = [
     box-shadow: 0 12px 40px rgba(102, 126, 234, 0.4);
   }
 
-  /* Project Animation */
+  /* Project Animation - Simplified */
   .project-item {
     opacity: 1;
     transform: scale(1);
+    transition: all 0.3s ease;
   }
 
   .project-item.hidden {
-    opacity: 0;
-    transform: scale(0.8);
-    pointer-events: none;
-    height: 0;
-    margin: 0;
-    overflow: hidden;
-  }
-
-  .project-item.show {
-    opacity: 1;
-    transform: scale(1);
-    pointer-events: auto;
+    display: none !important;
   }
 </style>
 
@@ -259,7 +249,7 @@ const PROJECTS = [
     const filterButtons = document.querySelectorAll('.filter-btn');
     const projectItems = document.querySelectorAll('.project-item');
     
-    // Filter functionality
+    // Filter functionality - Simplified
     filterButtons.forEach(button => {
       button.addEventListener('click', function(event) {
         const target = event.currentTarget as HTMLButtonElement;
@@ -269,26 +259,17 @@ const PROJECTS = [
         filterButtons.forEach(btn => btn.classList.remove('active'));
         target.classList.add('active');
         
-        // Filter projects with smooth animation
+        // Filter projects instantly
         projectItems.forEach(item => {
           const category = item.getAttribute('data-category');
           
           if (filter === 'all' || category === filter) {
-            // Show project
             item.classList.remove('hidden');
-            item.classList.add('show');
           } else {
-            // Hide project
-            item.classList.remove('show');
             item.classList.add('hidden');
           }
         });
       });
-    });
-    
-    // Initialize - show all projects
-    projectItems.forEach(item => {
-      item.classList.add('show');
     });
   });
 </script>
