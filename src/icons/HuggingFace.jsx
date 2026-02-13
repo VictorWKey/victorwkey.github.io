@@ -1,18 +1,18 @@
 const HuggingFace = () => (
   
-<svg class="w-full h-full" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" className="iconify iconify--noto" preserveAspectRatio="xMidYMid meet">
+<svg className="w-full h-full" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" preserveAspectRatio="xMidYMid meet">
 
 <radialGradient id="IconifyId17ecdb2904d178eab9208" cx="63.6" cy="-2088.9" r="56.96" gradientTransform="matrix(1 0 0 -1 0 -2026)" gradientUnits="userSpaceOnUse">
 
-<stop offset=".5" stop-color="#fde030">
+<stop offset=".5" stopColor="#fde030">
 
 </stop>
 
-<stop offset=".919" stop-color="#f7c02b">
+<stop offset=".919" stopColor="#f7c02b">
 
 </stop>
 
-<stop offset="1" stop-color="#f4a223">
+<stop offset="1" stopColor="#f4a223">
 
 </stop>
 
@@ -24,15 +24,15 @@ const HuggingFace = () => (
 
 <linearGradient id="IconifyId17ecdb2904d178eab9209" gradientUnits="userSpaceOnUse" x1="63.6" y1="-2144.8" x2="63.6" y2="-2033" gradientTransform="matrix(1 0 0 -1 0 -2026)">
 
-<stop offset=".158" stop-color="#f4a223">
+<stop offset=".158" stopColor="#f4a223">
 
 </stop>
 
-<stop offset=".333" stop-color="#f7c02b">
+<stop offset=".333" stopColor="#f7c02b">
 
 </stop>
 
-<stop offset=".807" stop-color="#fde030" stop-opacity="0">
+<stop offset=".807" stopColor="#fde030" stopOpacity="0">
 
 </stop>
 
@@ -48,11 +48,11 @@ const HuggingFace = () => (
 
 <radialGradient id="IconifyId17ecdb2904d178eab9210" cx="-143.13" cy="1415.916" r="18.117" gradientTransform="matrix(.9623 -.1803 .1713 .9142 -75.147 -1256.13)" gradientUnits="userSpaceOnUse">
 
-<stop offset="0" stop-color="#ed7770">
+<stop offset="0" stopColor="#ed7770">
 
 </stop>
 
-<stop offset=".9" stop-color="#ed7770" stop-opacity="0">
+<stop offset=".9" stopColor="#ed7770" stopOpacity="0">
 
 </stop>
 
@@ -64,11 +64,11 @@ const HuggingFace = () => (
 
 <radialGradient id="IconifyId17ecdb2904d178eab9211" cx="-73.259" cy="1415.944" r="18.115" gradientTransform="matrix(.9623 -.1803 .1713 .9142 -75.147 -1256.13)" gradientUnits="userSpaceOnUse">
 
-<stop offset="0" stop-color="#ed7770">
+<stop offset="0" stopColor="#ed7770">
 
 </stop>
 
-<stop offset=".9" stop-color="#ed7770" stop-opacity="0">
+<stop offset=".9" stopColor="#ed7770" stopOpacity="0">
 
 </stop>
 
@@ -98,11 +98,11 @@ const HuggingFace = () => (
 
 <radialGradient id="IconifyId17ecdb2904d178eab9212" cx="32.367" cy="94.072" r="38.513" gradientUnits="userSpaceOnUse">
 
-<stop offset=".33" stop-color="#fff176">
+<stop offset=".33" stopColor="#fff176">
 
 </stop>
 
-<stop offset="1" stop-color="#ffc400">
+<stop offset="1" stopColor="#ffc400">
 
 </stop>
 
@@ -124,11 +124,11 @@ const HuggingFace = () => (
 
 <radialGradient id="IconifyId17ecdb2904d178eab9213" cx="29.186" cy="93.866" r="38.904" gradientUnits="userSpaceOnUse">
 
-<stop offset=".33" stop-color="#fff176">
+<stop offset=".33" stopColor="#fff176">
 
 </stop>
 
-<stop offset="1" stop-color="#ffc400">
+<stop offset="1" stopColor="#ffc400">
 
 </stop>
 
@@ -146,11 +146,11 @@ const HuggingFace = () => (
 
 <radialGradient id="IconifyId17ecdb2904d178eab9214" cx="84.121" cy="94.125" r="38.455" gradientTransform="matrix(-1 0 0 1 178.845 0)" gradientUnits="userSpaceOnUse">
 
-<stop offset=".33" stop-color="#fff176">
+<stop offset=".33" stopColor="#fff176">
 
 </stop>
 
-<stop offset="1" stop-color="#ffc400">
+<stop offset="1" stopColor="#ffc400">
 
 </stop>
 
@@ -172,11 +172,11 @@ const HuggingFace = () => (
 
 <radialGradient id="IconifyId17ecdb2904d178eab9215" cx="80.941" cy="93.866" r="38.904" gradientTransform="matrix(-1 0 0 1 178.845 0)" gradientUnits="userSpaceOnUse">
 
-<stop offset=".33" stop-color="#fff176">
+<stop offset=".33" stopColor="#fff176">
 
 </stop>
 
-<stop offset="1" stop-color="#ffc400">
+<stop offset="1" stopColor="#ffc400">
 
 </stop>
 
