@@ -1,6 +1,6 @@
 const LinkedInWhite = () => (
   
-<svg fill="#ffffff" className="w-full h-full" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff">
+<svg fill="currentColor" className="w-full h-full" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" stroke="currentColor">
 
 <g id="SVGRepo_bgCarrier" strokeWidth="0"/>
 

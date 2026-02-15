@@ -19,37 +19,20 @@ import GithubWhite from '../icons/GithubWhite.jsx'
         
         try {
           await navigator.clipboard.writeText(email);
-          
-          // Mostrar feedback visual
           textElement.textContent = 'Copied!';
-          emailButton.classList.add('bg-green-500/20', 'border-green-400/40');
-          
-          // Restaurar después de 2 segundos
           setTimeout(() => {
-            if (textElement) {
-              textElement.textContent = originalText;
-              emailButton.classList.remove('bg-green-500/20', 'border-green-400/40');
-            }
+            if (textElement) textElement.textContent = originalText;
           }, 2000);
-          
         } catch (err) {
-          // Fallback para navegadores que no soportan clipboard API
           const textArea = document.createElement('textarea');
           textArea.value = email;
           document.body.appendChild(textArea);
           textArea.select();
           document.execCommand('copy');
           document.body.removeChild(textArea);
-          
-          // Mostrar feedback visual
           textElement.textContent = 'Copied!';
-          emailButton.classList.add('bg-green-500/20', 'border-green-400/40');
-          
           setTimeout(() => {
-            if (textElement) {
-              textElement.textContent = originalText;
-              emailButton.classList.remove('bg-green-500/20', 'border-green-400/40');
-            }
+            if (textElement) textElement.textContent = originalText;
           }, 2000);
         }
       });
@@ -57,86 +40,86 @@ import GithubWhite from '../icons/GithubWhite.jsx'
   });
 </script>
 
-<main id="top" class="w-full min-h-screen flex justify-center items-center pt-32 sm:pt-0 px-4 sm:px-8 pb-8 sm:pb-0">
-  <div class="w-full max-w-xs sm:max-w-5xl flex max-sm:flex-col justify-center items-center gap-6 sm:gap-12">
-    <div class="flex-shrink-0">
-      <figure class="w-48 h-48 sm:w-72 sm:h-72 rounded-full border-4 border-primary overflow-hidden relative bg-gradient-to-br from-primary/20 to-primary/5 shadow-2xl shadow-primary/25">
-        <img
-          src="../../img/pp-official.jpeg"
-          alt="Foto de Victor"
-          class="object-cover w-full h-full transition-transform duration-300 hover:scale-105"
-        >
-      </figure>
-    </div>
-    <div class="flex flex-col gap-4 sm:gap-6 z-10 text-left">
-      <div class="flex flex-col gap-3 sm:gap-4">
-        <div class="flex gap-2 sm:gap-4 items-start flex-wrap">
-          <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-pretty leading-tight">
-            <span class="text-white">Hey, I am </span><span class="text-primary">Victor López</span>
-          </h1>
-          
-          <div class="mt-1"><a
-            href="https://www.linkedin.com/in/victor-l%C3%B3pez-556605245/'"
-            class="inline-flex items-center bg-primary/20 text-primary text-xs font-semibold px-3 py-1.5 rounded-full border border-primary/30 backdrop-blur-sm hover:bg-primary/30 transition-all duration-200"
-            target="_blank"
-            rel="noopener"
-          >
-            <div class="w-2 h-2 bg-primary rounded-full mr-2 animate-pulse"></div>
-            Available
-          </a></div>
-        </div>
-      </div>
-      
-      <h2 class="text-xl sm:text-2xl lg:text-3xl font-semibold text-pretty text-white/90 leading-relaxed">AI Software Engineer</h2>
+<main id="top" class="w-full min-h-screen flex justify-center items-center pt-28 sm:pt-0 px-6 sm:px-8 pb-8 sm:pb-0 bg-white dark:bg-gray-950">
+  <div class="w-full max-w-3xl flex flex-col items-center text-center gap-6">
+    
+    <!-- Profile Image -->
+    <figure class="w-36 h-36 sm:w-40 sm:h-40 rounded-full overflow-hidden border-2 border-gray-200 dark:border-gray-700">
+      <img
+        src="../../img/pp-official.jpeg"
+        alt="Foto de Victor"
+        class="object-cover w-full h-full"
+      >
+    </figure>
 
-      <h3 class="font-light text-base sm:text-lg lg:text-xl text-pretty text-white/80 leading-relaxed max-w-2xl">From Guanajuato, México. Specialized in developing intelligent software solutions that bridge the gap between <span class="text-primary font-medium">artificial intelligence</span> and <span class="text-primary font-medium">scalable applications</span>. Expert in designing, implementing, and deploying AI-powered systems with modern software engineering practices.</h3>
-
-      <div class="flex gap-2 sm:gap-4 flex-wrap justify-start">
-        <!-- Social Links -->
+    <!-- Name & Badge -->
+    <div class="flex flex-col items-center gap-3">
+      <div class="flex items-center gap-3 flex-wrap justify-center">
+        <h1 class="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white tracking-tight">
+          Victor López
+        </h1>
         <a
-          href = "https://github.com/VictorWKey"
-          class="group rounded-full border border-primary/40 bg-primary/10 backdrop-blur-sm flex gap-2 py-2 px-3 sm:px-4 justify-center items-center transform transition-all duration-200 hover:scale-105 hover:bg-primary/20 hover:border-primary/60 hover:shadow-lg hover:shadow-primary/25"
+          href="https://www.linkedin.com/in/victor-l%C3%B3pez-556605245/"
+          class="inline-flex items-center text-primary text-xs font-medium px-2.5 py-1 rounded-full border border-primary/30 bg-primary-50 dark:bg-primary-900/20 hover:bg-primary-100 dark:hover:bg-primary-900/30 transition-colors duration-200"
           target="_blank"
           rel="noopener"
         >
-          <div class="size-4 group-hover:scale-110 transition-transform duration-200">
-            <GithubWhite/>
-          </div>
-          <p class="text-xs sm:text-sm text-white font-medium">GitHub</p>
-        </a>
-
-        <a
-        href = "https://www.linkedin.com/in/victor-l%C3%B3pez-556605245/"
-        class="group rounded-full border border-primary/40 bg-primary/10 backdrop-blur-sm flex gap-2 py-2 px-3 sm:px-4 justify-center items-center transform transition-all duration-200 hover:scale-105 hover:bg-primary/20 hover:border-primary/60 hover:shadow-lg hover:shadow-primary/25"
-        target="_blank"
-        rel="noopener"
-        >
-          <div class="size-4 group-hover:scale-110 transition-transform duration-200">
-            <LinkedInWhite/>
-          </div>
-          <p class="text-xs sm:text-sm text-white font-medium">LinkedIn</p>
-        </a>
-
-        <button
-        id="email-button"
-        class="group rounded-full border border-primary/40 bg-primary/10 backdrop-blur-sm flex gap-2 py-2 px-3 sm:px-4 justify-center items-center transform transition-all duration-200 hover:scale-105 hover:bg-primary/20 hover:border-primary/60 hover:shadow-lg hover:shadow-primary/25 cursor-pointer"
-        title="Click to copy email"
-        >
-          <div class="size-4 group-hover:scale-110 transition-transform duration-200">
-            <EmailWhite/>
-          </div>
-          <p class="text-xs sm:text-sm text-white font-medium hidden sm:block">victorwkey@gmail.com</p>
-          <p class="text-xs sm:text-sm text-white font-medium sm:hidden">Email</p>
-        </button>
-
-        <!-- Download CV Button -->
-        <a href="https://drive.google.com/file/d/1dHdAZFB2CBPFN6HyLsJgstCcswD44MJN/view?usp=sharing" class="group py-2.5 px-4 sm:px-6 bg-gradient-to-r from-primary to-primary/80 text-white rounded-full text-xs sm:text-sm font-bold transform transition-all duration-200 hover:scale-105 hover:shadow-lg hover:shadow-primary/30 flex gap-2 items-center justify-center cursor-pointer border border-primary/20" target="_blank" rel="noopener">
-          <div class="size-4 group-hover:scale-110 transition-transform duration-200">
-            <Download/>
-          </div>
-          <p>Download CV</p>
+          <div class="w-1.5 h-1.5 bg-primary rounded-full mr-1.5 animate-pulse"></div>
+          Available
         </a>
       </div>
+
+      <h2 class="text-lg sm:text-xl font-medium text-gray-600 dark:text-gray-400">AI Software Engineer</h2>
+    </div>
+
+    <!-- Description -->
+    <p class="text-base sm:text-lg text-gray-600 dark:text-gray-400 leading-relaxed max-w-2xl">
+      From Guanajuato, México. Specialized in developing intelligent software solutions that bridge the gap between 
+      <span class="text-primary font-medium">artificial intelligence</span> and 
+      <span class="text-primary font-medium">scalable applications</span>.
+    </p>
+
+    <!-- Action Buttons -->
+    <div class="flex gap-3 flex-wrap justify-center">
+      <a
+        href="https://github.com/VictorWKey"
+        class="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium rounded-lg border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-200 bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors duration-200"
+        target="_blank"
+        rel="noopener"
+      >
+        <div class="w-4 h-4"><GithubWhite/></div>
+        GitHub
+      </a>
+
+      <a
+        href="https://www.linkedin.com/in/victor-l%C3%B3pez-556605245/"
+        class="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium rounded-lg border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-200 bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors duration-200"
+        target="_blank"
+        rel="noopener"
+      >
+        <div class="w-4 h-4"><LinkedInWhite/></div>
+        LinkedIn
+      </a>
+
+      <button
+        id="email-button"
+        class="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium rounded-lg border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-200 bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors duration-200 cursor-pointer"
+        title="Click to copy email"
+      >
+        <div class="w-4 h-4"><EmailWhite/></div>
+        <p class="hidden sm:block">victorwkey@gmail.com</p>
+        <p class="sm:hidden">Email</p>
+      </button>
+
+      <a 
+        href="https://drive.google.com/file/d/1dHdAZFB2CBPFN6HyLsJgstCcswD44MJN/view?usp=sharing" 
+        class="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium rounded-lg bg-blue-600 dark:bg-blue-600 text-white dark:text-white hover:bg-blue-700 dark:hover:bg-blue-700 transition-colors duration-200" 
+        target="_blank" 
+        rel="noopener"
+      >
+        <div class="w-4 h-4"><Download/></div>
+        Download CV
+      </a>
     </div>
   </div>
 </main>

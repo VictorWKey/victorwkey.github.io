@@ -37,23 +37,20 @@ import Anaconda from "../icons/Anaconda.jsx";
 import NPM from "../icons/NPM.jsx";
 import VSC from "../icons/VSC.jsx";
 import Markdown from "../icons/Markdown.jsx";
+import AIBrain from "../icons/AIBrain.jsx";
+import Workflow from "../icons/Workflow.jsx";
 
 import React, { useState } from "react";
 
-const Modal = ({ isOpen, onClose, skill, certificates, onCertificateChange }) => {
-  if (!isOpen) return null;
+const Modal = ({ isOpen, onClose, skill, certificates }) => {
+  if (!isOpen || !skill) return null;
 
-  // Asegurémonos de que hay certificados disponibles
   const skillCertificates = certificates[skill.name] || [];
-  
-  if (skillCertificates.length === 0) return null; // Si no hay certificados, no mostramos el modal
+  if (skillCertificates.length === 0) return null;
 
-  // Índice del certificado actual
   const [currentCertificateIndex, setCurrentCertificateIndex] = useState(0);
-
   const currentCertificate = skillCertificates[currentCertificateIndex];
 
-  // Funciones para navegar entre los certificados
   const handlePrev = () => {
     setCurrentCertificateIndex(prevIndex => (prevIndex === 0 ? skillCertificates.length - 1 : prevIndex - 1));
   };
@@ -63,52 +60,34 @@ const Modal = ({ isOpen, onClose, skill, certificates, onCertificateChange }) =>
   };
 
   return (
-    <div className="fixed top-0 left-0 w-full h-full bg-black/80 backdrop-blur-sm flex justify-center items-center z-50 p-4">
-      <div className="relative bg-white/10 backdrop-blur-md border border-white/20 p-8 rounded-2xl max-w-2xl max-h-[90%] overflow-y-auto flex flex-col items-center">
-        
-        {/* Botón de Cerrar (X) en la esquina superior derecha */}
+    <div className="fixed inset-0 bg-black/50 flex justify-center items-center z-50 p-4" onClick={onClose}>
+      <div className="relative bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 p-8 rounded-xl max-w-2xl max-h-[90%] overflow-y-auto flex flex-col items-center" onClick={e => e.stopPropagation()}>
         <button 
           onClick={onClose} 
-          className="absolute top-4 right-4 text-2xl text-white hover:text-primary transition-colors duration-200"
+          className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 transition-colors"
         >
           ✕
         </button>
 
-        <h2 className="text-3xl font-bold mb-6 text-white text-center">{skill.name}</h2>
+        <h2 className="text-2xl font-bold mb-6 text-gray-900 dark:text-white">{skill.name}</h2>
 
-        {/* Flechas de navegación */}
         <div className="flex items-center gap-6">
-          <button 
-            onClick={handlePrev}
-            className="p-3 rounded-full bg-white/20 hover:bg-white/30 text-white transition-all duration-200 hover:scale-110"
-          >
+          <button onClick={handlePrev} className="p-2 rounded-lg bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-200 transition-colors">
             ←
           </button>
 
-          <div className="w-48 h-48 bg-white/10 rounded-xl overflow-hidden">
-            <img 
-              src={currentCertificate}
-              alt={`Certificado ${currentCertificateIndex + 1}`}
-              className="w-full h-full object-contain"
-            />
+          <div className="w-48 h-48 bg-gray-100 dark:bg-gray-700 rounded-lg overflow-hidden">
+            <img src={currentCertificate} alt={`Certificate ${currentCertificateIndex + 1}`} className="w-full h-full object-contain" />
           </div>
 
-          <button 
-            onClick={handleNext}
-            className="p-3 rounded-full bg-white/20 hover:bg-white/30 text-white transition-all duration-200 hover:scale-110"
-          >
+          <button onClick={handleNext} className="p-2 rounded-lg bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-200 transition-colors">
             →
           </button>
         </div>
 
         <div className="mt-4 flex gap-2">
           {skillCertificates.map((_, index) => (
-            <div 
-              key={index}
-              className={`w-2 h-2 rounded-full transition-all duration-200 ${
-                index === currentCertificateIndex ? 'bg-primary' : 'bg-white/30'
-              }`}
-            />
+            <div key={index} className={`w-2 h-2 rounded-full transition-colors ${index === currentCertificateIndex ? 'bg-primary' : 'bg-gray-300 dark:bg-gray-600'}`} />
           ))}
         </div>
       </div>
@@ -116,21 +95,9 @@ const Modal = ({ isOpen, onClose, skill, certificates, onCertificateChange }) =>
   );
 };
 
-
-
-
-
-
 const SKILLS = {
-  JavaScript: { name: "JavaScript", logo: () => <JavaScript />, category: "web" },
-  HTML: { name: "HTML", logo: () => <HTML />, category: "web" },
-  CSS: { name: "CSS", logo: () => <CSS />, category: "web" },
-  React: { name: "React", logo: () => <ReactLogo />, category: "web" },
-  NextJS: { name: "Next.js", logo: () => <NextJS />, category: "web" },
-  Tailwind: { name: "Tailwind", logo: () => <Tailwind />, category: "web" },
-  TypeScript: { name: "TypeScript", logo: () => <TypeScript />, category: "web" },
-  FastAPI: { name: "FastAPI", logo: () => <FastAPI />, category: "web" },
-  Astro: { name: "Astro", logo: () => <AstroLogo />, category: "web" },
+  ArtificialIntelligence: { name: "Artificial Intelligence", logo: () => <AIBrain />, category: "ia" },
+  LLMWorkflows: { name: "LLM Workflows", logo: () => <Workflow />, category: "ia" },
   Python: { name: "Python", logo: () => <Python />, category: "ia" },
   TensorFlow: { name: "TensorFlow", logo: () => <Tensorflow />, category: "ia" },
   Keras: { name: "Keras", logo: () => <Keras />, category: "ia" },
@@ -148,6 +115,15 @@ const SKILLS = {
   AWS: { name: "AWS", logo: () => <AWS />, category: "ia" },
   HuggingFace: { name: "HuggingFace", logo: () => <HuggingFace />, category: "ia" },
   MachineLearning: { name: "Machine Learning", logo: () => <ML />, category: "ia" },
+  JavaScript: { name: "JavaScript", logo: () => <JavaScript />, category: "web" },
+  HTML: { name: "HTML", logo: () => <HTML />, category: "web" },
+  CSS: { name: "CSS", logo: () => <CSS />, category: "web" },
+  React: { name: "React", logo: () => <ReactLogo />, category: "web" },
+  NextJS: { name: "Next.js", logo: () => <NextJS />, category: "web" },
+  Tailwind: { name: "Tailwind", logo: () => <Tailwind />, category: "web" },
+  TypeScript: { name: "TypeScript", logo: () => <TypeScript />, category: "web" },
+  FastAPI: { name: "FastAPI", logo: () => <FastAPI />, category: "web" },
+  Astro: { name: "Astro", logo: () => <AstroLogo />, category: "web" },
   ExploratoryDataAnalysis: { name: "Exploratory Data Analysis", logo: () => <ExploratoryData />, category: "ia" },
   TreatmentOfMissingData: { name: "Treatment of Missing Data", logo: () => <TreatmentMissing />, category: "ia" },
   Statistics: { name: "Statistics", logo: () => <Statistics />, category: "ia" },
@@ -165,16 +141,9 @@ const SkillsSection = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedSkill, setSelectedSkill] = useState(null);
   const certificates = {
-    JavaScript: [
-      "https://example.com/cert1.jpg",
-      "https://example.com/cert2.jpg"
-    ],
-    Python: [
-      "./../../certificates/python1.jpg",
-      "https://example.com/cert4.jpg"
-    ]
+    JavaScript: ["https://example.com/cert1.jpg", "https://example.com/cert2.jpg"],
+    Python: ["./../../certificates/python1.jpg", "https://example.com/cert4.jpg"]
   };
-  
 
   const handleSkillClick = (skill) => {
     setSelectedSkill(skill);
@@ -185,31 +154,24 @@ const SkillsSection = () => {
     setIsModalOpen(false);
   };
 
-  const handleCertificateChange = (newCertificate) => {
-    setCertificates((prevCertificates) => ({
-      ...prevCertificates,
-      [selectedSkill.name]: [...prevCertificates[selectedSkill.name], newCertificate],
-    }));
-  };
-
   return (
-    <section id="skills" className="w-full h-auto flex flex-col items-center py-12 px-6 relative z-10 scroll-mt-20">
+    <section id="skills" className="w-full flex flex-col items-center py-20 px-6 scroll-mt-20 bg-white dark:bg-gray-950">
       <div className="w-full max-w-4xl">
-        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white text-center mb-3 pt-4">Skills</h1>
-        <p className="text-base sm:text-lg lg:text-xl text-gray-300 text-center mb-8 max-w-2xl mx-auto">
+        <h2 className="section-heading text-3xl sm:text-4xl text-center mb-3 text-gray-900 dark:text-white">Skills</h2>
+        <p className="section-subheading text-center mb-10 text-gray-600 dark:text-gray-300">
           My expertise in <span className="text-primary">artificial intelligence</span> and <span className="text-primary">modern web development</span>
         </p>
         
-        <div className="space-y-6">
-          <SkillsContainer title="Data Science & Machine Learning">
+        <div className="space-y-8">
+          <SkillsContainer title="Artificial Intelligence & Data Engineering">
             {Object.entries(SKILLS).filter(([_, skill]) => skill.category === "ia").map(([name, skill]) => (
               <div
                 key={skill.name}
-                className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl w-28 h-28 flex flex-col items-center justify-center gap-2 hover:bg-white/20 hover:scale-105 transition-all duration-200 cursor-pointer group p-3"
+                className="bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl w-24 h-24 flex flex-col items-center justify-center gap-1.5 hover:border-primary/40 transition-colors duration-200 cursor-pointer p-3"
                 onClick={() => handleSkillClick(skill)}
               >
-                <div className="size-8 group-hover:scale-110 transition-transform duration-200 flex-shrink-0">{skill.logo()}</div>
-                <p className="text-xs text-white text-center font-medium leading-tight overflow-hidden text-ellipsis">{skill.name}</p>
+                <div className="w-7 h-7 flex-shrink-0 text-black dark:text-white">{skill.logo()}</div>
+                <p className="text-xs text-gray-700 dark:text-gray-200 text-center font-medium leading-tight">{skill.name}</p>
               </div>
             ))}
           </SkillsContainer>
@@ -218,28 +180,25 @@ const SkillsSection = () => {
             {Object.entries(SKILLS).filter(([_, skill]) => skill.category === "web").map(([name, skill]) => (
               <div
                 key={skill.name}
-                className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl w-28 h-28 flex flex-col items-center justify-center gap-2 hover:bg-white/20 hover:scale-105 transition-all duration-200 cursor-pointer group p-3"
+                className="bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl w-24 h-24 flex flex-col items-center justify-center gap-1.5 hover:border-primary/40 transition-colors duration-200 cursor-pointer p-3"
                 onClick={() => handleSkillClick(skill)}
               >
-                <div className="size-8 group-hover:scale-110 transition-transform duration-200 flex-shrink-0">{skill.logo()}</div>
-                <p className="text-xs text-white text-center font-medium leading-tight overflow-hidden text-ellipsis">{skill.name}</p>
+                <div className="w-7 h-7 flex-shrink-0 text-black dark:text-white">{skill.logo()}</div>
+                <p className="text-xs text-gray-700 dark:text-gray-200 text-center font-medium leading-tight">{skill.name}</p>
               </div>
             ))}
           </SkillsContainer>
         </div>
       </div>
 
-      {/* Modal */}
       <Modal
         isOpen={isModalOpen}
         onClose={handleCloseModal}
         skill={selectedSkill}
         certificates={certificates}
-        onCertificateChange={handleCertificateChange}
       />
     </section>
   );
 };
-
 
 export default SkillsSection;

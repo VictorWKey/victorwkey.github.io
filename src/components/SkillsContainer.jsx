@@ -1,7 +1,7 @@
-const CustomComponent = ({ title, children }) => {
+const SkillsContainer = ({ title, children }) => {
   return (
-    <div className="mb-6">
-      <h3 className="text-xl font-semibold text-white mb-4 text-center">{title}</h3>
+    <div>
+      <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4 text-center">{title}</h3>
       <div className="flex flex-wrap gap-3 justify-center">
         {children}
       </div>
@@ -9,4 +9,4 @@ const CustomComponent = ({ title, children }) => {
   );
 };
 
-export default CustomComponent;
+export default SkillsContainer;
