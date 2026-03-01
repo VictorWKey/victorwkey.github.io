@@ -9,7 +9,6 @@ import Tailwind from "../icons/Tailwind.jsx";
 import TypeScript from "../icons/TypeScript.jsx";
 import FastAPI from "../icons/FastAPI.jsx";
 import Python from "../icons/Python.jsx";
-import ML from "../icons/ML.jsx";
 import Tensorflow from "../icons/Tensorflow.jsx";
 import Pytorch from "../icons/Pytorch.jsx";
 import LangChain from "../icons/LangChain.jsx";
@@ -22,23 +21,14 @@ import Pandas from "../icons/Pandas.jsx";
 import NumPy from "../icons/NumPy.jsx";
 import Matplotlib from "../icons/Matplotlib.jsx";
 import Seaborn from "../icons/Seaborn.jsx";
-import Algebra from "../icons/Algebra.jsx";
-import Statistics from "../icons/Statistics.jsx";
-import Probability from "../icons/Probability.jsx";
-import Calculus from "../icons/Calculus.jsx";
-import ExploratoryData from "../icons/ExploratoryData.jsx";
-import TreatmentMissing from "../icons/TreatmentMissing.jsx";
 import MySQL from "../icons/MySQL.jsx";
 import PostgreSQL from "../icons/PostgreSQL.jsx";
 import MongoDB from "../icons/MongoDB.jsx";
 import Git from "../icons/Git.jsx";
 import Linux from "../icons/Linux.jsx";
-import Anaconda from "../icons/Anaconda.jsx";
-import NPM from "../icons/NPM.jsx";
-import VSC from "../icons/VSC.jsx";
-import Markdown from "../icons/Markdown.jsx";
-import AIBrain from "../icons/AIBrain.jsx";
-import Workflow from "../icons/Workflow.jsx";
+import NodeJS from "../icons/NodeJS.jsx";
+import ReactNative from "../icons/ReactNative.jsx";
+import Electron from "../icons/Electron.jsx";
 import { useTranslations } from '../i18n/index.js';
 
 import React, { useState } from "react";
@@ -97,25 +87,19 @@ const Modal = ({ isOpen, onClose, skill, certificates }) => {
 };
 
 const SKILLS = {
-  ArtificialIntelligence: { name: "Artificial Intelligence", logo: () => <AIBrain />, category: "ia" },
-  LLMWorkflows: { name: "LLM Workflows", logo: () => <Workflow />, category: "ia" },
   Python: { name: "Python", logo: () => <Python />, category: "ia" },
   TensorFlow: { name: "TensorFlow", logo: () => <Tensorflow />, category: "ia" },
   Keras: { name: "Keras", logo: () => <Keras />, category: "ia" },
-  Pytorch: { name: "Pytorch", logo: () => <Pytorch />, category: "ia" },
+  Pytorch: { name: "PyTorch", logo: () => <Pytorch />, category: "ia" },
   LangChain: { name: "LangChain", logo: () => <LangChain />, category: "ia" },
   scikitlearn: { name: "scikit-learn", logo: () => <SkLearn />, category: "ia" },
   SciPy: { name: "SciPy", logo: () => <SciPy />, category: "ia" },
   Pandas: { name: "Pandas", logo: () => <Pandas />, category: "ia" },
-  Numpy: { name: "Numpy", logo: () => <NumPy />, category: "ia" },
+  Numpy: { name: "NumPy", logo: () => <NumPy />, category: "ia" },
   Matplotlib: { name: "Matplotlib", logo: () => <Matplotlib />, category: "ia" },
   Seaborn: { name: "Seaborn", logo: () => <Seaborn />, category: "ia" },
-  MySQL: { name: "MySQL", logo: () => <MySQL />, category: "ia" },
-  PostgreSQL: { name: "PostgreSQL", logo: () => <PostgreSQL />, category: "ia" },
-  MongoDB: { name: "MongoDB", logo: () => <MongoDB />, category: "ia" },
   AWS: { name: "AWS", logo: () => <AWS />, category: "ia" },
-  HuggingFace: { name: "HuggingFace", logo: () => <HuggingFace />, category: "ia" },
-  MachineLearning: { name: "Machine Learning", logo: () => <ML />, category: "ia" },
+  HuggingFace: { name: "Hugging Face", logo: () => <HuggingFace />, category: "ia" },
   JavaScript: { name: "JavaScript", logo: () => <JavaScript />, category: "web" },
   HTML: { name: "HTML", logo: () => <HTML />, category: "web" },
   CSS: { name: "CSS", logo: () => <CSS />, category: "web" },
@@ -125,17 +109,14 @@ const SKILLS = {
   TypeScript: { name: "TypeScript", logo: () => <TypeScript />, category: "web" },
   FastAPI: { name: "FastAPI", logo: () => <FastAPI />, category: "web" },
   Astro: { name: "Astro", logo: () => <AstroLogo />, category: "web" },
-  ExploratoryDataAnalysis: { name: "Exploratory Data Analysis", logo: () => <ExploratoryData />, category: "ia" },
-  TreatmentOfMissingData: { name: "Treatment of Missing Data", logo: () => <TreatmentMissing />, category: "ia" },
-  Statistics: { name: "Statistics", logo: () => <Statistics />, category: "ia" },
-  Probability: { name: "Probability", logo: () => <Probability />, category: "ia" },
-  Algebra: { name: "Linear Algebra", logo: () => <Algebra />, category: "ia" },
-  Calculus: { name: "Calculus", logo: () => <Calculus />, category: "ia" },
+  MySQL: { name: "MySQL", logo: () => <MySQL />, category: "web" },
+  PostgreSQL: { name: "PostgreSQL", logo: () => <PostgreSQL />, category: "web" },
+  MongoDB: { name: "MongoDB", logo: () => <MongoDB />, category: "web" },
   Git: { name: "Git", logo: () => <Git />, category: "web" },
   Linux: { name: "Linux", logo: () => <Linux />, category: "web" },
-  Conda: { name: "Conda", logo: () => <Anaconda />, category: "web" },
-  VSC: { name: "VSC", logo: () => <VSC />, category: "web" },
-  Markdown: { name: "Markdown", logo: () => <Markdown />, category: "web" }
+  NodeJS: { name: "Node.js", logo: () => <NodeJS />, category: "web" },
+  ReactNative: { name: "React Native", logo: () => <ReactNative />, category: "web" },
+  Electron: { name: "Electron", logo: () => <Electron />, category: "web" }
 };
 
 const SkillsSection = ({ lang = 'en' }) => {
@@ -169,23 +150,23 @@ const SkillsSection = ({ lang = 'en' }) => {
             {Object.entries(SKILLS).filter(([_, skill]) => skill.category === "ia").map(([name, skill]) => (
               <div
                 key={skill.name}
-                className="bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl w-24 h-24 flex flex-col items-center justify-center gap-1.5 hover:border-primary/40 transition-colors duration-200 cursor-pointer p-3"
+                className="border border-gray-200 dark:border-gray-700 rounded-xl w-24 h-24 flex flex-col items-center justify-center gap-1.5 hover:border-primary/40 transition-colors duration-200 cursor-pointer p-3"
                 onClick={() => handleSkillClick(skill)}
               >
-                <div className="w-7 h-7 flex-shrink-0 text-black dark:text-white">{skill.logo()}</div>
+                <div className="w-7 h-7 flex-shrink-0">{skill.logo()}</div>
                 <p className="text-xs text-gray-700 dark:text-gray-200 text-center font-medium leading-tight">{skill.name}</p>
               </div>
             ))}
           </SkillsContainer>
-          
+
           <SkillsContainer title={t.skills.webCategory}>
             {Object.entries(SKILLS).filter(([_, skill]) => skill.category === "web").map(([name, skill]) => (
               <div
                 key={skill.name}
-                className="bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl w-24 h-24 flex flex-col items-center justify-center gap-1.5 hover:border-primary/40 transition-colors duration-200 cursor-pointer p-3"
+                className="border border-gray-200 dark:border-gray-700 rounded-xl w-24 h-24 flex flex-col items-center justify-center gap-1.5 hover:border-primary/40 transition-colors duration-200 cursor-pointer p-3"
                 onClick={() => handleSkillClick(skill)}
               >
-                <div className="w-7 h-7 flex-shrink-0 text-black dark:text-white">{skill.logo()}</div>
+                <div className="w-7 h-7 flex-shrink-0">{skill.logo()}</div>
                 <p className="text-xs text-gray-700 dark:text-gray-200 text-center font-medium leading-tight">{skill.name}</p>
               </div>
             ))}
