@@ -1,0 +1,80 @@
+{
+  "layout": {
+    "title": "Portafolio de Víctor Ángel López - Especialista en Inteligencia Artificial y Desarrollador Web",
+    "description": "¡Contrata a Víctor López para llevar tus proyectos al siguiente nivel! Como desarrollador frontend y especialista en inteligencia artificial, ofrezco soluciones creativas y funcionales que destacan en el mercado digital."
+  },
+  "nav": {
+    "home": "Inicio",
+    "experience": "Experiencia",
+    "skills": "Habilidades",
+    "aboutMe": "Sobre Mí"
+  },
+  "header": {
+    "available": "Disponible",
+    "role": "Ingeniero de Software IA",
+    "description": "De Guanajuato, México. Especializado en desarrollar soluciones de software inteligentes que conectan la",
+    "ai": "inteligencia artificial",
+    "and": "y las",
+    "scalable": "aplicaciones escalables",
+    "email": "Correo",
+    "downloadCV": "Descargar CV",
+    "copied": "¡Copiado!"
+  },
+  "projects": {
+    "sectionTitle": "Experiencia y Proyectos Destacados",
+    "sectionSubtitle": "Proyectos de desarrollo web y aplicaciones que van desde sistemas de gestión empresarial hasta",
+    "ecommerce": "comercio electrónico",
+    "informational": "sitios web informativos",
+    "allProjects": "Todos los Proyectos",
+    "frontend": "Frontend",
+    "fullStack": "Full-Stack",
+    "repository": "Repositorio",
+    "liveDemo": "Demo en Vivo",
+    "watchVideo": "Ver Video",
+    "viewImages": "Ver Imágenes",
+    "privateProject": "Proyecto Privado",
+    "items": [
+      {
+        "title": "AlineaDent - Sistema de Gestión de Clínica Dental",
+        "desc": "Sistema integral de gestión de clínica dental desarrollado con Next.js y Python/FastAPI. Gestiona pacientes, citas y tratamientos dentales con calendario visual, comunicación integrada por WhatsApp, monitoreo de conversaciones con IA y generación automática de reportes."
+      },
+      {
+        "title": "Sistema de Órdenes de Trabajo - Atta Montacargas",
+        "desc": "Aplicación móvil para gestión de órdenes de trabajo desarrollada con React Native y FastAPI. Incluye gestión de roles de usuario, creación y seguimiento de órdenes de trabajo, generación automática de PDF, panel de métricas en tiempo real y un sistema completo de gestión de estados."
+      },
+      {
+        "title": "Sitio Web del Gimnasio Muscle Factory",
+        "desc": "Sitio web informativo de gimnasio desarrollado con Astro y React. Incluye secciones de servicios, herramienta de comparación de suplementos con carrito de compras funcional, catálogo detallado de productos e información completa de entrenamiento personal."
+      },
+      {
+        "title": "Frontend de E-Commerce",
+        "desc": "Plataforma moderna de comercio electrónico construida con React y Tailwind CSS. Incluye carrito de compras interactivo, sistema de filtrado avanzado, navegación por categorías, vistas detalladas de productos y diseño completamente responsivo."
+      }
+    ]
+  },
+  "skills": {
+    "sectionTitle": "Habilidades",
+    "sectionSubtitle": "Mi experiencia en",
+    "ai": "inteligencia artificial",
+    "and": "y",
+    "webDev": "desarrollo web moderno",
+    "aiCategory": "Inteligencia Artificial e Ingeniería de Datos",
+    "webCategory": "Desarrollo de Software"
+  },
+  "aboutMe": {
+    "sectionTitle": "Sobre Mí",
+    "p1": "¡Hola! Soy <highlight>Víctor Ángel López Romero</highlight>, un Ingeniero de Software IA de 22 años de Guanajuato, México. Mi fascinación por la Inteligencia Artificial comenzó durante la universidad cuando me asombré de cómo la IA podía realizar tareas aparentemente complejas. Después de una investigación profunda, descubrí que la IA es en realidad una hermosa combinación de <highlight>matemáticas puras, algoritmos, razonamiento lógico y un inmenso poder de cómputo</highlight>.",
+    "p2": "Esta revelación me fascinó porque encontré un campo donde podía aplicar todos mis conocimientos matemáticos y desbloquear su verdadero potencial. Al combinar la Inteligencia Artificial con el desarrollo web moderno — con <highlight>JavaScript siendo mi puerta de entrada a la programación</highlight> — ahora me enfoco en crear <highlight>aplicaciones inteligentes que mejoran la productividad</highlight> y ayudan a las personas a ahorrar tiempo valioso."
+  },
+  "footer": {
+    "role": "Ingeniero de Software IA",
+    "location": "Guanajuato, México",
+    "rights": "Todos los derechos reservados."
+  },
+  "menu": {
+    "title": "Menú"
+  },
+  "modal": {
+    "of": "de"
+  }
+}

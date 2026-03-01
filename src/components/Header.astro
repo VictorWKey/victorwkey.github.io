@@ -3,12 +3,17 @@ import LinkedInWhite from '../icons/LinkedInWhite.jsx'
 import Download from '../icons/Download.jsx'
 import EmailWhite from '../icons/EmailWhite.jsx'
 import GithubWhite from '../icons/GithubWhite.jsx'
+import { useTranslations } from '../i18n/index.js'
+
+const { lang = 'en' } = Astro.props;
+const t = useTranslations(lang);
 ---
 
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     const emailButton = document.getElementById('email-button');
     const email = 'victorwkey@gmail.com';
+    const copiedText = emailButton?.getAttribute('data-copied') || 'Copied!';
     
     if (emailButton) {
       emailButton.addEventListener('click', async function() {
@@ -19,7 +24,7 @@ import GithubWhite from '../icons/GithubWhite.jsx'
         
         try {
           await navigator.clipboard.writeText(email);
-          textElement.textContent = 'Copied!';
+          textElement.textContent = copiedText;
           setTimeout(() => {
             if (textElement) textElement.textContent = originalText;
           }, 2000);
@@ -30,7 +35,7 @@ import GithubWhite from '../icons/GithubWhite.jsx'
           textArea.select();
           document.execCommand('copy');
           document.body.removeChild(textArea);
-          textElement.textContent = 'Copied!';
+          textElement.textContent = copiedText;
           setTimeout(() => {
             if (textElement) textElement.textContent = originalText;
           }, 2000);
@@ -65,18 +70,18 @@ import GithubWhite from '../icons/GithubWhite.jsx'
           rel="noopener"
         >
           <div class="w-1.5 h-1.5 bg-primary rounded-full mr-1.5 animate-pulse"></div>
-          Available
+          {t.header.available}
         </a>
       </div>
 
-      <h2 class="text-lg sm:text-xl font-medium text-gray-600 dark:text-gray-400">AI Software Engineer</h2>
+      <h2 class="text-lg sm:text-xl font-medium text-gray-600 dark:text-gray-400">{t.header.role}</h2>
     </div>
 
     <!-- Description -->
     <p class="text-base sm:text-lg text-gray-600 dark:text-gray-400 leading-relaxed max-w-2xl">
-      From Guanajuato, México. Specialized in developing intelligent software solutions that bridge the gap between 
-      <span class="text-primary font-medium">artificial intelligence</span> and 
-      <span class="text-primary font-medium">scalable applications</span>.
+      {t.header.description} 
+      <span class="text-primary font-medium">{t.header.ai}</span> {t.header.and} 
+      <span class="text-primary font-medium">{t.header.scalable}</span>.
     </p>
 
     <!-- Action Buttons -->
@@ -103,12 +108,13 @@ import GithubWhite from '../icons/GithubWhite.jsx'
 
       <button
         id="email-button"
+        data-copied={t.header.copied}
         class="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium rounded-lg border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-200 bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors duration-200 cursor-pointer"
         title="Click to copy email"
       >
         <div class="w-4 h-4"><EmailWhite/></div>
         <p class="hidden sm:block">victorwkey@gmail.com</p>
-        <p class="sm:hidden">Email</p>
+        <p class="sm:hidden">{t.header.email}</p>
       </button>
 
       <a 
@@ -118,7 +124,7 @@ import GithubWhite from '../icons/GithubWhite.jsx'
         rel="noopener"
       >
         <div class="w-4 h-4"><Download/></div>
-        Download CV
+        {t.header.downloadCV}
       </a>
     </div>
   </div>

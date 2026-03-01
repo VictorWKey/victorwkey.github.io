@@ -7,4 +7,12 @@ export default defineConfig({
   integrations: [tailwind(), react()],
   output: 'static',
   site: 'https://victorwkey.github.io',
+  i18n: {
+    defaultLocale: 'en',
+    locales: ['en', 'es'],
+    routing: {
+      prefixDefaultLocale: true,
+      redirectToDefaultLocale: false,
+    },
+  },
 });

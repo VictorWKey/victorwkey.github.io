@@ -2,9 +2,11 @@ import React from 'react'
 import { useStore } from '@nanostores/react';
 import { isMovilMenuOpen } from '../movilMenu.js';
 import Close from "../icons/Close.jsx"
+import { useTranslations } from '../i18n/index.js';
 
-function MovilMenu() {
+function MovilMenu({ lang = 'en' }) {
   const $isMovilMenuOpen = useStore(isMovilMenuOpen);
+  const t = useTranslations(lang);
 
   const handleNavigation = (href) => {
     isMovilMenuOpen.set(false);
@@ -28,7 +30,7 @@ function MovilMenu() {
         
         {/* Header */}
         <div className="flex items-center justify-between p-5 border-b border-gray-200 dark:border-gray-700">
-          <span className="text-lg font-semibold text-gray-900 dark:text-white">Menu</span>
+          <span className="text-lg font-semibold text-gray-900 dark:text-white">{t.menu.title}</span>
           <button 
             onClick={() => isMovilMenuOpen.set(false)} 
             className="p-2 rounded-lg text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors"
@@ -43,19 +45,19 @@ function MovilMenu() {
         <nav className="flex-1 py-2">
           <button onClick={() => handleNavigation('#top')}
             className="w-full text-left px-5 py-3 text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
-            Home
+            {t.nav.home}
           </button>
           <button onClick={() => handleNavigation('#projects')}
             className="w-full text-left px-5 py-3 text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
-            Experience
+            {t.nav.experience}
           </button>
           <button onClick={() => handleNavigation('#skills')}
             className="w-full text-left px-5 py-3 text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
-            Skills
+            {t.nav.skills}
           </button>
           <button onClick={() => handleNavigation('#about-me')}
             className="w-full text-left px-5 py-3 text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
-            About Me
+            {t.nav.aboutMe}
           </button>
         </nav>
 

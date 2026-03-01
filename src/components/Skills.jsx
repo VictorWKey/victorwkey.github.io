@@ -39,6 +39,7 @@ import VSC from "../icons/VSC.jsx";
 import Markdown from "../icons/Markdown.jsx";
 import AIBrain from "../icons/AIBrain.jsx";
 import Workflow from "../icons/Workflow.jsx";
+import { useTranslations } from '../i18n/index.js';
 
 import React, { useState } from "react";
 
@@ -137,7 +138,8 @@ const SKILLS = {
   Markdown: { name: "Markdown", logo: () => <Markdown />, category: "web" }
 };
 
-const SkillsSection = () => {
+const SkillsSection = ({ lang = 'en' }) => {
+  const t = useTranslations(lang);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedSkill, setSelectedSkill] = useState(null);
   const certificates = {
@@ -157,13 +159,13 @@ const SkillsSection = () => {
   return (
     <section id="skills" className="w-full flex flex-col items-center py-20 px-6 scroll-mt-20 bg-white dark:bg-gray-950">
       <div className="w-full max-w-4xl">
-        <h2 className="section-heading text-3xl sm:text-4xl text-center mb-3 text-gray-900 dark:text-white">Skills</h2>
+        <h2 className="section-heading text-3xl sm:text-4xl text-center mb-3 text-gray-900 dark:text-white">{t.skills.sectionTitle}</h2>
         <p className="section-subheading text-center mb-10 text-gray-600 dark:text-gray-300">
-          My expertise in <span className="text-primary">artificial intelligence</span> and <span className="text-primary">modern web development</span>
+          {t.skills.sectionSubtitle} <span className="text-primary">{t.skills.ai}</span> {t.skills.and} <span className="text-primary">{t.skills.webDev}</span>
         </p>
         
         <div className="space-y-8">
-          <SkillsContainer title="Artificial Intelligence & Data Engineering">
+          <SkillsContainer title={t.skills.aiCategory}>
             {Object.entries(SKILLS).filter(([_, skill]) => skill.category === "ia").map(([name, skill]) => (
               <div
                 key={skill.name}
@@ -176,7 +178,7 @@ const SkillsSection = () => {
             ))}
           </SkillsContainer>
           
-          <SkillsContainer title="Software Development">
+          <SkillsContainer title={t.skills.webCategory}>
             {Object.entries(SKILLS).filter(([_, skill]) => skill.category === "web").map(([name, skill]) => (
               <div
                 key={skill.name}

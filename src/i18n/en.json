@@ -1,0 +1,80 @@
+{
+  "layout": {
+    "title": "Victor Ángel López Portfolio - AI Software Engineer and Web Developer",
+    "description": "Hire Víctor López to take your projects to the next level! As a frontend developer and AI specialist, I offer creative and functional solutions that stand out in the digital market."
+  },
+  "nav": {
+    "home": "Home",
+    "experience": "Experience",
+    "skills": "Skills",
+    "aboutMe": "About Me"
+  },
+  "header": {
+    "available": "Available",
+    "role": "AI Software Engineer",
+    "description": "From Guanajuato, México. Specialized in developing intelligent software solutions that bridge the gap between",
+    "ai": "artificial intelligence",
+    "and": "and",
+    "scalable": "scalable applications",
+    "email": "Email",
+    "downloadCV": "Download CV",
+    "copied": "Copied!"
+  },
+  "projects": {
+    "sectionTitle": "Experience & Featured Projects",
+    "sectionSubtitle": "Web development projects and applications ranging from business management systems to",
+    "ecommerce": "e-commerce",
+    "informational": "informational websites",
+    "allProjects": "All Projects",
+    "frontend": "Frontend",
+    "fullStack": "Full-Stack",
+    "repository": "Repository",
+    "liveDemo": "Live Demo",
+    "watchVideo": "Watch Video",
+    "viewImages": "View Images",
+    "privateProject": "Private Project",
+    "items": [
+      {
+        "title": "AlineaDent - Dental Clinic Management System",
+        "desc": "Comprehensive dental clinic management system built with Next.js and Python/FastAPI. Manages patients, appointments, and dental treatments with visual calendar, integrated WhatsApp communication, AI conversation monitoring, and automatic report generation."
+      },
+      {
+        "title": "Work Orders Management System - Atta Montacargas",
+        "desc": "Mobile application for work order management developed with React Native and FastAPI. It includes user role management, work order creation and tracking, automatic PDF generation, a real-time metrics dashboard, and a complete status management system."
+      },
+      {
+        "title": "Muscle Factory Gym Website",
+        "desc": "Informational gym website developed with Astro and React. Features service sections, supplement comparison tool with functional shopping cart, detailed product catalog, and comprehensive personal training information."
+      },
+      {
+        "title": "E-Commerce Frontend",
+        "desc": "Modern e-commerce platform built with React and Tailwind CSS. Features interactive shopping cart, advanced filtering system, category navigation, detailed product views, and fully responsive design."
+      }
+    ]
+  },
+  "skills": {
+    "sectionTitle": "Skills",
+    "sectionSubtitle": "My expertise in",
+    "ai": "artificial intelligence",
+    "and": "and",
+    "webDev": "modern web development",
+    "aiCategory": "Artificial Intelligence & Data Engineering",
+    "webCategory": "Software Development"
+  },
+  "aboutMe": {
+    "sectionTitle": "About Me",
+    "p1": "Hello! I'm <highlight>Víctor Ángel López Romero</highlight>, a 22-year-old AI Software Engineer from Guanajuato, México. My fascination with Artificial Intelligence started during university when I was amazed by how AI could perform seemingly complex tasks. After deep research, I discovered that AI is actually a beautiful combination of <highlight>pure mathematics, algorithms, logical reasoning, and immense computing power</highlight>.",
+    "p2": "This revelation fascinated me because I found a field where I could apply all my mathematical knowledge and unlock its true potential. By combining Artificial Intelligence with modern web development — with <highlight>JavaScript being my gateway into programming</highlight> — I now focus on creating <highlight>intelligent applications that enhance productivity</highlight> and help people save valuable time."
+  },
+  "footer": {
+    "role": "AI Software Engineer",
+    "location": "Guanajuato, México",
+    "rights": "All rights reserved."
+  },
+  "menu": {
+    "title": "Menu"
+  },
+  "modal": {
+    "of": "of"
+  }
+}

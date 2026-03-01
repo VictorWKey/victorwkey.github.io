@@ -15,6 +15,10 @@ import AWS from "../icons/AWS.jsx";
 import MongoDB from "../icons/MongoDB.jsx";
 import PostgreSQL from "../icons/PostgreSQL.jsx";
 import NextJS from "../icons/NextJS.jsx";
+import { useTranslations } from '../i18n/index.js';
+
+const { lang = 'en' } = Astro.props;
+const t = useTranslations(lang);
 
 const TAGS = {
   JavaScript: {
@@ -92,16 +96,16 @@ const TAGS = {
 const PROJECTS = [
   // Full-Stack Projects First
   {
-    title: "AlineaDent - Dental Clinic Management System",
-    desc: "Comprehensive dental clinic management system built with Next.js and Python/FastAPI. Manages patients, appointments, and dental treatments with visual calendar, integrated WhatsApp communication, AI conversation monitoring, and automatic report generation.",
+    title: t.projects.items[0].title,
+    desc: t.projects.items[0].desc,
     technologies: [TAGS.JavaScript, TAGS.HTML, TAGS.CSS, TAGS.NextJS, TAGS.Tailwind, TAGS.Python, TAGS.FastAPI, TAGS.PostgreSQL],
     img: "/img/alineadent-sistema.png",
     videoUrl: "https://drive.google.com/file/d/1z6yksLOkjBW50mauP8OHpfmqBcF_Z063/view?usp=sharing",
     category: "Full-Stack"
   },
   {
-    title: "Work Orders Management System - Atta Montacargas",
-    desc: "Mobile application for work order management developed with React Native and FastAPI. It includes user role management, work order creation and tracking, automatic PDF generation, a real-time metrics dashboard, and a complete status management system.",
+    title: t.projects.items[1].title,
+    desc: t.projects.items[1].desc,
     technologies: [TAGS.JavaScript, TAGS.HTML, TAGS.CSS, TAGS.React, TAGS.Python, TAGS.FastAPI],
     img: "/img/attamontacargas-sistema.png",
     images: [
@@ -112,8 +116,8 @@ const PROJECTS = [
   },
   // Frontend Projects Second
   {
-    title: "Muscle Factory Gym Website",
-    desc: "Informational gym website developed with Astro and React. Features service sections, supplement comparison tool with functional shopping cart, detailed product catalog, and comprehensive personal training information.",
+    title: t.projects.items[2].title,
+    desc: t.projects.items[2].desc,
     technologies: [TAGS.JavaScript, TAGS.HTML, TAGS.CSS, TAGS.Astro, TAGS.React, TAGS.Tailwind],
     img: "/img/musclefactory-website.png",
     site: "https://muscle-factory-website.vercel.app/",
@@ -121,8 +125,8 @@ const PROJECTS = [
     category: "Frontend"
   },
   {
-    title: "E-Commerce Frontend",
-    desc: "Modern e-commerce platform built with React and Tailwind CSS. Features interactive shopping cart, advanced filtering system, category navigation, detailed product views, and fully responsive design.",
+    title: t.projects.items[3].title,
+    desc: t.projects.items[3].desc,
     technologies: [TAGS.JavaScript, TAGS.HTML, TAGS.CSS, TAGS.React, TAGS.Tailwind],
     img: "/img/frontend-ecommerce.png",
     site: "https://shop-app-w-react.netlify.app/",
@@ -130,18 +134,14 @@ const PROJECTS = [
     category: "Frontend"
   }
 ]
-
-
-
-
 ---
 
 <section id="projects" class="w-full flex flex-col items-center py-20 px-6 scroll-mt-16 bg-gray-50 dark:bg-gray-900">
   <div class="w-full max-w-5xl">
-    <h2 class="section-heading text-3xl sm:text-4xl text-center mb-3 text-gray-900 dark:text-white">Experience & Featured Projects</h2>
+    <h2 class="section-heading text-3xl sm:text-4xl text-center mb-3 text-gray-900 dark:text-white">{t.projects.sectionTitle}</h2>
     <p class="section-subheading text-center mb-10 text-gray-600 dark:text-gray-300">
-      Web development projects and applications ranging from business management systems to 
-      <span class="text-primary">e-commerce</span> and <span class="text-primary">informational websites</span>
+      {t.projects.sectionSubtitle} 
+      <span class="text-primary">{t.projects.ecommerce}</span> and <span class="text-primary">{t.projects.informational}</span>
     </p>
     
     <!-- Filter Buttons -->
@@ -150,19 +150,19 @@ const PROJECTS = [
         class="filter-btn active px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-200"
         data-filter="all"
       >
-        All Projects
+        {t.projects.allProjects}
       </button>
       <button 
         class="filter-btn px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-200"
         data-filter="Frontend"
       >
-        Frontend
+        {t.projects.frontend}
       </button>
       <button 
         class="filter-btn px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-200"
         data-filter="Full-Stack"
       >
-        Full-Stack
+        {t.projects.fullStack}
       </button>
     </div>
     
@@ -179,6 +179,7 @@ const PROJECTS = [
             img={project.img}
             category={project.category}
             images={project.images}
+            lang={lang}
           />
         </div>
       ))}

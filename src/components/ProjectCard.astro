@@ -1,5 +1,8 @@
 ---
-const {title, desc, technologies, img, webSite, repository, videoUrl, category, images} = Astro.props;
+import { useTranslations } from '../i18n/index.js'
+
+const {title, desc, technologies, img, webSite, repository, videoUrl, category, images, lang = 'en'} = Astro.props;
+const t = useTranslations(lang);
 
 const hasImages = images && images.length > 0;
 const hasRepository = repository && repository !== "#";
@@ -51,7 +54,7 @@ const hasAnyLink = hasRepository || hasWebSite || hasVideo || hasImages;
             target="_blank" 
             rel="noopener"
           >
-            Repository
+            {t.projects.repository}
           </a>
         )}
         
@@ -62,7 +65,7 @@ const hasAnyLink = hasRepository || hasWebSite || hasVideo || hasImages;
             target="_blank" 
             rel="noopener"
           >
-            Live Demo
+            {t.projects.liveDemo}
           </a>
         )}
         
@@ -73,7 +76,7 @@ const hasAnyLink = hasRepository || hasWebSite || hasVideo || hasImages;
             target="_blank" 
             rel="noopener"
           >
-            Watch Video
+            {t.projects.watchVideo}
           </a>
         )}
         
@@ -82,7 +85,7 @@ const hasAnyLink = hasRepository || hasWebSite || hasVideo || hasImages;
             onclick={`openProjectModal('${title}', ${JSON.stringify(images)})`}
             class="flex-1 py-2 px-3 text-sm font-medium text-center rounded-lg border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors duration-200"
           >
-            View Images
+            {t.projects.viewImages}
           </button>
         )}
       </div>
@@ -90,7 +93,7 @@ const hasAnyLink = hasRepository || hasWebSite || hasVideo || hasImages;
 
     {!hasAnyLink && (
       <div class="py-2 px-3 text-sm font-medium text-center rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-400 dark:text-gray-500">
-        Private Project
+        {t.projects.privateProject}
       </div>
     )}
   </div>

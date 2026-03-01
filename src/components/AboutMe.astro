@@ -1,20 +1,36 @@
+---
+import { useTranslations } from '../i18n/index.js'
+
+const { lang = 'en' } = Astro.props;
+const t = useTranslations(lang);
+
+function renderHighlight(text: string) {
+  return text.split(/<highlight>(.*?)<\/highlight>/g);
+}
+
+const p1Parts: string[] = renderHighlight(t.aboutMe.p1);
+const p2Parts: string[] = renderHighlight(t.aboutMe.p2);
+---
+
 <section id="about-me" class="w-full flex flex-col items-center justify-center py-20 px-6 scroll-mt-20 bg-white dark:bg-gray-950">
   <div class="w-full max-w-3xl">
-    <h2 class="section-heading text-3xl sm:text-4xl text-center mb-12 text-gray-900 dark:text-white">About Me</h2>
+    <h2 class="section-heading text-3xl sm:text-4xl text-center mb-12 text-gray-900 dark:text-white">{t.aboutMe.sectionTitle}</h2>
 
     <div class="space-y-6">
       <p class="text-base sm:text-lg leading-relaxed text-gray-700 dark:text-gray-300">
-        Hello! I'm <span class="text-primary font-medium">Víctor Ángel López Romero</span>, a 22-year-old AI Software Engineer from Guanajuato, México.
-        My fascination with Artificial Intelligence started during university when I was amazed by how AI could perform seemingly complex tasks.
-        After deep research, I discovered that AI is actually a beautiful combination of 
-        <span class="text-primary font-medium">pure mathematics, algorithms, logical reasoning, and immense computing power</span>.
+        {p1Parts.map((part, i) => 
+          i % 2 === 1 
+            ? <span class="text-primary font-medium">{part}</span>
+            : <Fragment>{part}</Fragment>
+        )}
       </p>
       
       <p class="text-base sm:text-lg leading-relaxed text-gray-700 dark:text-gray-300">
-        This revelation fascinated me because I found a field where I could apply all my mathematical knowledge and unlock its true potential. 
-        By combining Artificial Intelligence with modern web development — with 
-        <span class="text-primary font-medium">JavaScript being my gateway into programming</span> — I now focus on creating 
-        <span class="text-primary font-medium">intelligent applications that enhance productivity</span> and help people save valuable time.
+        {p2Parts.map((part, i) => 
+          i % 2 === 1 
+            ? <span class="text-primary font-medium">{part}</span>
+            : <Fragment>{part}</Fragment>
+        )}
       </p>
     </div>
   </div>

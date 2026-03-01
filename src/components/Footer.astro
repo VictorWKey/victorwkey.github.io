@@ -4,6 +4,10 @@ import X from '../icons/X.jsx'
 import InstagramWhite from '../icons/InstagramWhite'
 import FacebookWhite from '../icons/FacebookWhite.jsx'
 import LinkedInWhite from "../icons/LinkedInWhite.jsx"
+import { useTranslations } from '../i18n/index.js'
+
+const { lang = 'en' } = Astro.props;
+const t = useTranslations(lang);
 ---
 
 <footer class="w-full py-10 px-6 border-t border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-900 transition-colors duration-200">
@@ -13,7 +17,7 @@ import LinkedInWhite from "../icons/LinkedInWhite.jsx"
       <!-- Branding -->
       <div class="flex flex-col items-center md:items-start">
         <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-1">Victor López</h3>
-        <p class="text-sm text-gray-600 dark:text-gray-400">AI Software Engineer</p>
+        <p class="text-sm text-gray-600 dark:text-gray-400">{t.footer.role}</p>
       </div>
 
       <!-- Social Links -->
@@ -45,13 +49,13 @@ import LinkedInWhite from "../icons/LinkedInWhite.jsx"
         <a href="mailto:victorwkey@gmail.com" class="text-sm text-primary hover:underline">
           victorwkey@gmail.com
         </a>
-        <p class="text-xs text-gray-500 dark:text-gray-500 mt-1">Guanajuato, México</p>
+        <p class="text-xs text-gray-500 dark:text-gray-500 mt-1">{t.footer.location}</p>
       </div>
     </div>
 
     <div class="border-t border-gray-200 dark:border-gray-700 mt-8 pt-6 text-center">
       <p class="text-xs text-gray-500 dark:text-gray-500">
-        © {new Date().getFullYear()} Victor López. All rights reserved.
+        © {new Date().getFullYear()} Victor López. {t.footer.rights}
       </p>
     </div>
   </div>

@@ -1,6 +1,7 @@
 import Menu from '../icons/Menu.jsx';
 import { isMovilMenuOpen } from '../movilMenu.js';
 import { useState, useEffect } from 'react';
+import { useTranslations, languages } from '../i18n/index.js';
 
 function ThemeToggle() {
   const [dark, setDark] = useState(true);
@@ -35,36 +36,54 @@ function ThemeToggle() {
   );
 }
 
-function Navbar() {
+function LanguageSwitcher({ lang }) {
+  const otherLang = lang === 'en' ? 'es' : 'en';
+  const otherLabel = languages[otherLang];
+
+  return (
+    <a
+      href={`/${otherLang}/`}
+      className="px-3 py-1.5 text-xs font-medium rounded-lg border border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200"
+    >
+      {otherLabel}
+    </a>
+  );
+}
+
+function Navbar({ lang = 'en' }) {
+  const t = useTranslations(lang);
+
   return (
     <nav className="z-20 bg-white/80 dark:bg-gray-950/90 backdrop-blur-sm border-b border-gray-200 dark:border-gray-700 flex justify-between sm:justify-between items-center py-3 px-6 fixed top-0 w-full transition-colors duration-200">
       
       {/* Logo/Brand */}
       <div className="flex items-center">
-        <span className="font-bold text-lg text-gray-900 dark:text-white tracking-tight">VL</span>
+        <img src="/img/pp-official-circular.png" alt="VL Logo" className="w-8 h-8 rounded-full object-cover" />
       </div>
 
       {/* Desktop Navigation */}
       <div className="hidden sm:flex items-center gap-1">
         <a href="#top" className="px-4 py-2 text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200">
-          Home
+          {t.nav.home}
         </a>
         <a href="#projects" className="px-4 py-2 text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200">
-          Experience
+          {t.nav.experience}
         </a>
         <a href="#skills" className="px-4 py-2 text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200">
-          Skills
+          {t.nav.skills}
         </a>
         <a href="#about-me" className="px-4 py-2 text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200">
-          About Me
+          {t.nav.aboutMe}
         </a>
-        <div className="ml-2 border-l border-gray-200 dark:border-gray-700 pl-2">
+        <div className="ml-2 border-l border-gray-200 dark:border-gray-700 pl-2 flex items-center gap-2">
+          <LanguageSwitcher lang={lang} />
           <ThemeToggle />
         </div>
       </div>
 
-      {/* Mobile: theme toggle + menu */}
+      {/* Mobile: theme toggle + lang + menu */}
       <div className="sm:hidden flex items-center gap-2">
+        <LanguageSwitcher lang={lang} />
         <ThemeToggle />
         <button 
           onClick={() => isMovilMenuOpen.set(true)}
