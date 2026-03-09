@@ -17,16 +17,17 @@ const t = useTranslations(lang);
     
     if (emailButton) {
       emailButton.addEventListener('click', async function() {
-        const textElement = emailButton.querySelector('p');
-        if (!textElement) return;
+        const textElements = emailButton.querySelectorAll('p');
+        const visibleElement = Array.from(textElements).find(el => el.offsetParent !== null);
+        if (!visibleElement) return;
         
-        const originalText = textElement.textContent;
+        const originalText = visibleElement.textContent;
         
         try {
           await navigator.clipboard.writeText(email);
-          textElement.textContent = copiedText;
+          visibleElement.textContent = copiedText;
           setTimeout(() => {
-            if (textElement) textElement.textContent = originalText;
+            if (visibleElement) visibleElement.textContent = originalText;
           }, 2000);
         } catch (err) {
           const textArea = document.createElement('textarea');
@@ -35,9 +36,9 @@ const t = useTranslations(lang);
           textArea.select();
           document.execCommand('copy');
           document.body.removeChild(textArea);
-          textElement.textContent = copiedText;
+          visibleElement.textContent = copiedText;
           setTimeout(() => {
-            if (textElement) textElement.textContent = originalText;
+            if (visibleElement) visibleElement.textContent = originalText;
           }, 2000);
         }
       });
