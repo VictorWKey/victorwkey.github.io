@@ -21,7 +21,13 @@
     "scalable": "aplicaciones full-stack que generan valor real de negocio",
     "email": "Correo",
     "downloadCV": "Descargar CV",
-    "copied": "¡Copiado!"
+    "copied": "¡Copiado!",
+    "cvModalTitle": "Descargar CV",
+    "cvLanguage": "Idioma",
+    "cvFormat": "Formato",
+    "cvEnglish": "Inglés",
+    "cvSpanish": "Español",
+    "cvDownload": "Descargar"
   },
   "experience": {
     "sectionTitle": "Experiencia",

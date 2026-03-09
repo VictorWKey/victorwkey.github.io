@@ -21,7 +21,13 @@
     "scalable": "full-stack applications that deliver real business value",
     "email": "Email",
     "downloadCV": "Download CV",
-    "copied": "Copied!"
+    "copied": "Copied!",
+    "cvModalTitle": "Download CV",
+    "cvLanguage": "Language",
+    "cvFormat": "Format",
+    "cvEnglish": "English",
+    "cvSpanish": "Spanish",
+    "cvDownload": "Download"
   },
   "experience": {
     "sectionTitle": "Experience",

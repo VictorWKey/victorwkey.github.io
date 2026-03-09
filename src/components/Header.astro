@@ -1,8 +1,8 @@
 ---
 import LinkedInWhite from '../icons/LinkedInWhite.jsx'
-import Download from '../icons/Download.jsx'
 import EmailWhite from '../icons/EmailWhite.jsx'
 import GithubWhite from '../icons/GithubWhite.jsx'
+import CVDownloadModal from './CVDownloadModal.jsx'
 import { useTranslations } from '../i18n/index.js'
 
 const { lang = 'en' } = Astro.props;
@@ -120,15 +120,7 @@ const t = useTranslations(lang);
         <p class="sm:hidden">{t.header.email}</p>
       </button>
 
-      <a 
-        href="https://drive.google.com/file/d/1dHdAZFB2CBPFN6HyLsJgstCcswD44MJN/view?usp=sharing" 
-        class="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium rounded-lg bg-blue-600 dark:bg-blue-600 text-white dark:text-white hover:bg-blue-700 dark:hover:bg-blue-700 transition-colors duration-200" 
-        target="_blank" 
-        rel="noopener"
-      >
-        <div class="w-4 h-4"><Download/></div>
-        {t.header.downloadCV}
-      </a>
+      <CVDownloadModal lang={lang} client:load />
     </div>
   </div>
 </main>
