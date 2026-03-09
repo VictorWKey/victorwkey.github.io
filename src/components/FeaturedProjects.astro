@@ -1,0 +1,237 @@
+---
+import { useTranslations } from '../i18n/index.js'
+import Python from "../icons/Python.jsx";
+import Pytorch from "../icons/Pytorch.jsx";
+import HuggingFace from "../icons/HuggingFace.jsx";
+import LangChain from "../icons/LangChain.jsx";
+import Electron from "../icons/Electron.jsx";
+import ReactLogo from "../icons/ReactLogo.jsx";
+import TypeScript from "../icons/TypeScript.jsx";
+import Tailwind from "../icons/Tailwind.jsx";
+
+const { lang = 'en' } = Astro.props;
+const t = useTranslations(lang);
+
+const PROJECTS = [
+  {
+    title: t.featuredProjects.items[0].title,
+    desc: t.featuredProjects.items[0].desc,
+    highlights: t.featuredProjects.items[0].highlights,
+    technologies: [
+      { name: "Python", logo: Python },
+      { name: "PyTorch", logo: Pytorch },
+      { name: "Hugging Face", logo: HuggingFace },
+      { name: "LangChain", logo: LangChain },
+      { name: "Electron", logo: Electron },
+      { name: "React", logo: ReactLogo },
+      { name: "TypeScript", logo: TypeScript },
+      { name: "Tailwind", logo: Tailwind },
+    ],
+    img: "/tourlyai-1920x1080.png",
+    repository: "https://github.com/TourlyAI",
+    site: "https://tourlyai.site",
+  }
+];
+---
+
+<section id="featured-projects" class="w-full flex flex-col items-center py-20 px-6 scroll-mt-16 bg-white dark:bg-gray-950">
+  <div class="w-full max-w-3xl">
+    <h2 class="section-heading text-3xl sm:text-4xl text-center mb-3 text-gray-900 dark:text-white">{t.featuredProjects.sectionTitle}</h2>
+    <p class="section-subheading text-center mb-12 text-gray-600 dark:text-gray-300">
+      {t.featuredProjects.sectionSubtitle}
+    </p>
+
+    <div class="space-y-6">
+      {PROJECTS.map((project) => (
+        <div class="project-card card overflow-hidden w-full hover:shadow-lg hover:border-primary/30 transition-all duration-200 cursor-pointer" data-site={project.site}>
+          <!-- Project Image — exact 16:9 container matches the screenshot ratio -->
+          <figure class="w-full aspect-video bg-gray-100 dark:bg-gray-800 overflow-hidden rounded-t-xl">
+            <img
+              class="w-full h-full object-cover"
+              src={project.img}
+              alt={project.title}
+            />
+          </figure>
+
+          <div class="p-5 sm:p-6 flex flex-col">
+            <!-- Title + info icon -->
+            <div class="flex items-start justify-between gap-3 mb-2">
+              <h3 class="text-lg sm:text-xl font-bold text-gray-900 dark:text-white">{project.title}</h3>
+              {project.highlights && project.highlights.length > 0 && (
+                <div class="highlights-trigger relative flex-shrink-0 mt-0.5">
+                  <button
+                    class="highlights-btn w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold text-primary border border-primary/40 hover:bg-primary/10 transition-colors duration-200"
+                    aria-label="Show project highlights"
+                    data-highlights={JSON.stringify(project.highlights)}
+                  >i</button>
+                  <!-- Desktop tooltip -->
+                  <div class="highlights-tooltip fixed w-[min(22rem,calc(100vw-2rem))] bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl shadow-xl p-4 z-50 hidden">
+                    <p class="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide mb-2">Highlights</p>
+                    <ul class="space-y-1.5">
+                      {project.highlights.map((highlight: string) => (
+                        <li class="flex gap-2 text-xs text-gray-600 dark:text-gray-300 leading-snug">
+                          <span class="text-primary flex-shrink-0 leading-snug">▹</span>
+                          <span>{highlight}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              )}
+            </div>
+
+            <!-- Description -->
+            <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
+              {project.desc}
+            </p>
+
+            <!-- Technologies -->
+            <div class="flex flex-wrap gap-1.5 mb-4">
+              {project.technologies.map((tech: any) => {
+                const TechComponent = tech.logo;
+                return (
+                  <div class="flex items-center gap-1.5 bg-gray-100 dark:bg-gray-700 rounded-md px-2 py-1">
+                    <div class="w-3.5 h-3.5">
+                      <TechComponent/>
+                    </div>
+                    <span class="text-xs text-gray-600 dark:text-gray-400">{tech.name}</span>
+                  </div>
+                );
+              })}
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="flex gap-2">
+              {project.site && (
+                <a
+                  href={project.site}
+                  class="py-2 px-4 text-sm font-medium text-center rounded-lg bg-primary text-white hover:bg-primary/90 transition-colors duration-200"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  {t.featuredProjects.liveDemo}
+                </a>
+              )}
+              {project.repository && (
+                <a
+                  href={project.repository}
+                  class="py-2 px-4 text-sm font-medium text-center rounded-lg border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors duration-200"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  {t.featuredProjects.repository}
+                </a>
+              )}
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<!-- Mobile highlights modal (shared) -->
+<div id="highlights-modal" class="fixed inset-0 z-50 hidden items-end sm:items-center justify-center">
+  <!-- Backdrop -->
+  <div id="highlights-modal-backdrop" class="absolute inset-0 bg-black/40"></div>
+  <!-- Sheet -->
+  <div class="relative w-full sm:w-auto sm:max-w-md mx-auto bg-white dark:bg-gray-800 rounded-t-2xl sm:rounded-2xl shadow-2xl p-5 z-10 max-h-[80vh] overflow-y-auto">
+    <!-- Handle (mobile) -->
+    <div class="w-10 h-1 bg-gray-300 dark:bg-gray-600 rounded-full mx-auto mb-4 sm:hidden"></div>
+    <div class="flex items-center justify-between mb-3">
+      <p class="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide">Highlights</p>
+      <button id="highlights-modal-close" class="p-1.5 rounded-lg text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <ul id="highlights-modal-list" class="space-y-2"></ul>
+  </div>
+</div>
+
+<script is:inline>
+  const isMobile = () => window.innerWidth < 640;
+
+  // --- Desktop tooltip ---
+  function positionTooltip(btn, tooltip) {
+    const rect = btn.getBoundingClientRect();
+    const ttWidth = tooltip.offsetWidth || 352;
+    const ttHeight = tooltip.offsetHeight || 200;
+    const margin = 8;
+    let left = rect.right - ttWidth;
+    if (left < margin) left = margin;
+    if (left + ttWidth > window.innerWidth - margin) left = window.innerWidth - ttWidth - margin;
+    let top = rect.bottom + margin;
+    if (top + ttHeight > window.innerHeight - margin) top = rect.top - ttHeight - margin;
+    tooltip.style.left = left + 'px';
+    tooltip.style.top  = top  + 'px';
+  }
+
+  // --- Mobile modal ---
+  const modal     = document.getElementById('highlights-modal');
+  const modalList = document.getElementById('highlights-modal-list');
+  const modalClose = document.getElementById('highlights-modal-close');
+  const backdrop  = document.getElementById('highlights-modal-backdrop');
+
+  function openModal(highlights) {
+    modalList.innerHTML = highlights.map(h =>
+      `<li class="flex gap-2 text-sm text-gray-600 dark:text-gray-300 leading-snug">
+        <span class="text-primary flex-shrink-0 leading-snug">▹</span>
+        <span>${h}</span>
+      </li>`
+    ).join('');
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal() {
+    modal.classList.add('hidden');
+    modal.classList.remove('flex');
+    document.body.style.overflow = '';
+  }
+
+  modalClose.addEventListener('click', closeModal);
+  backdrop.addEventListener('click', closeModal);
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+  // --- Button wiring ---
+  document.querySelectorAll('.highlights-trigger').forEach(trigger => {
+    const tooltip    = trigger.querySelector('.highlights-tooltip');
+    const btn        = trigger.querySelector('.highlights-btn');
+    const highlights = JSON.parse(btn.dataset.highlights || '[]');
+
+    function showTooltip() {
+      tooltip.classList.remove('hidden');
+      positionTooltip(btn, tooltip);
+    }
+    function hideTooltip() { tooltip.classList.add('hidden'); }
+
+    // Desktop: hover
+    btn.addEventListener('mouseenter', () => { if (!isMobile()) showTooltip(); });
+    btn.addEventListener('mouseleave', () => { if (!isMobile()) hideTooltip(); });
+    btn.addEventListener('focus',      () => { if (!isMobile()) showTooltip(); });
+    btn.addEventListener('blur',       () => { if (!isMobile()) hideTooltip(); });
+
+    // Click: tooltip on desktop, modal on mobile
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      if (isMobile()) {
+        openModal(highlights);
+      } else {
+        if (tooltip.classList.contains('hidden')) showTooltip(); else hideTooltip();
+      }
+    });
+  });
+
+  // Card-level click → navigate to site (skip if clicking a button/link/button inside)
+  document.querySelectorAll('.project-card').forEach(card => {
+    card.addEventListener('click', (e) => {
+      if (e.target.closest('a, button')) return;
+      window.open(card.dataset.site, '_blank', 'noopener');
+    });
+  });
+
+  document.addEventListener('click', () => {
+    document.querySelectorAll('.highlights-tooltip').forEach(t => t.classList.add('hidden'));
+  });
+</script>

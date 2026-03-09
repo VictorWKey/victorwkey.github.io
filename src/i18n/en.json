@@ -1,54 +1,96 @@
 {
   "layout": {
-    "title": "Victor Ángel López Portfolio - AI Software Engineer and Web Developer",
+    "title": "Victor López - Portfolio",
     "description": "Hire Víctor López to take your projects to the next level! As a frontend developer and AI specialist, I offer creative and functional solutions that stand out in the digital market."
   },
   "nav": {
     "home": "Home",
     "experience": "Experience",
     "skills": "Skills",
-    "aboutMe": "About Me"
+    "aboutMe": "About Me",
+    "education": "Education"
   },
   "header": {
     "available": "Available",
     "role": "AI Software Engineer",
-    "description": "From Guanajuato, México. Specialized in developing intelligent software solutions that bridge the gap between",
-    "ai": "artificial intelligence",
-    "and": "and",
-    "scalable": "scalable applications",
+    "description": "AI Software Engineer at",
+    "company": "Vórtice Coaching",
+    "descriptionContinue": ", bridging the gap between advanced AI research and production-ready software. I lead Generative AI solutions — from",
+    "ai": "RAG architectures and autonomous agents",
+    "and": "to",
+    "scalable": "full-stack applications that deliver real business value",
     "email": "Email",
     "downloadCV": "Download CV",
     "copied": "Copied!"
   },
-  "projects": {
-    "sectionTitle": "Experience & Featured Projects",
-    "sectionSubtitle": "Web development projects and applications ranging from business management systems to",
-    "ecommerce": "e-commerce",
-    "informational": "informational websites",
-    "allProjects": "All Projects",
-    "frontend": "Frontend",
-    "fullStack": "Full-Stack",
-    "repository": "Repository",
-    "liveDemo": "Live Demo",
-    "watchVideo": "Watch Video",
-    "viewImages": "View Images",
-    "privateProject": "Private Project",
+  "experience": {
+    "sectionTitle": "Experience",
+    "sectionSubtitle": "My professional journey building intelligent software solutions",
+    "present": "Present",
     "items": [
       {
-        "title": "AlineaDent - Dental Clinic Management System",
-        "desc": "Comprehensive dental clinic management system built with Next.js and Python/FastAPI. Manages patients, appointments, and dental treatments with visual calendar, integrated WhatsApp communication, AI conversation monitoring, and automatic report generation."
+        "company": "Vórtice Coaching",
+        "role": "AI Software Engineer",
+        "type": "Full-time",
+        "startDate": "Oct 2025",
+        "location": "Irapuato, Guanajuato, Mexico · Remote",
+        "description": "Development of full-stack software modules using Node.js and Next.js, integrating Large Language Models (LLMs) for automation and system-driven insights. Design of embedding pipelines and vector database workflows to support Retrieval-Augmented Generation (RAG) systems, along with continuous optimization to improve performance, scalability, and efficiency.",
+        "highlights": [
+          "Architecting advanced RAG and Embeddings pipelines for intelligent data processing",
+          "Leveraging LLMs to extract valuable insights and automate complex workflows",
+          "End-to-end development — from backend logic to seamless user experiences"
+        ]
+      }
+    ]
+  },
+  "featuredProjects": {
+    "sectionTitle": "Featured Projects",
+    "sectionSubtitle": "Showcasing impactful projects that push the boundaries of AI and full-stack development",
+    "repository": "Repository",
+    "liveDemo": "Live Demo",
+    "items": [
+      {
+        "title": "TourlyAI — AI-Powered Tourism Analytics",
+        "desc": "Open-source desktop app that turns tourism reviews into strategic insights — 100% locally, no cloud needed. My capstone project at UG: 2 fine-tuned BERT models, a 9-phase NLP pipeline, 34+ chart types, and a full Electron + React + Python app with bilingual support.",
+        "highlights": [
+          "19 Jupyter notebooks exploring sentiment analysis, topic modeling, and multi-label classification",
+          "Custom multi-label classifier predicting 12 tourism categories + a subjectivity classifier for mixed reviews",
+          "Full NLP pipeline: preprocessing → sentiment → subjectivity → categories → BERTopic → LLM summarization → strategic insights",
+          "Desktop app with interactive dashboards, review explorer, PDF reports, and optional LLM via Ollama or OpenAI"
+        ]
+      }
+    ]
+  },
+  "education": {
+    "sectionTitle": "Education",
+    "sectionSubtitle": "The academic and self-driven foundations behind my engineering skills",
+    "items": [
+      {
+        "institution": "Universidad de Guanajuato",
+        "campus": "Campus Irapuato-Salamanca · Engineering Division",
+        "degree": "Bachelor of Engineering, Data and Artificial Intelligence",
+        "startDate": "Aug 2023",
+        "endDate": "Dec 2026",
+        "location": "Guanajuato, Mexico",
+        "description": "Focused on the design and development of intelligent systems, big data processing, and foundational computer science principles.",
+        "areas": [
+          "Algorithms and Data Structures",
+          "Machine Learning and Artificial Intelligence Modeling",
+          "Mathematical Foundations for Data Science and Analytics"
+        ]
       },
       {
-        "title": "Work Orders Management System - Atta Montacargas",
-        "desc": "Mobile application for work order management developed with React Native and FastAPI. It includes user role management, work order creation and tracking, automatic PDF generation, a real-time metrics dashboard, and a complete status management system."
-      },
-      {
-        "title": "Muscle Factory Gym Website",
-        "desc": "Informational gym website developed with Astro and React. Features service sections, supplement comparison tool with functional shopping cart, detailed product catalog, and comprehensive personal training information."
-      },
-      {
-        "title": "E-Commerce Frontend",
-        "desc": "Modern e-commerce platform built with React and Tailwind CSS. Features interactive shopping cart, advanced filtering system, category navigation, detailed product views, and fully responsive design."
+        "institution": "Platzi",
+        "degree": "Full Stack Developer Path, Computer Software Engineering",
+        "startDate": "Mar 2023",
+        "endDate": "Mar 2034",
+        "description": "Professional specialization in full-stack architecture and advanced AI fields, bridging the gap between academic theory and high-performance production environments.",
+        "areas": [
+          "Full-Stack Development: End-to-end software creation, API design, modern frontend frameworks, and database management",
+          "Natural Language Processing (NLP): Text analysis, language modeling, and AI-driven communication tools",
+          "Computer Vision & AI: Image processing techniques and visual recognition systems",
+          "Cloud & Infrastructure: Cloud services for deploying and scaling secure applications"
+        ]
       }
     ]
   },

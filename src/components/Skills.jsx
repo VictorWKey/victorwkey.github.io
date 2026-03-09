@@ -31,60 +31,8 @@ import ReactNative from "../icons/ReactNative.jsx";
 import Electron from "../icons/Electron.jsx";
 import { useTranslations } from '../i18n/index.js';
 
-import React, { useState } from "react";
+import React from "react";
 
-const Modal = ({ isOpen, onClose, skill, certificates }) => {
-  if (!isOpen || !skill) return null;
-
-  const skillCertificates = certificates[skill.name] || [];
-  if (skillCertificates.length === 0) return null;
-
-  const [currentCertificateIndex, setCurrentCertificateIndex] = useState(0);
-  const currentCertificate = skillCertificates[currentCertificateIndex];
-
-  const handlePrev = () => {
-    setCurrentCertificateIndex(prevIndex => (prevIndex === 0 ? skillCertificates.length - 1 : prevIndex - 1));
-  };
-
-  const handleNext = () => {
-    setCurrentCertificateIndex(prevIndex => (prevIndex === skillCertificates.length - 1 ? 0 : prevIndex + 1));
-  };
-
-  return (
-    <div className="fixed inset-0 bg-black/50 flex justify-center items-center z-50 p-4" onClick={onClose}>
-      <div className="relative bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 p-8 rounded-xl max-w-2xl max-h-[90%] overflow-y-auto flex flex-col items-center" onClick={e => e.stopPropagation()}>
-        <button 
-          onClick={onClose} 
-          className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 transition-colors"
-        >
-          ✕
-        </button>
-
-        <h2 className="text-2xl font-bold mb-6 text-gray-900 dark:text-white">{skill.name}</h2>
-
-        <div className="flex items-center gap-6">
-          <button onClick={handlePrev} className="p-2 rounded-lg bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-200 transition-colors">
-            ←
-          </button>
-
-          <div className="w-48 h-48 bg-gray-100 dark:bg-gray-700 rounded-lg overflow-hidden">
-            <img src={currentCertificate} alt={`Certificate ${currentCertificateIndex + 1}`} className="w-full h-full object-contain" />
-          </div>
-
-          <button onClick={handleNext} className="p-2 rounded-lg bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-200 transition-colors">
-            →
-          </button>
-        </div>
-
-        <div className="mt-4 flex gap-2">
-          {skillCertificates.map((_, index) => (
-            <div key={index} className={`w-2 h-2 rounded-full transition-colors ${index === currentCertificateIndex ? 'bg-primary' : 'bg-gray-300 dark:bg-gray-600'}`} />
-          ))}
-        </div>
-      </div>
-    </div>
-  );
-};
 
 const SKILLS = {
   Python: { name: "Python", logo: () => <Python />, category: "ia" },
@@ -121,21 +69,6 @@ const SKILLS = {
 
 const SkillsSection = ({ lang = 'en' }) => {
   const t = useTranslations(lang);
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [selectedSkill, setSelectedSkill] = useState(null);
-  const certificates = {
-    JavaScript: ["https://example.com/cert1.jpg", "https://example.com/cert2.jpg"],
-    Python: ["./../../certificates/python1.jpg", "https://example.com/cert4.jpg"]
-  };
-
-  const handleSkillClick = (skill) => {
-    setSelectedSkill(skill);
-    setIsModalOpen(true);
-  };
-
-  const handleCloseModal = () => {
-    setIsModalOpen(false);
-  };
 
   return (
     <section id="skills" className="w-full flex flex-col items-center py-20 px-6 scroll-mt-20 bg-white dark:bg-gray-950">
@@ -150,8 +83,7 @@ const SkillsSection = ({ lang = 'en' }) => {
             {Object.entries(SKILLS).filter(([_, skill]) => skill.category === "ia").map(([name, skill]) => (
               <div
                 key={skill.name}
-                className="border border-gray-200 dark:border-gray-700 rounded-xl w-24 h-24 flex flex-col items-center justify-center gap-1.5 hover:border-primary/40 transition-colors duration-200 cursor-pointer p-3"
-                onClick={() => handleSkillClick(skill)}
+                className="border border-gray-200 dark:border-gray-700 rounded-xl w-24 h-24 flex flex-col items-center justify-center gap-1.5 hover:border-primary/40 transition-colors duration-200 p-3"
               >
                 <div className="w-7 h-7 flex-shrink-0">{skill.logo()}</div>
                 <p className="text-xs text-gray-700 dark:text-gray-200 text-center font-medium leading-tight">{skill.name}</p>
@@ -163,8 +95,7 @@ const SkillsSection = ({ lang = 'en' }) => {
             {Object.entries(SKILLS).filter(([_, skill]) => skill.category === "web").map(([name, skill]) => (
               <div
                 key={skill.name}
-                className="border border-gray-200 dark:border-gray-700 rounded-xl w-24 h-24 flex flex-col items-center justify-center gap-1.5 hover:border-primary/40 transition-colors duration-200 cursor-pointer p-3"
-                onClick={() => handleSkillClick(skill)}
+                className="border border-gray-200 dark:border-gray-700 rounded-xl w-24 h-24 flex flex-col items-center justify-center gap-1.5 hover:border-primary/40 transition-colors duration-200 p-3"
               >
                 <div className="w-7 h-7 flex-shrink-0">{skill.logo()}</div>
                 <p className="text-xs text-gray-700 dark:text-gray-200 text-center font-medium leading-tight">{skill.name}</p>
@@ -173,13 +104,6 @@ const SkillsSection = ({ lang = 'en' }) => {
           </SkillsContainer>
         </div>
       </div>
-
-      <Modal
-        isOpen={isModalOpen}
-        onClose={handleCloseModal}
-        skill={selectedSkill}
-        certificates={certificates}
-      />
     </section>
   );
 };

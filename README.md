@@ -7,9 +7,8 @@
 <div align="center">
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-4bbf6b?style=for-the-badge&logo=vercel&logoColor=white)](https://victorwkey.com)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/victor-angel-lopez-556605245/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/victor-angel-lopez-romero-556605245)
 [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/victorwkey)
-[![X](https://img.shields.io/badge/X-000000?style=for-the-badge&logo=x&logoColor=white)](https://x.com/victorwkey)
 
 </div>
 
@@ -89,7 +88,7 @@ Open to collaborating on AI projects and exploring new opportunities.
 <div align="center">
 
 [![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:victorwkey@gmail.com)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/victor-angel-lopez-556605245/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/victor-angel-lopez-romero-556605245)
 [![Portfolio](https://img.shields.io/badge/Portfolio-4bbf6b?style=for-the-badge&logo=firefox&logoColor=white)](https://victorwkey.com)
 
 </div>

@@ -47,13 +47,17 @@ function MovilMenu({ lang = 'en' }) {
             className="w-full text-left px-5 py-3 text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
             {t.nav.home}
           </button>
-          <button onClick={() => handleNavigation('#projects')}
+          <button onClick={() => handleNavigation('#experience')}
             className="w-full text-left px-5 py-3 text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
             {t.nav.experience}
           </button>
           <button onClick={() => handleNavigation('#skills')}
             className="w-full text-left px-5 py-3 text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
             {t.nav.skills}
+          </button>
+          <button onClick={() => handleNavigation('#education')}
+            className="w-full text-left px-5 py-3 text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+            {t.nav.education}
           </button>
           <button onClick={() => handleNavigation('#about-me')}
             className="w-full text-left px-5 py-3 text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">

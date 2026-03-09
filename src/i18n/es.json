@@ -1,54 +1,96 @@
 {
   "layout": {
-    "title": "Portafolio de Víctor Ángel López - Especialista en Inteligencia Artificial y Desarrollador Web",
+    "title": "Victor López - Portafolio",
     "description": "¡Contrata a Víctor López para llevar tus proyectos al siguiente nivel! Como desarrollador frontend y especialista en inteligencia artificial, ofrezco soluciones creativas y funcionales que destacan en el mercado digital."
   },
   "nav": {
     "home": "Inicio",
     "experience": "Experiencia",
     "skills": "Habilidades",
-    "aboutMe": "Sobre Mí"
+    "aboutMe": "Sobre Mí",
+    "education": "Educación"
   },
   "header": {
     "available": "Disponible",
     "role": "Ingeniero de Software IA",
-    "description": "De Guanajuato, México. Especializado en desarrollar soluciones de software inteligentes que conectan la",
-    "ai": "inteligencia artificial",
-    "and": "y las",
-    "scalable": "aplicaciones escalables",
+    "description": "Ingeniero de Software IA en",
+    "company": "Vórtice Coaching",
+    "descriptionContinue": ", conectando la investigación avanzada en IA con software listo para producción. Lidero soluciones de IA Generativa — desde",
+    "ai": "arquitecturas RAG y agentes autónomos",
+    "and": "hasta",
+    "scalable": "aplicaciones full-stack que generan valor real de negocio",
     "email": "Correo",
     "downloadCV": "Descargar CV",
     "copied": "¡Copiado!"
   },
-  "projects": {
-    "sectionTitle": "Experiencia y Proyectos Destacados",
-    "sectionSubtitle": "Proyectos de desarrollo web y aplicaciones que van desde sistemas de gestión empresarial hasta",
-    "ecommerce": "comercio electrónico",
-    "informational": "sitios web informativos",
-    "allProjects": "Todos los Proyectos",
-    "frontend": "Frontend",
-    "fullStack": "Full-Stack",
-    "repository": "Repositorio",
-    "liveDemo": "Demo en Vivo",
-    "watchVideo": "Ver Video",
-    "viewImages": "Ver Imágenes",
-    "privateProject": "Proyecto Privado",
+  "experience": {
+    "sectionTitle": "Experiencia",
+    "sectionSubtitle": "Mi trayectoria profesional construyendo soluciones de software inteligente",
+    "present": "Presente",
     "items": [
       {
-        "title": "AlineaDent - Sistema de Gestión de Clínica Dental",
-        "desc": "Sistema integral de gestión de clínica dental desarrollado con Next.js y Python/FastAPI. Gestiona pacientes, citas y tratamientos dentales con calendario visual, comunicación integrada por WhatsApp, monitoreo de conversaciones con IA y generación automática de reportes."
+        "company": "Vórtice Coaching",
+        "role": "AI Software Engineer",
+        "type": "Tiempo completo",
+        "startDate": "Oct 2025",
+        "location": "Irapuato, Guanajuato, México · Remoto",
+        "description": "Desarrollo de módulos de software full-stack usando Node.js y Next.js, integrando Modelos de Lenguaje Grande (LLMs) para automatización e insights del sistema. Diseño de pipelines de embeddings y flujos de bases de datos vectoriales para soportar sistemas de Generación Aumentada por Recuperación (RAG), junto con optimización continua para mejorar rendimiento, escalabilidad y eficiencia.",
+        "highlights": [
+          "Arquitectura de pipelines avanzados de RAG y Embeddings para procesamiento inteligente de datos",
+          "Uso de LLMs para extraer insights valiosos y automatizar flujos de trabajo complejos",
+          "Desarrollo end-to-end — desde lógica de backend hasta experiencias de usuario fluidas"
+        ]
+      }
+    ]
+  },
+  "featuredProjects": {
+    "sectionTitle": "Proyectos Destacados",
+    "sectionSubtitle": "Proyectos de impacto que empujan los límites de la IA y el desarrollo full-stack",
+    "repository": "Repositorio",
+    "liveDemo": "Demo en Vivo",
+    "items": [
+      {
+        "title": "TourlyAI — Analítica de Turismo con IA",
+        "desc": "App de escritorio de código abierto que convierte reseñas turísticas en insights estratégicos — 100% local, sin nube. Mi proyecto de titulación en la UG: 2 modelos BERT fine-tuneados, un pipeline NLP de 9 fases, más de 34 tipos de gráficos y una app completa con Electron + React + Python con soporte bilingüe.",
+        "highlights": [
+          "19 notebooks de Jupyter explorando análisis de sentimiento, modelado de temas y clasificación multi-etiqueta",
+          "Clasificador multi-etiqueta personalizado con 12 categorías turísticas + clasificador de subjetividad para reseñas mixtas",
+          "Pipeline NLP completo: preprocesamiento → sentimiento → subjetividad → categorías → BERTopic → resumen con LLM → insights estratégicos",
+          "App con dashboards interactivos, explorador de reseñas, reportes PDF e integración opcional con LLM vía Ollama u OpenAI"
+        ]
+      }
+    ]
+  },
+  "education": {
+    "sectionTitle": "Educación",
+    "sectionSubtitle": "Las bases académicas y autodidactas detrás de mis habilidades de ingeniería",
+    "items": [
+      {
+        "institution": "Universidad de Guanajuato",
+        "campus": "Campus Irapuato-Salamanca · División de Ingenierías",
+        "degree": "Ingeniería en Datos e Inteligencia Artificial",
+        "startDate": "Ago 2023",
+        "endDate": "Dic 2026",
+        "location": "Guanajuato, México",
+        "description": "Enfocado en el diseño y desarrollo de sistemas inteligentes, procesamiento de big data y principios fundamentales de ciencias de la computación.",
+        "areas": [
+          "Algoritmos y Estructuras de Datos",
+          "Machine Learning y Modelado de Inteligencia Artificial",
+          "Fundamentos Matemáticos para Ciencia de Datos y Analítica"
+        ]
       },
       {
-        "title": "Sistema de Órdenes de Trabajo - Atta Montacargas",
-        "desc": "Aplicación móvil para gestión de órdenes de trabajo desarrollada con React Native y FastAPI. Incluye gestión de roles de usuario, creación y seguimiento de órdenes de trabajo, generación automática de PDF, panel de métricas en tiempo real y un sistema completo de gestión de estados."
-      },
-      {
-        "title": "Sitio Web del Gimnasio Muscle Factory",
-        "desc": "Sitio web informativo de gimnasio desarrollado con Astro y React. Incluye secciones de servicios, herramienta de comparación de suplementos con carrito de compras funcional, catálogo detallado de productos e información completa de entrenamiento personal."
-      },
-      {
-        "title": "Frontend de E-Commerce",
-        "desc": "Plataforma moderna de comercio electrónico construida con React y Tailwind CSS. Incluye carrito de compras interactivo, sistema de filtrado avanzado, navegación por categorías, vistas detalladas de productos y diseño completamente responsivo."
+        "institution": "Platzi",
+        "degree": "Ruta de Desarrollador Full Stack, Ingeniería de Software",
+        "startDate": "Mar 2023",
+        "endDate": "Mar 2034",
+        "description": "Especialización profesional en arquitectura full-stack y campos avanzados de IA, conectando la teoría académica con entornos de producción de alto rendimiento.",
+        "areas": [
+          "Desarrollo Full-Stack: Creación de software end-to-end, diseño de APIs, frameworks frontend modernos y gestión de bases de datos",
+          "Procesamiento de Lenguaje Natural (NLP): Análisis de texto, modelado de lenguaje y herramientas de comunicación con IA",
+          "Visión por Computadora e IA: Técnicas de procesamiento de imágenes y sistemas de reconocimiento visual",
+          "Cloud e Infraestructura: Servicios en la nube para desplegar y escalar aplicaciones seguras"
+        ]
       }
     ]
   },
