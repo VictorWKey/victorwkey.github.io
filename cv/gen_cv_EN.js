@@ -90,7 +90,7 @@ function english() {
     center("Victor Angel Lopez Romero", S.name, true),
     center("AI Software Engineer", S.title),
     center("victorwkey@gmail.com  |  +52 462 257 4618  |  www.victorwkey.com", S.contact),
-    center("linkedin.com/in/victor-angel-lopez-romero-556605245  |  github.com/VictorWKey", S.contact),
+    center("linkedin.com/in/victorlopezwk  |  github.com/VictorWKey", S.contact),
     center("Irapuato, Guanajuato, M\u00e9xico  |  Open to Remote Work & Relocation", S.contact, false, 80),
 
     secHdr("PROFESSIONAL SUMMARY"),
@@ -137,7 +137,7 @@ function spanish() {
     center("Victor Angel Lopez Romero", S.name, true),
     center("Ingeniero de Software IA", S.title),
     center("victorwkey@gmail.com  |  +52 462 257 4618  |  www.victorwkey.com", S.contact),
-    center("linkedin.com/in/victor-angel-lopez-romero-556605245  |  github.com/VictorWKey", S.contact),
+    center("linkedin.com/in/victorlopezwk  |  github.com/VictorWKey", S.contact),
     gap(),
 
     secHdr("RESUMEN PROFESIONAL"),

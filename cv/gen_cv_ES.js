@@ -87,7 +87,7 @@ function spanish() {
     center("Victor Angel Lopez Romero", S.name, true),
     center("Ingeniero de Software IA", S.title),
     center("victorwkey@gmail.com  |  +52 462 257 4618  |  www.victorwkey.com", S.contact),
-    center("linkedin.com/in/victor-angel-lopez-romero-556605245  |  github.com/VictorWKey", S.contact),
+    center("linkedin.com/in/victorlopezwk  |  github.com/VictorWKey", S.contact),
     center("Irapuato, Guanajuato, M\u00e9xico  |  Disponible para Trabajo Remoto y Reubicaci\u00f3n", S.contact, false, 80),
 
     secHdr("RESUMEN PROFESIONAL"),
