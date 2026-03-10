@@ -87,15 +87,13 @@
       },
       {
         "institution": "Platzi",
-        "degree": "Full Stack Developer Path, Computer Software Engineering",
+        "degree": "Learning Paths: Full-Stack Developer — Deep Learning: Natural Language Processing (NLP)",
         "startDate": "Mar 2023",
-        "endDate": "Mar 2034",
-        "description": "Professional specialization in full-stack architecture and advanced AI fields, bridging the gap between academic theory and high-performance production environments.",
+        "endDate": "Jun 2025",
+        "description": "Professional specialization in full-stack architecture and NLP-focused deep learning, bridging the gap between academic theory and high-performance production environments.",
         "areas": [
-          "Full-Stack Development: End-to-end software creation, API design, modern frontend frameworks, and database management",
-          "Natural Language Processing (NLP): Text analysis, language modeling, and AI-driven communication tools",
-          "Computer Vision & AI: Image processing techniques and visual recognition systems",
-          "Cloud & Infrastructure: Cloud services for deploying and scaling secure applications"
+          "Full-Stack Developer: End-to-end web development, modern frontend frameworks, API design, and database management",
+          "Deep Learning: Natural Language Processing (NLP): Text analysis, language modeling, sentiment analysis, and AI-driven NLP systems"
         ]
       }
     ]

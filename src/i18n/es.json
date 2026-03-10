@@ -87,15 +87,13 @@
       },
       {
         "institution": "Platzi",
-        "degree": "Ruta de Desarrollador Full Stack, Ingeniería de Software",
+        "degree": "Rutas de Aprendizaje: Full-Stack Developer — Deep Learning: Natural Language Processing (NLP)",
         "startDate": "Mar 2023",
-        "endDate": "Mar 2034",
-        "description": "Especialización profesional en arquitectura full-stack y campos avanzados de IA, conectando la teoría académica con entornos de producción de alto rendimiento.",
+        "endDate": "Jun 2025",
+        "description": "Especialización profesional en arquitectura full-stack y deep learning orientado a NLP, conectando la teoría académica con entornos de producción de alto rendimiento.",
         "areas": [
-          "Desarrollo Full-Stack: Creación de software end-to-end, diseño de APIs, frameworks frontend modernos y gestión de bases de datos",
-          "Procesamiento de Lenguaje Natural (NLP): Análisis de texto, modelado de lenguaje y herramientas de comunicación con IA",
-          "Visión por Computadora e IA: Técnicas de procesamiento de imágenes y sistemas de reconocimiento visual",
-          "Cloud e Infraestructura: Servicios en la nube para desplegar y escalar aplicaciones seguras"
+          "Full-Stack Developer: Desarrollo web end-to-end, frameworks frontend modernos, diseño de APIs y gestión de bases de datos",
+          "Deep Learning: Natural Language Processing (NLP): Análisis de texto, modelado del lenguaje, análisis de sentimientos y sistemas NLP con IA"
         ]
       }
     ]

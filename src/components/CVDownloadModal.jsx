@@ -3,7 +3,7 @@ import { useTranslations } from '../i18n/index.js';
 
 function CVDownloadModal({ lang = 'en' }) {
   const [open, setOpen] = useState(false);
-  const [selectedLang, setSelectedLang] = useState('en');
+  const [selectedLang, setSelectedLang] = useState(lang);
   const [format, setFormat] = useState('pdf');
   const modalRef = useRef(null);
   const t = useTranslations(lang);
