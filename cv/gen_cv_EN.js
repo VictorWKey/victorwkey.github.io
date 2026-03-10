@@ -3,6 +3,7 @@ const {
   BorderStyle, LevelFormat, TabStopType
 } = require('docx');
 const fs = require('fs');
+const path = require('path');
 
 const MARGIN = 720;
 const PAGE_W = 12240;
@@ -181,7 +182,8 @@ const docEN = new Document({ numbering, sections: [pageSection(english())] });
 
 Packer.toBuffer(docEN)
   .then(buf => {
-    fs.writeFileSync("/home/claude/CV_Victor_Lopez_EN_v3.docx", buf);
-    console.log("Done!");
+    const dest = path.join(__dirname, '..', 'public', 'CV_Victor_Lopez_EN.docx');
+    fs.writeFileSync(dest, buf);
+    console.log('CV EN generado → ' + dest);
   })
   .catch(err => console.error(err));

@@ -3,6 +3,7 @@ const {
   BorderStyle, LevelFormat, TabStopType
 } = require('docx');
 const fs = require('fs');
+const path = require('path');
 
 const MARGIN = 720;
 const PAGE_W = 12240;
@@ -90,7 +91,7 @@ function spanish() {
     center("Irapuato, Guanajuato, M\u00e9xico  |  Disponible para Trabajo Remoto y Reubicaci\u00f3n", S.contact, false, 80),
 
     secHdr("RESUMEN PROFESIONAL"),
-    normal("Ingeniero de Software IA especializado en el dise\u00f1o, despliegue y optimizaci\u00f3n de sistemas LLM, NLP y Retrieval-Augmented Generation (RAG) de nivel productivo para aplicaciones SaaS empresariales. Propongo e implemento pipelines de IA de extremo a extremo de forma aut\u00f3noma en Vortice Coaching, logrando una reducci\u00f3n del 40-60% en costos computacionales y automatizando flujos de trabajo clave del negocio. Creador de TourlyAI, plataforma NLP open-source completamente local con pipeline de 9 fases, 2 modelos BERT ajustados a medida y cero dependencias externas en tiempo de ejecuci\u00f3n."),
+    normal("Ingeniero de Software IA especializado en el dise\u00f1o, despliegue y optimizaci\u00f3n de sistemas LLM, NLP y Retrieval-Augmented Generation (RAG) para aplicaciones SaaS empresariales. Propongo e implemento pipelines de IA de extremo a extremo de forma aut\u00f3noma en Vortice Coaching, logrando una reducci\u00f3n del 40-60% en costos computacionales y automatizando flujos de trabajo clave del negocio. Creador de TourlyAI, plataforma NLP open-source completamente local con pipeline de 9 fases, 2 modelos BERT ajustados a medida y cero dependencias externas en tiempo de ejecuci\u00f3n."),
 
     secHdr("HABILIDADES"),
     skill("LLMs e IA", "LangChain, HuggingFace, Ollama, Retrieval-Augmented Generation (RAG), LLM Workflows, Prompt Engineering, Bidirectional Encoder Representations from Transformers (BERT) Fine-tuning, Model Deployment, Inference Optimization"),
@@ -131,7 +132,8 @@ const docES = new Document({ numbering, sections: [pageSection(spanish())] });
 
 Packer.toBuffer(docES)
   .then(buf => {
-    fs.writeFileSync("/home/claude/CV_Victor_Lopez_ES_v3.docx", buf);
-    console.log("Done!");
+    const dest = path.join(__dirname, '..', 'public', 'CV_Victor_Lopez_ES.docx');
+    fs.writeFileSync(dest, buf);
+    console.log('CV ES generado → ' + dest);
   })
   .catch(err => console.error(err));
