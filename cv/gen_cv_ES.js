@@ -104,7 +104,7 @@ function spanish() {
     secHdr("EXPERIENCIA LABORAL"),
     entryHead("Vortice Coaching", "Oct 2025 \u2013 Presente"),
     entryTitle("Ingeniero de Software IA"),
-    blt("Dise\u00f1\u00e9 e implement\u00e9 un pipeline de preprocesamiento de texto con ingesta de documentos v\u00eda OCR, limpieza de texto y extracci\u00f3n estructurada de informaci\u00f3n para alimentar los servicios de IA de la plataforma."),
+    blt("Dise\u00f1\u00e9 y despliegu\u00e9 un agente de IA conversacional que interact\u00faa con todos los servicios clave de la plataforma, permitiendo a los usuarios operarla en lenguaje natural; construido con arquitectura din\u00e1mica y extensible que integra autom\u00e1ticamente los nuevos servicios conforme la plataforma escala."),
     blt("Impuls\u00e9 el dise\u00f1o t\u00e9cnico de 8 servicios de la plataforma que implement\u00e9; restructur\u00e9 la arquitectura del proyecto para mayor escalabilidad y mejor experiencia de desarrollo, y comuniqu\u00e9 decisiones de dise\u00f1o de sistemas IA al liderazgo no t\u00e9cnico para alinear la estrategia de la plataforma."),
     blt("Constru\u00ed 9 workflows LLM en diversos servicios de la plataforma para automatizar la extracci\u00f3n de informaci\u00f3n valiosa de m\u00faltiples fuentes, garantizando salidas estructuradas y consistentes para su visualizaci\u00f3n y uso en an\u00e1lisis posteriores."),
     blt("Constru\u00ed m\u00f3dulos de an\u00e1lisis y evaluaci\u00f3n desde cero con estrategias de optimizaci\u00f3n de inferencia, logrando una reducci\u00f3n del 40-60% en consumo de tokens y costos de c\u00f3mputo junto con una mejora del 40% en el rendimiento general del sistema."),

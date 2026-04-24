@@ -107,7 +107,7 @@ function english() {
     secHdr("WORK EXPERIENCE"),
     entryHead("Vortice Coaching", "Oct 2025 \u2013 Present"),
     entryTitle("AI Software Engineer"),
-    blt("Designed and implemented a text preprocessing pipeline including OCR-based document ingestion, text cleaning, and structured information extraction to feed the platform's AI services."),
+    blt("Built a conversational AI agent interfacing with all core platform services, enabling users to operate the platform through natural language; designed with a dynamic, extensible architecture that automatically integrates newly added services as the platform scales."),
     blt("Drove the technical design of 8 platform services I implemented; restructured project architecture for improved scalability and developer experience, and communicated AI system design decisions to non-technical leadership to align on platform strategy."),
     blt("Built 9 LLM workflows across platform services to automate the extraction of valuable information from multiple sources, ensuring structured, consistent outputs for visualization and downstream analysis."),
     blt("Built analysis and evaluation modules from scratch with model inference optimization strategies, achieving a 40-60% reduction in token consumption and compute costs alongside a 40% improvement in overall system performance."),
@@ -156,7 +156,7 @@ function spanish() {
     entryTitle("Ingeniero de Software IA"),
     blt("Dise\u00f1\u00f3 y despleg\u00f3 un pipeline NLP de extremo a extremo logrando una reducci\u00f3n del 40-60% en costos computacionales mediante optimizaci\u00f3n de procesamiento y almacenamiento sem\u00e1ntico, reduciendo directamente los gastos de infraestructura de la plataforma productiva."),
     blt("Desarroll\u00f3 m\u00faltiples flujos de trabajo impulsados por IA para automatizar an\u00e1lisis organizacionales complejos \u2014 evaluaciones de desempe\u00f1o, perfilamiento conductual e informes financieros \u2014 eliminando el procesamiento manual en 3 funciones clave del negocio."),
-    blt("Construy\u00f3 m\u00f3dulos de an\u00e1lisis y evaluaci\u00f3n desde cero, implementando estrategias de optimizaci\u00f3n de inferencia de modelos que mejoraron el rendimiento general del sistema en un 40%."),
+    blt("Desarroll\u00f3 un agente de IA conversacional que interact\u00faa con todos los servicios clave de la plataforma, permitiendo a los usuarios operarla en lenguaje natural; dise\u00f1ado con arquitectura din\u00e1mica y extensible que integra autom\u00e1ticamente los nuevos servicios conforme la plataforma crece."),
     blt("Propuso e implement\u00f3 de forma aut\u00f3noma una plataforma de IA empresarial multi-servicio; lider\u00f3 la refactorizaci\u00f3n hacia arquitectura de microservicios para mayor escalabilidad, y comunic\u00f3 decisiones de dise\u00f1o de sistemas IA al liderazgo no t\u00e9cnico para alinear la estrategia de la plataforma."),
 
     secHdr("PROYECTOS"),
