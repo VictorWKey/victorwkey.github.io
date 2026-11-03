@@ -1,6 +1,6 @@
 {
   "layout": {
-    "title": "Victor López | Software Developer · AI Engineering",
+    "title": "Victor López | Software Developer · AI Engineer",
     "description": "Software developer specializing in AI engineering. Conversational agents, RAG, LLM workflows, and backend development. Based in Irapuato, Mexico."
   },
   "nav": {
@@ -17,7 +17,7 @@
   },
   "header": {
     "available": "Open to opportunities",
-    "role": "Software Developer | AI Engineering",
+    "role": "Software Developer | AI Engineer",
     "email": "Email",
     "downloadCV": "Download CV",
     "copied": "Copied!",
@@ -121,7 +121,7 @@
     "p2": "I now work in software development with a focus on AI. I'm interested in combining AI and web development to build applications that help people complete specific tasks and save time. I try to understand <highlight>what the person using the software needs</highlight> and keep the solution as simple as possible."
   },
   "footer": {
-    "role": "Software Developer | AI Engineering",
+    "role": "Software Developer | AI Engineer",
     "location": "Irapuato, Guanajuato, Mexico",
     "rights": "All rights reserved."
   },

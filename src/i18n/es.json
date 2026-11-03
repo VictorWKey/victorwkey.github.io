@@ -1,6 +1,6 @@
 {
   "layout": {
-    "title": "Victor López | Desarrollo de Software · Ingeniería de IA",
+    "title": "Victor López | Software Developer · AI Engineer",
     "description": "Desarrollador de software especializado en ingeniería de IA. Agentes conversacionales, RAG, workflows con LLMs y desarrollo backend. Ubicado en Irapuato, México."
   },
   "nav": {
@@ -17,7 +17,7 @@
   },
   "header": {
     "available": "Abierto a oportunidades",
-    "role": "Desarrollador de Software | Ingeniería de IA",
+    "role": "Software Developer | AI Engineer",
     "email": "Correo",
     "downloadCV": "Descargar CV",
     "copied": "¡Copiado!",
@@ -121,7 +121,7 @@
     "p2": "Ahora trabajo en desarrollo de software con enfoque en IA. Me interesa combinar la IA y el desarrollo web para crear aplicaciones que faciliten tareas concretas y ayuden a ahorrar tiempo. Busco entender <highlight>qué necesita la persona que va a usar el software</highlight> y mantener la solución lo más sencilla posible."
   },
   "footer": {
-    "role": "Desarrollador de Software | Ingeniería de IA",
+    "role": "Software Developer | AI Engineer",
     "location": "Irapuato, Guanajuato, México",
     "rights": "Todos los derechos reservados."
   },
