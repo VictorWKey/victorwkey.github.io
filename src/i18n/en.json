@@ -117,7 +117,7 @@
   },
   "aboutMe": {
     "sectionTitle": "About Me",
-    "p1": "I'm <highlight>Víctor Ángel López Romero</highlight>. I'm 23 and from Guanajuato, Mexico. I started programming with JavaScript, and at university I became interested in understanding how artificial intelligence worked. Studying it gave me a way to apply the mathematics and algorithms I was already learning.",
+    "p1": "I'm <highlight>Víctor Ángel López Romero</highlight>. I'm 22 and from Guanajuato, Mexico. I started programming with JavaScript, and at university I became interested in understanding how artificial intelligence worked. Studying it gave me a way to apply the mathematics and algorithms I was already learning.",
     "p2": "I now work in software development with a focus on AI. I'm interested in combining AI and web development to build applications that help people complete specific tasks and save time. I try to understand <highlight>what the person using the software needs</highlight> and keep the solution as simple as possible."
   },
   "footer": {
