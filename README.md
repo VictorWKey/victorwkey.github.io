@@ -35,7 +35,7 @@ The build runs Astro's checks and generates the static site in `dist/`. These co
 - `src/data/certifications.js`: credential names, issue dates, verification links, and badge image sources.
 - `src/components/`: portfolio sections and interactions.
 
-The AWS badge images in `public/certifications/` are the original transparent artwork provided through Credly, used without alteration. A white presentation container is used in light mode; dark mode preserves the images' transparency. Each badge opens its owner's public verification page:
+The AWS badge images in `public/certifications/` are the original transparent artwork provided through Credly, used without alteration. A white presentation container is used in light mode. Dark mode preserves the images' transparency. Each badge opens its owner's public verification page:
 
 - [AWS Certified Developer - Associate](https://www.credly.com/badges/6288e6d3-9f06-4ff0-a192-1ab24f74d3bb/public_url), issued October 26, 2026.
 - [AWS Certified AI Practitioner](https://www.credly.com/badges/2faf6a4b-b03b-4f3d-9c34-39d5b7bcffc4/public_url), issued November 2, 2026.

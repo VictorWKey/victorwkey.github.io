@@ -18,7 +18,7 @@ endobj
 << /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 7 0 R >>
 endobj
 7 0 obj
-<< /Length 5395 >>
+<< /Length 5457 >>
 stream
 BT /F2 17.50 Tf 198.81 741.26 Td (Victor Angel Lopez Romero) Tj ET
 BT /F1 12.40 Tf 208.78 727.86 Td (Software Developer | AI Engineer) Tj ET
@@ -43,49 +43,50 @@ BT /F1 9.40 Tf 39.89 508.23 Td (evaluation, LangGraph, MCP, A2A) Tj ET
 BT /F2 10.80 Tf 39.89 488.44 Td (WORK EXPERIENCE) Tj ET
 0.6 w 39.89 486.44 m 572.11 486.44 l S
 BT /F2 9.40 Tf 39.89 467.36 Td (Vortice Coaching) Tj ET
-BT /F1 9.40 Tf 489.20 467.36 Td (Oct 2025 - Present) Tj ET
+BT /F1 9.40 Tf 484.60 467.36 Td (Oct 2025 to Present) Tj ET
 BT /F3 9.40 Tf 39.89 456.16 Td (AI Software Engineer) Tj ET
 BT /F1 9.40 Tf 39.89 441.24 Td (-) Tj ET
 BT /F1 9.40 Tf 49.89 441.24 Td (Built a conversational AI agent with tool calling to retrieve information through application APIs.) Tj ET
 BT /F1 9.40 Tf 39.89 427.81 Td (-) Tj ET
-BT /F1 9.40 Tf 49.89 427.81 Td (Implemented RAG features for document-based question answering, with semantic retrieval and source references.) Tj ET
-BT /F1 9.40 Tf 39.89 414.38 Td (-) Tj ET
-BT /F1 9.40 Tf 49.89 414.38 Td (Developed LLM workflows for information analysis, summarization, and structured outputs.) Tj ET
-BT /F1 9.40 Tf 39.89 400.95 Td (-) Tj ET
-BT /F1 9.40 Tf 49.89 400.95 Td (Built backend services and APIs with input validation, access control, and data persistence.) Tj ET
-BT /F1 9.40 Tf 39.89 387.52 Td (-) Tj ET
-BT /F1 9.40 Tf 49.89 387.52 Td (Implemented process management features and integrations across services; contributed to interface and) Tj ET
-BT /F1 9.40 Tf 49.89 376.32 Td (interaction improvements.) Tj ET
-BT /F1 9.40 Tf 39.89 362.89 Td (-) Tj ET
-BT /F1 9.40 Tf 49.89 362.89 Td (Reduced token consumption by 42% against the existing baseline, measured in development tests.) Tj ET
-BT /F2 10.80 Tf 39.89 343.10 Td (ACADEMIC PROJECTS) Tj ET
-0.6 w 39.89 341.10 m 572.11 341.10 l S
-BT /F2 9.40 Tf 39.89 322.02 Td (TourlyAI - NLP for tourism reviews | github.com/TourlyAI) Tj ET
-BT /F1 9.40 Tf 484.60 322.02 Td (Sep 2025 - Mar 2026) Tj ET
-BT /F3 9.40 Tf 39.89 310.82 Td (Academic project | Software development and model fine-tuning) Tj ET
-BT /F1 9.40 Tf 39.89 295.90 Td (-) Tj ET
-BT /F1 9.40 Tf 49.89 295.90 Td (Built a 9-stage NLP pipeline for tourism reviews, combining sentiment analysis, BERTopic topic modeling, and) Tj ET
-BT /F1 9.40 Tf 49.89 284.70 Td (LLM-generated summaries and insights.) Tj ET
-BT /F1 9.40 Tf 39.89 271.27 Td (-) Tj ET
-BT /F1 9.40 Tf 49.89 271.27 Td (Fine-tuned and evaluated 2 BERT models with PyTorch and Hugging Face: 12-category multi-label classification \(80%) Tj ET
-BT /F1 9.40 Tf 49.89 260.07 Td (weighted F1\) and subjectivity detection \(77% F1\).) Tj ET
-BT /F1 9.40 Tf 39.89 246.64 Td (-) Tj ET
-BT /F1 9.40 Tf 49.89 246.64 Td (Integrated the pipeline into an Electron, React, and Python desktop app with interactive dashboards and PDF) Tj ET
-BT /F1 9.40 Tf 49.89 235.44 Td (reports, using LangChain for local inference with Ollama and optional OpenAI integration.) Tj ET
-BT /F2 10.80 Tf 39.89 215.65 Td (EDUCATION) Tj ET
-0.6 w 39.89 213.65 m 572.11 213.65 l S
-BT /F2 9.40 Tf 39.89 194.57 Td (Universidad de Guanajuato) Tj ET
-BT /F1 9.40 Tf 383.26 194.57 Td (Aug 2023 - Nov 2026 \(expected completion\)) Tj ET
-BT /F3 9.40 Tf 39.89 183.37 Td (B.Eng. in Data Engineering & Artificial Intelligence \(in progress\)) Tj ET
-BT /F2 10.80 Tf 39.89 162.09 Td (CERTIFICATIONS) Tj ET
-0.6 w 39.89 160.09 m 572.11 160.09 l S
-BT /F2 9.40 Tf 39.89 141.01 Td (AWS Certified Developer - Associate) Tj ET
-BT /F1 9.40 Tf 535.26 141.01 Td (Oct 2026) Tj ET
-BT /F2 9.40 Tf 39.89 126.09 Td (AWS Certified AI Practitioner) Tj ET
-BT /F1 9.40 Tf 535.26 126.09 Td (Nov 2026) Tj ET
-BT /F2 10.80 Tf 39.89 108.53 Td (LANGUAGES) Tj ET
-0.6 w 39.89 106.53 m 572.11 106.53 l S
-BT /F1 9.40 Tf 39.89 91.17 Td (Spanish: Native | English: B1 \(Intermediate\)) Tj ET
+BT /F1 9.40 Tf 49.89 427.81 Td (Implemented RAG features for question answering based on documents, with semantic retrieval and source) Tj ET
+BT /F1 9.40 Tf 49.89 416.61 Td (references.) Tj ET
+BT /F1 9.40 Tf 39.89 403.18 Td (-) Tj ET
+BT /F1 9.40 Tf 49.89 403.18 Td (Developed LLM workflows for information analysis, summarization, and structured outputs.) Tj ET
+BT /F1 9.40 Tf 39.89 389.75 Td (-) Tj ET
+BT /F1 9.40 Tf 49.89 389.75 Td (Built backend services and APIs with input validation, access control, and data persistence.) Tj ET
+BT /F1 9.40 Tf 39.89 376.32 Td (-) Tj ET
+BT /F1 9.40 Tf 49.89 376.32 Td (Implemented process management features and integrations across services. Contributed to interface and) Tj ET
+BT /F1 9.40 Tf 49.89 365.12 Td (interaction improvements.) Tj ET
+BT /F1 9.40 Tf 39.89 351.69 Td (-) Tj ET
+BT /F1 9.40 Tf 49.89 351.69 Td (Reduced token consumption by 42% against the existing baseline, measured in development tests.) Tj ET
+BT /F2 10.80 Tf 39.89 331.90 Td (ACADEMIC PROJECTS) Tj ET
+0.6 w 39.89 329.90 m 572.11 329.90 l S
+BT /F2 9.40 Tf 39.89 310.82 Td (TourlyAI: NLP for tourism reviews | github.com/TourlyAI) Tj ET
+BT /F1 9.40 Tf 479.99 310.82 Td (Sep 2025 to Mar 2026) Tj ET
+BT /F3 9.40 Tf 39.89 299.62 Td (Academic project | Software development and model fine-tuning) Tj ET
+BT /F1 9.40 Tf 39.89 284.70 Td (-) Tj ET
+BT /F1 9.40 Tf 49.89 284.70 Td (Built an NLP pipeline with 9 stages for tourism reviews, combining sentiment analysis, BERTopic topic modeling,) Tj ET
+BT /F1 9.40 Tf 49.89 273.50 Td (and summaries and insights generated by LLMs.) Tj ET
+BT /F1 9.40 Tf 39.89 260.07 Td (-) Tj ET
+BT /F1 9.40 Tf 49.89 260.07 Td (Fine-tuned and evaluated 2 BERT models with PyTorch and Hugging Face: multi-label classification across 12) Tj ET
+BT /F1 9.40 Tf 49.89 248.87 Td (categories \(80% weighted F1\) and subjectivity detection \(77% F1\).) Tj ET
+BT /F1 9.40 Tf 39.89 235.44 Td (-) Tj ET
+BT /F1 9.40 Tf 49.89 235.44 Td (Integrated the pipeline into an Electron, React, and Python desktop app with interactive dashboards and PDF) Tj ET
+BT /F1 9.40 Tf 49.89 224.24 Td (reports, using LangChain for local inference with Ollama and optional OpenAI integration.) Tj ET
+BT /F2 10.80 Tf 39.89 204.45 Td (EDUCATION) Tj ET
+0.6 w 39.89 202.45 m 572.11 202.45 l S
+BT /F2 9.40 Tf 39.89 183.37 Td (Universidad de Guanajuato) Tj ET
+BT /F1 9.40 Tf 378.66 183.37 Td (Aug 2023 to Nov 2026 \(expected completion\)) Tj ET
+BT /F3 9.40 Tf 39.89 172.17 Td (B.Eng. in Data Engineering & Artificial Intelligence \(in progress\)) Tj ET
+BT /F2 10.80 Tf 39.89 150.89 Td (CERTIFICATIONS) Tj ET
+0.6 w 39.89 148.89 m 572.11 148.89 l S
+BT /F2 9.40 Tf 39.89 129.81 Td (AWS Certified Developer - Associate) Tj ET
+BT /F1 9.40 Tf 535.26 129.81 Td (Oct 2026) Tj ET
+BT /F2 9.40 Tf 39.89 114.89 Td (AWS Certified AI Practitioner) Tj ET
+BT /F1 9.40 Tf 535.26 114.89 Td (Nov 2026) Tj ET
+BT /F2 10.80 Tf 39.89 97.33 Td (LANGUAGES) Tj ET
+0.6 w 39.89 95.33 m 572.11 95.33 l S
+BT /F1 9.40 Tf 39.89 79.97 Td (Spanish: Native | English: B1 \(Intermediate\)) Tj ET
 endstream
 endobj
 xref
@@ -101,5 +102,5 @@ xref
 trailer
 << /Size 8 /Root 1 0 R >>
 startxref
-6012
+6074
 %%EOF

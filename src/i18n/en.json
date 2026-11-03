@@ -50,7 +50,7 @@
           "Implemented RAG for document-based question answering, with semantic retrieval and source references.",
           "Developed LLM workflows for information analysis, summarization, and structured outputs.",
           "Built backend services and APIs with input validation, access control, and data persistence.",
-          "Implemented process management features and integrations across services; contributed to interface and interaction improvements.",
+          "Implemented process management features and integrations across services. Contributed to interface and interaction improvements.",
           "Reduced token consumption by 42% against the existing baseline, measured in development tests."
         ]
       }
@@ -63,7 +63,7 @@
     "liveDemo": "Live Demo",
     "items": [
       {
-        "title": "TourlyAI — NLP for tourism reviews",
+        "title": "TourlyAI: NLP for tourism reviews",
         "desc": "Academic project: an Electron, React, and Python desktop app for exploring tourism reviews. Combines two fine-tuned BERT models with a nine-stage NLP pipeline, interactive dashboards, and PDF reports.",
         "highlights": [
           "Built a nine-stage NLP pipeline combining sentiment analysis, BERTopic topic modeling, and LLM-generated summaries and insights.",
@@ -95,7 +95,7 @@
       },
       {
         "institution": "Platzi",
-        "degree": "Learning Paths: Full-Stack Developer — Deep Learning: Natural Language Processing (NLP)",
+        "degree": "Learning Paths: Full-Stack Developer and Deep Learning: Natural Language Processing (NLP)",
         "startDate": "Mar 2023",
         "endDate": "Jun 2025",
         "description": "Learning paths in web development and deep learning for natural language processing, complementing my university studies and software development work.",

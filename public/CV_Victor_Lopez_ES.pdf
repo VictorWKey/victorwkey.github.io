@@ -18,7 +18,7 @@ endobj
 << /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 7 0 R >>
 endobj
 7 0 obj
-<< /Length 5636 >>
+<< /Length 5635 >>
 stream
 BT /F2 17.50 Tf 198.81 741.26 Td (Victor Angel Lopez Romero) Tj ET
 BT /F1 12.40 Tf 208.78 727.86 Td (Software Developer | AI Engineer) Tj ET
@@ -43,7 +43,7 @@ BT /F1 9.40 Tf 39.89 508.23 Td (evaluación de agentes, LangGraph, MCP, A2A) Tj E
 BT /F2 10.80 Tf 39.89 488.44 Td (EXPERIENCIA LABORAL) Tj ET
 0.6 w 39.89 486.44 m 572.11 486.44 l S
 BT /F2 9.40 Tf 39.89 467.36 Td (Vortice Coaching) Tj ET
-BT /F1 9.40 Tf 484.60 467.36 Td (Oct 2025 - Presente) Tj ET
+BT /F1 9.40 Tf 484.60 467.36 Td (Oct 2025 a Presente) Tj ET
 BT /F3 9.40 Tf 39.89 456.16 Td (Ingeniero de Software IA) Tj ET
 BT /F1 9.40 Tf 39.89 441.24 Td (-) Tj ET
 BT /F1 9.40 Tf 49.89 441.24 Td (Desarrollé un agente conversacional con tool calling para consultar información mediante APIs de la aplicación.) Tj ET
@@ -55,14 +55,14 @@ BT /F1 9.40 Tf 49.89 403.18 Td (Desarrollé workflows con LLMs para análisis de i
 BT /F1 9.40 Tf 39.89 389.75 Td (-) Tj ET
 BT /F1 9.40 Tf 49.89 389.75 Td (Construí servicios backend y APIs con validación de datos, control de acceso y persistencia.) Tj ET
 BT /F1 9.40 Tf 39.89 376.32 Td (-) Tj ET
-BT /F1 9.40 Tf 49.89 376.32 Td (Implementé funcionalidades de gestión de procesos e integraciones entre servicios; participé en ajustes de) Tj ET
+BT /F1 9.40 Tf 49.89 376.32 Td (Implementé funcionalidades de gestión de procesos e integraciones entre servicios. Participé en ajustes de) Tj ET
 BT /F1 9.40 Tf 49.89 365.12 Td (interfaces e interacción.) Tj ET
 BT /F1 9.40 Tf 39.89 351.69 Td (-) Tj ET
 BT /F1 9.40 Tf 49.89 351.69 Td (Reduje 42% el consumo de tokens frente al baseline existente, medido en pruebas de desarrollo.) Tj ET
 BT /F2 10.80 Tf 39.89 331.90 Td (PROYECTOS ACADÉMICOS) Tj ET
 0.6 w 39.89 329.90 m 572.11 329.90 l S
-BT /F2 9.40 Tf 39.89 310.82 Td (TourlyAI - NLP para reseñas turísticas | github.com/TourlyAI) Tj ET
-BT /F1 9.40 Tf 484.60 310.82 Td (Sep 2025 - Mar 2026) Tj ET
+BT /F2 9.40 Tf 39.89 310.82 Td (TourlyAI: NLP para reseñas turísticas | github.com/TourlyAI) Tj ET
+BT /F1 9.40 Tf 484.60 310.82 Td (Sep 2025 a Mar 2026) Tj ET
 BT /F3 9.40 Tf 39.89 299.62 Td (Proyecto académico | Desarrollo de software y fine-tuning de modelos) Tj ET
 BT /F1 9.40 Tf 39.89 284.70 Td (-) Tj ET
 BT /F1 9.40 Tf 49.89 284.70 Td (Construí un pipeline NLP de 9 fases para reseñas turísticas, combinando análisis de sentimiento, descubrimiento) Tj ET
@@ -76,8 +76,8 @@ BT /F1 9.40 Tf 49.89 224.24 Td (reportes PDF, usando LangChain para inferencia l
 BT /F2 10.80 Tf 39.89 204.45 Td (EDUCACIÓN) Tj ET
 0.6 w 39.89 202.45 m 572.11 202.45 l S
 BT /F2 9.40 Tf 39.89 183.37 Td (Universidad de Guanajuato) Tj ET
-BT /F1 9.40 Tf 374.05 183.37 Td (Ago 2023 - Nov 2026 \(finalización prevista\)) Tj ET
-BT /F3 9.40 Tf 39.89 172.17 Td (Ingeniería en Datos e Inteligencia Artificial \(en curso\)) Tj ET
+BT /F1 9.40 Tf 374.05 183.37 Td (Ago 2023 a Nov 2026 \(finalización prevista\)) Tj ET
+BT /F3 9.40 Tf 39.89 172.17 Td (Ingeniería de Datos e Inteligencia Artificial \(en curso\)) Tj ET
 BT /F2 10.80 Tf 39.89 150.89 Td (CERTIFICACIONES) Tj ET
 0.6 w 39.89 148.89 m 572.11 148.89 l S
 BT /F2 9.40 Tf 39.89 129.81 Td (AWS Certified Developer - Associate) Tj ET
@@ -102,5 +102,5 @@ xref
 trailer
 << /Size 8 /Root 1 0 R >>
 startxref
-6253
+6252
 %%EOF

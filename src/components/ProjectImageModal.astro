@@ -223,7 +223,7 @@
     if (mainImage && currentModalImages[currentModalIndex]) {
       const currentImage = currentModalImages[currentModalIndex];
       mainImage.src = currentImage.src;
-      mainImage.alt = currentImage.alt || `${currentModalTitle} - Image ${currentModalIndex + 1}`;
+      mainImage.alt = currentImage.alt || `${currentModalTitle}: Image ${currentModalIndex + 1}`;
     }
     
     if (counterElement) {

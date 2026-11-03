@@ -42,7 +42,7 @@ const EDU_IMAGES: Record<number, string> = {
               <!-- Date & Location -->
               <div class="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-3 mt-1">
                 <span class="text-sm text-gray-500 dark:text-night-muted">
-                  {item.startDate} – {item.endDate}
+                  {item.startDate} {lang === 'es' ? 'a' : 'to'} {item.endDate}
                 </span>
                 {item.location && (
                   <>

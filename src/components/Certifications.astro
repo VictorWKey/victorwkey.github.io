@@ -16,7 +16,7 @@ const formatDate = (date: string) => new Intl.DateTimeFormat(language, {
     <div class="grid md:grid-cols-2 gap-6">
       {certifications.map((credential) => (
         <a href={credential.url} target="_blank" rel="noopener noreferrer"
-          aria-label={`${credential.name} — ${copy.verify} (${copy.external})`}
+          aria-label={`${credential.name}. ${copy.verify} (${copy.external})`}
           class="group flex flex-col items-center text-center rounded-2xl border border-gray-200 dark:border-night-line bg-gray-50 dark:bg-night-surface p-6 sm:p-8 transition duration-200 hover:border-primary/60 dark:hover:border-night-accent dark:hover:bg-night-raised hover:shadow-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary dark:focus-visible:outline-night-accent">
           <div class="w-40 h-40 rounded-xl bg-white dark:bg-transparent p-3 mb-6 flex items-center justify-center">
             <img src={credential.image} alt={credential.name} width="160" height="160"

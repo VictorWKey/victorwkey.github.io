@@ -46,7 +46,7 @@ const EXPERIENCE_IMAGES: Record<number, string> = {
                 <!-- Date & Location -->
                 <div class="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-3 mt-1">
                   <span class="text-sm text-gray-500 dark:text-night-muted">
-                    {item.startDate} – <span class="text-primary dark:text-night-accent font-medium">{t.experience.present}</span>
+                    {item.startDate} {lang === 'es' ? 'a' : 'to'} <span class="text-primary dark:text-night-accent font-medium">{t.experience.present}</span>
                   </span>
                   <span class="hidden sm:inline text-gray-300 dark:text-night-muted">·</span>
                   <span class="text-sm text-gray-500 dark:text-night-muted">{item.location}</span>
