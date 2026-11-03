@@ -36,7 +36,7 @@ endobj
 << /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R /F4 6 0 R >> >> /Annots [7 0 R 8 0 R 9 0 R 10 0 R 11 0 R] /Contents 13 0 R >>
 endobj
 13 0 obj
-<< /Length 5774 >>
+<< /Length 5783 >>
 stream
 BT /F2 18.00 Tf 187.98 738.00 Td (Victor Angel Lopez Romero) Tj ET
 BT /F1 11.20 Tf 223.00 724.80 Td (Software Developer | AI Engineer) Tj ET
@@ -60,7 +60,7 @@ BT /F1 10.00 Tf 152.69 551.00 Td (Python, TypeScript, JavaScript, Node.js, Expre
 BT /F2 10.00 Tf 36.00 537.20 Td (Data and messaging: ) Tj ET
 BT /F1 10.00 Tf 139.36 537.20 Td (SQL, PostgreSQL, Qdrant, Redis, BullMQ) Tj ET
 BT /F2 10.00 Tf 36.00 523.40 Td (Frontend and tooling: ) Tj ET
-BT /F1 10.00 Tf 142.11 523.40 Td (React, Electron, Docker, Git) Tj ET
+BT /F1 10.00 Tf 142.11 523.40 Td (React, Next.js, Electron, Docker, Git) Tj ET
 BT /F2 10.00 Tf 36.00 509.60 Td (Familiar with: ) Tj ET
 BT /F1 10.00 Tf 103.24 509.60 Td (Context engineering, prompt engineering, multi-agent patterns \(agents-as-tools, swarm\), agent evaluation,) Tj ET
 BT /F1 10.00 Tf 36.00 497.80 Td (LangGraph, MCP, A2A) Tj ET
@@ -131,5 +131,5 @@ xref
 trailer
 << /Size 14 /Root 1 0 R >>
 startxref
-7324
+7333
 %%EOF
