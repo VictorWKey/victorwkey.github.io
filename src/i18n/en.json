@@ -1,24 +1,23 @@
 {
   "layout": {
-    "title": "Victor López - Portfolio",
-    "description": "Hire Víctor López to take your projects to the next level! As a frontend developer and AI specialist, I offer creative and functional solutions that stand out in the digital market."
+    "title": "Victor López | Software Developer · AI Engineering",
+    "description": "Software developer specializing in AI engineering. Conversational agents, RAG, LLM workflows, and backend development. Based in Irapuato, Mexico."
   },
   "nav": {
     "home": "Home",
     "experience": "Experience",
     "skills": "Skills",
     "aboutMe": "About Me",
-    "education": "Education"
+    "education": "Education",
+    "certifications": "Certifications",
+    "projects": "Projects",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "toggleTheme": "Switch color theme"
   },
   "header": {
-    "available": "Available",
-    "role": "AI Software Engineer",
-    "description": "AI Software Engineer at",
-    "company": "Vórtice Coaching",
-    "descriptionContinue": ", bridging the gap between advanced AI research and production-ready software. I lead Generative AI solutions — from",
-    "ai": "RAG architectures and autonomous agents",
-    "and": "to",
-    "scalable": "full-stack applications that deliver real business value",
+    "available": "Open to opportunities",
+    "role": "Software Developer | AI Engineering",
     "email": "Email",
     "downloadCV": "Download CV",
     "copied": "Copied!",
@@ -27,11 +26,16 @@
     "cvFormat": "Format",
     "cvEnglish": "English",
     "cvSpanish": "Spanish",
-    "cvDownload": "Download"
+    "cvDownload": "Download",
+    "summary": "Software developer specializing in AI engineering, with over one year of professional experience building conversational agents, RAG systems, and LLM workflows for business applications.",
+    "approach": "Focused on understanding business problems and building software that is easy to use, while keeping complexity and resource use in check.",
+    "profileAlt": "Portrait of Victor López",
+    "copyEmail": "Copy email address",
+    "cvClose": "Close CV download dialog"
   },
   "experience": {
     "sectionTitle": "Experience",
-    "sectionSubtitle": "My professional journey building intelligent software solutions",
+    "sectionSubtitle": "AI features and backend services developed in my professional work",
     "present": "Present",
     "items": [
       {
@@ -40,45 +44,49 @@
         "type": "Full-time",
         "startDate": "Oct 2025",
         "location": "Irapuato, Guanajuato, Mexico · Remote",
-        "description": "Development of full-stack software modules using Node.js and Next.js, integrating Large Language Models (LLMs) for automation and system-driven insights. Design of embedding pipelines and vector database workflows to support Retrieval-Augmented Generation (RAG) systems, along with continuous optimization to improve performance, scalability, and efficiency.",
+        "description": "Development of AI features and backend services for a business platform, including conversational interfaces, document search, and information analysis.",
         "highlights": [
-          "Architecting advanced RAG and Embeddings pipelines for intelligent data processing",
-          "Leveraging LLMs to extract valuable insights and automate complex workflows",
-          "End-to-end development — from backend logic to seamless user experiences"
+          "Built a conversational AI agent with tool calling to retrieve information through application APIs.",
+          "Implemented RAG for document-based question answering, with semantic retrieval and source references.",
+          "Developed LLM workflows for information analysis, summarization, and structured outputs.",
+          "Built backend services and APIs with input validation, access control, and data persistence.",
+          "Implemented process management features and integrations across services; contributed to interface and interaction improvements.",
+          "Reduced token consumption by 42% against the existing baseline, measured in development tests."
         ]
       }
     ]
   },
   "featuredProjects": {
     "sectionTitle": "Featured Projects",
-    "sectionSubtitle": "Showcasing impactful projects that push the boundaries of AI and full-stack development",
+    "sectionSubtitle": "Applied machine learning and software development",
     "repository": "Repository",
     "liveDemo": "Live Demo",
     "items": [
       {
-        "title": "TourlyAI — AI-Powered Tourism Analytics",
-        "desc": "Open-source desktop app that turns tourism reviews into strategic insights — 100% locally, no cloud needed. My capstone project at UG: 2 fine-tuned BERT models, a 9-phase NLP pipeline, 34+ chart types, and a full Electron + React + Python app with bilingual support.",
+        "title": "TourlyAI — NLP for tourism reviews",
+        "desc": "Academic project: an Electron, React, and Python desktop app for exploring tourism reviews. Combines two fine-tuned BERT models with a nine-stage NLP pipeline, interactive dashboards, and PDF reports.",
         "highlights": [
-          "19 Jupyter notebooks exploring sentiment analysis, topic modeling, and multi-label classification",
-          "Custom multi-label classifier predicting 12 tourism categories + a subjectivity classifier for mixed reviews",
-          "Full NLP pipeline: preprocessing → sentiment → subjectivity → categories → BERTopic → LLM summarization → strategic insights",
-          "Desktop app with interactive dashboards, review explorer, PDF reports, and optional LLM via Ollama or OpenAI"
+          "Built a nine-stage NLP pipeline combining sentiment analysis, BERTopic topic modeling, and LLM-generated summaries and insights.",
+          "Fine-tuned and evaluated two BERT models with PyTorch and Hugging Face: 12-category multi-label classification (80% weighted F1) and subjectivity detection (77% F1).",
+          "Integrated the pipeline into a desktop app with interactive dashboards and PDF reports, using LangChain for local inference with Ollama and optional OpenAI integration."
         ]
       }
-    ]
+    ],
+    "highlightsLabel": "Project details",
+    "highlightsDescription": "Implementation and evaluation highlights"
   },
   "education": {
     "sectionTitle": "Education",
-    "sectionSubtitle": "The academic and self-driven foundations behind my engineering skills",
+    "sectionSubtitle": "University studies and continued technical learning",
     "items": [
       {
         "institution": "Universidad de Guanajuato",
         "campus": "Campus Irapuato-Salamanca · Engineering Division",
-        "degree": "Bachelor of Engineering, Data and Artificial Intelligence",
+        "degree": "B.Eng. in Data Engineering & Artificial Intelligence (in progress)",
         "startDate": "Aug 2023",
-        "endDate": "Dec 2026",
+        "endDate": "Nov 2026 (expected completion)",
         "location": "Guanajuato, Mexico",
-        "description": "Focused on the design and development of intelligent systems, big data processing, and foundational computer science principles.",
+        "description": "Studies in data engineering and artificial intelligence, with academic work in NLP, model fine-tuning, and software development.",
         "areas": [
           "Algorithms and Data Structures",
           "Machine Learning and Artificial Intelligence Modeling",
@@ -90,7 +98,7 @@
         "degree": "Learning Paths: Full-Stack Developer — Deep Learning: Natural Language Processing (NLP)",
         "startDate": "Mar 2023",
         "endDate": "Jun 2025",
-        "description": "Professional specialization in full-stack architecture and NLP-focused deep learning, bridging the gap between academic theory and high-performance production environments.",
+        "description": "Learning paths in web development and deep learning for natural language processing, complementing my university studies and software development work.",
         "areas": [
           "Full-Stack Developer: End-to-end web development, modern frontend frameworks, API design, and database management",
           "Deep Learning: Natural Language Processing (NLP): Text analysis, language modeling, sentiment analysis, and AI-driven NLP systems"
@@ -100,7 +108,7 @@
   },
   "skills": {
     "sectionTitle": "Skills",
-    "sectionSubtitle": "My expertise in",
+    "sectionSubtitle": "Technologies I use and topics I continue to study",
     "ai": "artificial intelligence",
     "and": "and",
     "webDev": "modern web development",
@@ -109,12 +117,12 @@
   },
   "aboutMe": {
     "sectionTitle": "About Me",
-    "p1": "Hello! I'm <highlight>Víctor Ángel López Romero</highlight>, a 22-year-old AI Software Engineer from Guanajuato, México. My fascination with Artificial Intelligence started during university when I was amazed by how AI could perform seemingly complex tasks. After deep research, I discovered that AI is actually a beautiful combination of <highlight>pure mathematics, algorithms, logical reasoning, and immense computing power</highlight>.",
-    "p2": "This revelation fascinated me because I found a field where I could apply all my mathematical knowledge and unlock its true potential. By combining Artificial Intelligence with modern web development — with <highlight>JavaScript being my gateway into programming</highlight> — I now focus on creating <highlight>intelligent applications that enhance productivity</highlight> and help people save valuable time."
+    "p1": "I'm <highlight>Víctor Ángel López Romero</highlight>. I'm 23 and from Guanajuato, Mexico. I started programming with JavaScript, and at university I became interested in understanding how artificial intelligence worked. Studying it gave me a way to apply the mathematics and algorithms I was already learning.",
+    "p2": "I now work in software development with a focus on AI. I'm interested in combining AI and web development to build applications that help people complete specific tasks and save time. I try to understand <highlight>what the person using the software needs</highlight> and keep the solution as simple as possible."
   },
   "footer": {
-    "role": "AI Software Engineer",
-    "location": "Guanajuato, México",
+    "role": "Software Developer | AI Engineering",
+    "location": "Irapuato, Guanajuato, Mexico",
     "rights": "All rights reserved."
   },
   "menu": {

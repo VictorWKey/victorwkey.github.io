@@ -6,6 +6,7 @@ import AboutMe from '../../components/AboutMe.astro';
 import Experience from '../../components/Experience.astro';
 import FeaturedProjects from '../../components/FeaturedProjects.astro';
 import Education from '../../components/Education.astro';
+import Certifications from '../../components/Certifications.astro';
 import Navbar from '../../components/Navbar.jsx';
 import Footer from '../../components/Footer.astro';
 import MovilMenu from '../../components/MovilMenu.jsx';
@@ -27,10 +28,13 @@ const t = useTranslations(lang);
 	<Navbar lang={lang} client:load/>
 	<MovilMenu lang={lang} client:load/>
 	<Header lang={lang} />
+	<main id="main-content">
 	<Experience lang={lang} />
+	<Certifications lang={lang} />
 	<FeaturedProjects lang={lang} />
-	<Skills lang={lang} client:load/>
+	<Skills lang={lang} />
 	<Education lang={lang} />
 	<AboutMe lang={lang} />
+	</main>
 	<Footer lang={lang} />
 </Layout>

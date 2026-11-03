@@ -1,0 +1,37 @@
+---
+import { certifications, certificationCopy } from '../data/certifications.js';
+
+const { lang = 'en' } = Astro.props;
+const language = lang === 'es' ? 'es' : 'en';
+const copy = certificationCopy[language];
+const formatDate = (date: string) => new Intl.DateTimeFormat(language, {
+  month: 'long', year: 'numeric', timeZone: 'UTC',
+}).format(new Date(`${date}T00:00:00Z`));
+---
+
+<section id="certifications" aria-labelledby="certifications-title" class="w-full py-16 sm:py-20 px-6 bg-white dark:bg-night-canvas">
+  <div class="max-w-4xl mx-auto">
+    <h2 id="certifications-title" class="section-heading text-center text-gray-900 dark:text-night-heading mb-3">{copy.title}</h2>
+    <p class="section-subheading text-center mb-10">{copy.subtitle}</p>
+    <div class="grid md:grid-cols-2 gap-6">
+      {certifications.map((credential) => (
+        <a href={credential.url} target="_blank" rel="noopener noreferrer"
+          aria-label={`${credential.name} — ${copy.verify} (${copy.external})`}
+          class="group flex flex-col items-center text-center rounded-2xl border border-gray-200 dark:border-night-line bg-gray-50 dark:bg-night-surface p-6 sm:p-8 transition duration-200 hover:border-primary/60 dark:hover:border-night-accent dark:hover:bg-night-raised hover:shadow-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary dark:focus-visible:outline-night-accent">
+          <div class="w-40 h-40 rounded-xl bg-white dark:bg-transparent p-3 mb-6 flex items-center justify-center">
+            <img src={credential.image} alt={credential.name} width="160" height="160"
+              loading="lazy" decoding="async" class="w-full h-full object-contain" />
+          </div>
+          <p class="text-xs tracking-wide font-medium text-gray-500 dark:text-night-muted mb-2">{copy.issuer} · {credential.level}</p>
+          <h3 class="text-xl font-semibold text-gray-900 dark:text-night-heading max-w-xs leading-snug md:min-h-[3.5rem]">{credential.name}</h3>
+          <p class="text-sm text-gray-500 dark:text-night-muted mt-2">{copy.issued} <time datetime={credential.issuedOn}>{formatDate(credential.issuedOn)}</time></p>
+          <p class="text-sm leading-relaxed text-gray-600 dark:text-night-body my-5">{credential.description[language]}</p>
+          <span class="inline-flex items-center gap-2 text-sm font-semibold text-primary dark:text-night-accent mt-auto group-hover:underline underline-offset-4">
+            {copy.verify}
+            <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M15 3h6v6M10 14 21 3M21 14v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5" /></svg>
+          </span>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>

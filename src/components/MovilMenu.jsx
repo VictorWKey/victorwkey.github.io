@@ -1,77 +1,77 @@
-import React from 'react'
+import { useEffect, useRef } from 'react';
 import { useStore } from '@nanostores/react';
 import { isMovilMenuOpen } from '../movilMenu.js';
-import Close from "../icons/Close.jsx"
+import Close from '../icons/Close.jsx';
 import { useTranslations } from '../i18n/index.js';
 
-function MovilMenu({ lang = 'en' }) {
-  const $isMovilMenuOpen = useStore(isMovilMenuOpen);
+export default function MovilMenu({ lang = 'en' }) {
+  const open = useStore(isMovilMenuOpen);
+  const dialogRef = useRef(null);
   const t = useTranslations(lang);
+  const links = [
+    ['#top', t.nav.home],
+    ['#experience', t.nav.experience],
+    ['#certifications', t.nav.certifications],
+    ['#featured-projects', t.nav.projects],
+    ['#skills', t.nav.skills],
+    ['#education', t.nav.education],
+    ['#about-me', t.nav.aboutMe],
+  ];
 
-  const handleNavigation = (href) => {
+  useEffect(() => {
+    const dialog = dialogRef.current;
+    if (open) {
+      if (!dialog.open) dialog.showModal();
+      const previousOverflow = document.body.style.overflow;
+      document.body.style.overflow = 'hidden';
+      return () => {
+        document.body.style.overflow = previousOverflow;
+        if (dialog.open) dialog.close();
+      };
+    }
+    if (dialog.open) dialog.close();
+  }, [open]);
+
+  useEffect(() => {
+    const desktop = window.matchMedia('(min-width: 1280px)');
+    const closeOnDesktop = () => {
+      if (desktop.matches) isMovilMenuOpen.set(false);
+    };
+    desktop.addEventListener('change', closeOnDesktop);
+    closeOnDesktop();
+    return () => desktop.removeEventListener('change', closeOnDesktop);
+  }, []);
+
+  const closeMenu = () => {
+    dialogRef.current?.close();
     isMovilMenuOpen.set(false);
-    setTimeout(() => {
-      window.location.hash = href;
-    }, 100);
+  };
+  const handleBackdrop = (event) => {
+    if (event.target !== event.currentTarget) return;
+    const rect = event.currentTarget.getBoundingClientRect();
+    if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) closeMenu();
   };
 
   return (
-    <>
-      {/* Overlay */}
-      <div 
-        className={`fixed inset-0 bg-black/30 z-40 sm:hidden transition-opacity duration-200 ${
-          $isMovilMenuOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
-        }`}
-        onClick={() => isMovilMenuOpen.set(false)}
-      />
-      
-      {/* Menu */}
-      <div className={`z-50 w-72 h-screen bg-white dark:bg-gray-950 fixed flex flex-col border-r border-gray-200 dark:border-gray-700 transition-transform duration-200 sm:hidden transform ${$isMovilMenuOpen ? 'translate-x-0' : '-translate-x-full'}`}>
-        
-        {/* Header */}
-        <div className="flex items-center justify-between p-5 border-b border-gray-200 dark:border-gray-700">
-          <span className="text-lg font-semibold text-gray-900 dark:text-white">{t.menu.title}</span>
-          <button 
-            onClick={() => isMovilMenuOpen.set(false)} 
-            className="p-2 rounded-lg text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors"
-          >
-            <div className='w-5 h-5'>
-              <Close/>
-            </div>
+    <dialog ref={dialogRef} id="mobile-navigation" aria-labelledby="mobile-menu-title" onCancel={() => isMovilMenuOpen.set(false)} onClose={() => isMovilMenuOpen.set(false)} onClick={handleBackdrop} className="fixed inset-y-0 left-0 right-auto m-0 h-dvh max-h-none w-80 max-w-[calc(100%_-_2rem)] p-0 border-0 border-r border-gray-200 dark:border-night-line bg-white dark:bg-night-canvas text-gray-900 dark:text-night-heading backdrop:bg-black/40 backdrop:backdrop-blur-sm xl:hidden">
+      <div className="flex min-h-full flex-col">
+        <div className="flex items-center justify-between p-5 border-b border-gray-200 dark:border-night-line">
+          <span id="mobile-menu-title" className="text-lg font-semibold">{t.menu.title}</span>
+          <button type="button" autoFocus onClick={closeMenu} aria-label={t.nav.closeMenu} className="p-2.5 rounded-lg text-gray-600 dark:text-night-body hover:bg-gray-100 dark:hover:bg-night-raised focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary dark:focus-visible:ring-night-accent">
+            <span aria-hidden="true" className="block w-5 h-5"><Close /></span>
           </button>
         </div>
-
-        {/* Navigation */}
-        <nav className="flex-1 py-2">
-          <button onClick={() => handleNavigation('#top')}
-            className="w-full text-left px-5 py-3 text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
-            {t.nav.home}
-          </button>
-          <button onClick={() => handleNavigation('#experience')}
-            className="w-full text-left px-5 py-3 text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
-            {t.nav.experience}
-          </button>
-          <button onClick={() => handleNavigation('#skills')}
-            className="w-full text-left px-5 py-3 text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
-            {t.nav.skills}
-          </button>
-          <button onClick={() => handleNavigation('#education')}
-            className="w-full text-left px-5 py-3 text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
-            {t.nav.education}
-          </button>
-          <button onClick={() => handleNavigation('#about-me')}
-            className="w-full text-left px-5 py-3 text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
-            {t.nav.aboutMe}
-          </button>
+        <nav aria-label={t.menu.title} className="flex-1 py-3 px-3 space-y-1">
+          {links.map(([href, label]) => (
+            <a key={href} href={href} onClick={closeMenu} className="block rounded-lg px-3 py-3 text-base font-medium text-gray-700 dark:text-night-body hover:bg-gray-100 dark:hover:bg-night-raised focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary dark:focus-visible:ring-night-accent">
+              {label}
+            </a>
+          ))}
         </nav>
-
-        {/* Footer */}
-        <div className="p-5 border-t border-gray-200 dark:border-gray-700">
-          <p className="text-xs text-gray-400">© {new Date().getFullYear()} Victor López</p>
+        <div className="p-5 border-t border-gray-200 dark:border-night-line">
+          <p className="text-xs text-gray-500 dark:text-night-muted">© {new Date().getFullYear()} Victor López</p>
         </div>
       </div>
-    </>
-  )
+    </dialog>
+  );
 }
-
-export default MovilMenu

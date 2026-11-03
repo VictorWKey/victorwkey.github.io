@@ -9,47 +9,47 @@ const { lang = 'en' } = Astro.props;
 const t = useTranslations(lang);
 ---
 
-<footer class="w-full py-10 px-6 border-t border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-900 transition-colors duration-200">
+<footer class="w-full py-10 px-6 border-t border-gray-200 dark:border-night-line bg-gray-50 dark:bg-night-section transition-colors duration-200">
   <div class="max-w-5xl mx-auto">
     <div class="flex flex-col md:flex-row justify-between items-center gap-8">
       
       <!-- Branding -->
       <div class="flex flex-col items-center md:items-start">
-        <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-1">Victor Angel López Romero</h3>
-        <p class="text-sm text-gray-600 dark:text-gray-400">{t.footer.role}</p>
+        <h3 class="text-lg font-semibold text-gray-900 dark:text-night-heading mb-1">Victor Angel López Romero</h3>
+        <p class="text-sm text-gray-600 dark:text-night-muted">{t.footer.role}</p>
       </div>
 
       <!-- Social Links -->
       <div class="flex gap-3">
-        <a href="https://github.com/VictorWKey" target="_blank" rel="noopener"
-          class="p-2.5 rounded-lg border border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200">
-          <div class="w-4 h-4"><GithubWhite/></div>
+        <a href="https://github.com/VictorWKey" target="_blank" rel="noopener noreferrer" aria-label="GitHub"
+          class="p-2.5 rounded-lg border border-gray-200 dark:border-night-line text-gray-600 dark:text-night-muted hover:bg-gray-100 dark:hover:bg-night-raised transition-colors duration-200">
+          <div class="w-4 h-4" aria-hidden="true"><GithubWhite/></div>
         </a>
-        <a href="https://www.linkedin.com/in/victorlopezwk" target="_blank" rel="noopener"
-          class="p-2.5 rounded-lg border border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200">
-          <div class="w-4 h-4"><LinkedInWhite/></div>
+        <a href="https://www.linkedin.com/in/victorlopezwk" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"
+          class="p-2.5 rounded-lg border border-gray-200 dark:border-night-line text-gray-600 dark:text-night-muted hover:bg-gray-100 dark:hover:bg-night-raised transition-colors duration-200">
+          <div class="w-4 h-4" aria-hidden="true"><LinkedInWhite/></div>
         </a>
-        <a href="https://www.instagram.com/victorwkey/" target="_blank" rel="noopener"
-          class="p-2.5 rounded-lg border border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200">
-          <div class="w-4 h-4"><InstagramWhite/></div>
+        <a href="https://www.instagram.com/victorwkey/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"
+          class="p-2.5 rounded-lg border border-gray-200 dark:border-night-line text-gray-600 dark:text-night-muted hover:bg-gray-100 dark:hover:bg-night-raised transition-colors duration-200">
+          <div class="w-4 h-4" aria-hidden="true"><InstagramWhite/></div>
         </a>
-        <a href="https://www.facebook.com/profile.php?id=61557229064845" target="_blank" rel="noopener"
-          class="p-2.5 rounded-lg border border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200">
-          <div class="w-4 h-4"><FacebookWhite/></div>
+        <a href="https://www.facebook.com/profile.php?id=61557229064845" target="_blank" rel="noopener noreferrer" aria-label="Facebook"
+          class="p-2.5 rounded-lg border border-gray-200 dark:border-night-line text-gray-600 dark:text-night-muted hover:bg-gray-100 dark:hover:bg-night-raised transition-colors duration-200">
+          <div class="w-4 h-4" aria-hidden="true"><FacebookWhite/></div>
         </a>
       </div>
 
       <!-- Contact -->
       <div class="flex flex-col items-center md:items-end">
-        <a href="mailto:victorwkey@gmail.com" class="text-sm text-primary hover:underline">
+        <a href="mailto:victorwkey@gmail.com" class="text-sm text-primary dark:text-night-accent dark:hover:text-night-accent-hover hover:underline underline-offset-4">
           victorwkey@gmail.com
         </a>
-        <p class="text-xs text-gray-500 dark:text-gray-500 mt-1">{t.footer.location}</p>
+        <p class="text-xs text-gray-500 dark:text-night-muted mt-1">{t.footer.location}</p>
       </div>
     </div>
 
-    <div class="border-t border-gray-200 dark:border-gray-700 mt-8 pt-6 text-center">
-      <p class="text-xs text-gray-500 dark:text-gray-500">
+    <div class="border-t border-gray-200 dark:border-night-line mt-8 pt-6 text-center">
+      <p class="text-xs text-gray-500 dark:text-night-muted">
         © {new Date().getFullYear()} Victor López. {t.footer.rights}
       </p>
     </div>

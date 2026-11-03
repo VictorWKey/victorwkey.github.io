@@ -10,6 +10,19 @@ export default {
 				'onest': ['Onest', 'sans-serif']
 			},
 			colors: {
+				night: {
+					canvas: '#10151e',
+					section: '#141c28',
+					surface: '#1b2635',
+					raised: '#253449',
+					line: '#3a4a61',
+					muted: '#a9b7ca',
+					body: '#d5deeb',
+					heading: '#f3f6fc',
+					accent: '#8bbcff',
+					'accent-hover': '#b6d5ff',
+					'on-accent': '#101c2d',
+				},
 				primary: {
 					DEFAULT: '#2563eb',
 					50: '#eff6ff',

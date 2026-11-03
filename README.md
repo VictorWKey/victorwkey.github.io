@@ -1,103 +1,49 @@
-<div align="center">
+# Victor López Portfolio
 
-![Header](https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=1,2,3,4,5&height=200&section=header&text=Víctor%20López&fontSize=80&fontAlignY=35&animation=twinkling&fontColor=ffffff&desc=AI%20Software%20Engineer%20|%20Building%20Intelligent%20Systems&descAlignY=60&descAlign=50)
+Bilingual portfolio for a software developer specializing in AI engineering, built with Astro, React, and Tailwind CSS. The English and Spanish pages present professional experience, skills, certifications, education, and selected project work.
 
-</div>
+## Content
 
-<div align="center">
+- Conversational agents, RAG systems, LLM workflows, and backend development at Vórtice Coaching, described without proprietary implementation details.
+- TourlyAI, an academic NLP desktop application using fine-tuned BERT models, topic modeling, and LLM summaries.
+- Skills grouped by area, with independently studied topics labeled separately.
+- AWS Certified Developer - Associate and AWS Certified AI Practitioner, linked to their public credentials.
+- English and Spanish CV downloads in PDF and Word formats.
 
-[![Portfolio](https://img.shields.io/badge/Portfolio-4bbf6b?style=for-the-badge&logo=vercel&logoColor=white)](https://victorwkey.com)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/victorlopezwk)
-[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/victorwkey)
+## Development
 
-</div>
+Install dependencies and start the local server:
 
----
-
-## 🚀 About Me
-
-AI Software Engineer specialized in building intelligent, scalable systems. I combine full-stack development expertise with advanced AI capabilities to create production-ready solutions that solve real-world problems.
-
-**Core Focus:**
-- 🤖 **AI Integration:** LLMs, RAG systems, and intelligent agents
-- 🏗️ **Full-Stack Development:** Modern web applications with AI capabilities  
-- ⚡ **Performance Optimization:** Cost-efficient, scalable AI workflows
-- 🔒 **Secure Deployment:** Private infrastructure and cloud solutions
-
----
-
-## 🛠️ Tech Stack
-
-**AI & Machine Learning**
-```
-LLMs • RAG • Agents • TensorFlow • PyTorch • LangChain • Hugging Face
+```sh
+npm ci
+npm run dev -- --host 127.0.0.1 --port 4321
 ```
 
-**Backend Development**
-```  
-Python • FastAPI • Node.js • PostgreSQL • MongoDB • Docker • AWS
+Open `http://127.0.0.1:4321/en/` or `http://127.0.0.1:4321/es/`.
+
+```sh
+npm run build
+npm run preview -- --host 127.0.0.1 --port 4321
 ```
 
-**Frontend Development**
-```
-React • Next.js • Astro • TypeScript • Tailwind CSS • JavaScript
-```
+The build runs Astro's checks and generates the static site in `dist/`. These commands run locally and do not deploy the site. Publishing remains a separate step.
 
----
+## Content sources
 
-## 💼 Featured Projects
+- `src/i18n/en.json` and `src/i18n/es.json`: profile, experience, project, education, and interface text.
+- `src/data/skills.js`: bilingual skill groups.
+- `src/data/certifications.js`: credential names, issue dates, verification links, and badge image sources.
+- `src/components/`: portfolio sections and interactions.
 
-### 🦷 AlineaDent - Dental Clinic Management System
-**Full-Stack Solution** | *Next.js • FastAPI • PostgreSQL*
-- Complete clinic management with appointment scheduling and patient records
-- AI-powered WhatsApp integration for automated communication
-- Visual calendar interface and automated report generation
+The AWS badge images in `public/certifications/` are the original transparent artwork provided through Credly, used without alteration. A white presentation container is used in light mode; dark mode preserves the images' transparency. Each badge opens its owner's public verification page:
 
-### 🏗️ Atta Montacargas - Work Orders Management  
-**Full-Stack Application** | *React Native • FastAPI*
-- Mobile work order management with role-based access control
-- Real-time metrics dashboard and automatic PDF generation
-- Complete workflow tracking and status management
+- [AWS Certified Developer - Associate](https://www.credly.com/badges/6288e6d3-9f06-4ff0-a192-1ab24f74d3bb/public_url), issued October 26, 2026.
+- [AWS Certified AI Practitioner](https://www.credly.com/badges/2faf6a4b-b03b-4f3d-9c34-39d5b7bcffc4/public_url), issued November 2, 2026.
 
-### 💪 Muscle Factory Gym Website
-**Frontend Project** | *Astro • React • Tailwind*
-- Modern gym website with service information and supplement catalog
-- Interactive shopping cart with product comparison tools
-- [Live Demo](https://muscle-factory-website.vercel.app/) • [Source Code](https://github.com/VictorWKey/muscle-factory-website)
+## CV downloads
 
-### 🛍️ E-Commerce Frontend Platform
-**Frontend Application** | *React • Tailwind CSS*
-- Modern e-commerce interface with advanced filtering system
-- Interactive shopping cart and responsive design
-- [Live Demo](https://shop-app-w-react.netlify.app/) • [Source Code](https://github.com/VictorWKey/fronted-shop-react-app)---
+The published downloads are `public/CV_Victor_Lopez_EN.pdf`, `public/CV_Victor_Lopez_EN.docx`, `public/CV_Victor_Lopez_ES.pdf`, and `public/CV_Victor_Lopez_ES.docx`. They include both AWS credentials and distinguish implemented skills from technical familiarity. Review content and layout before replacing these files.
 
----
+## Deployment
 
-## � GitHub Stats
-
-<div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=victorwkey&show_icons=true&count_private=true&hide_border=true&theme=tokyonight" />
-</div>
-
----
-
-## 🤝 Let's Connect
-
-Open to collaborating on AI projects and exploring new opportunities.
-
-<div align="center">
-
-[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:victorwkey@gmail.com)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/victorlopezwk)
-[![Portfolio](https://img.shields.io/badge/Portfolio-4bbf6b?style=for-the-badge&logo=firefox&logoColor=white)](https://victorwkey.com)
-
-</div>
-
----
-
-<div align="center">
-
-**Building the future of AI — one intelligent system at a time** 🚀
-
-</div>
-
+Pushing to `main` triggers `.github/workflows/deploy.yml`, which builds the static site and publishes it to [GitHub Pages](https://victorwkey.github.io/). Confirm that both workflow jobs complete successfully and check the published English and Spanish pages after deployment.

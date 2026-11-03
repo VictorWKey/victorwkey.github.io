@@ -1,5 +1,6 @@
 ---
 import "@fontsource-variable/onest";
+import '../styles/base.css';
 interface Props {
 	title: string;
 	description: string;
@@ -7,6 +8,7 @@ interface Props {
 }
 
 const { description, title, lang = 'en' } = Astro.props;
+const socialImage = new URL('/fb-image.png', Astro.site).href;
 ---
 
 <!doctype html>
@@ -14,37 +16,34 @@ const { description, title, lang = 'en' } = Astro.props;
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content={description}/>
-		<meta property="og:image" content="../../fb-image.png">
-		<meta property="twitter:image" content="../../fb-image.png">
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:type" content="website" />
+		<meta property="og:image" content={socialImage}>
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:image" content={socialImage}>
 		<meta name="viewport" content="width=device-width" />
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap" rel="stylesheet">
-		<link rel="icon" type="image/svg+xml" href="../../img/pp-official-circular.png" />
+		<link rel="icon" type="image/png" href="/img/pp-official-circular.png" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 		<script is:inline>
 			// Apply saved theme before render to prevent flash
 			(function() {
-				const saved = localStorage.getItem('theme');
-				if (saved === 'light') {
-					document.documentElement.classList.remove('dark');
-				} else if (saved === 'dark') {
-					document.documentElement.classList.add('dark');
-				} else if (window.matchMedia('(prefers-color-scheme: light)').matches) {
-					document.documentElement.classList.remove('dark');
-				}
+				let saved;
+				try { saved = localStorage.getItem('theme'); } catch {}
+				const dark = saved ? saved === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches;
+				document.documentElement.classList.toggle('dark', dark);
 			})();
 		</script>
 	</head>
 	<body class="min-h-screen">
+		<a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100] focus:rounded-lg focus:bg-white focus:text-gray-950 focus:px-4 focus:py-3">{lang === 'es' ? 'Saltar al contenido' : 'Skip to content'}</a>
 		<slot />
 	</body>
 </html>
 
 <style>
 	html {
-		scroll-behavior: smooth;
 		min-height: 100%;
 	}
 	body {

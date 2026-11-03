@@ -7,10 +7,7 @@
     "start": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
-    "astro": "astro",
-    "gen:cv": "node cv/gen_cv_EN.js && node cv/gen_cv_ES.js",
-    "gen:cv:en": "node cv/gen_cv_EN.js",
-    "gen:cv:es": "node cv/gen_cv_ES.js"
+    "astro": "astro"
   },
   "dependencies": {
     "@astrojs/check": "^0.5.6",

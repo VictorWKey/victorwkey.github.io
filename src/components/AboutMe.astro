@@ -12,23 +12,23 @@ const p1Parts: string[] = renderHighlight(t.aboutMe.p1);
 const p2Parts: string[] = renderHighlight(t.aboutMe.p2);
 ---
 
-<section id="about-me" class="w-full flex flex-col items-center justify-center py-20 px-6 scroll-mt-20 bg-white dark:bg-gray-950">
+<section id="about-me" class="w-full flex flex-col items-center justify-center py-20 px-6 scroll-mt-20 bg-white dark:bg-night-canvas">
   <div class="w-full max-w-3xl">
-    <h2 class="section-heading text-3xl sm:text-4xl text-center mb-12 text-gray-900 dark:text-white">{t.aboutMe.sectionTitle}</h2>
+    <h2 class="section-heading text-3xl sm:text-4xl text-center mb-12 text-gray-900 dark:text-night-heading">{t.aboutMe.sectionTitle}</h2>
 
     <div class="space-y-6">
-      <p class="text-base sm:text-lg leading-relaxed text-gray-700 dark:text-gray-300">
+      <p class="text-base sm:text-lg leading-relaxed text-gray-700 dark:text-night-body">
         {p1Parts.map((part, i) => 
           i % 2 === 1 
-            ? <span class="text-primary font-medium">{part}</span>
+            ? <span class="text-primary dark:text-night-accent font-medium">{part}</span>
             : <Fragment>{part}</Fragment>
         )}
       </p>
       
-      <p class="text-base sm:text-lg leading-relaxed text-gray-700 dark:text-gray-300">
+      <p class="text-base sm:text-lg leading-relaxed text-gray-700 dark:text-night-body">
         {p2Parts.map((part, i) => 
           i % 2 === 1 
-            ? <span class="text-primary font-medium">{part}</span>
+            ? <span class="text-primary dark:text-night-accent font-medium">{part}</span>
             : <Fragment>{part}</Fragment>
         )}
       </p>

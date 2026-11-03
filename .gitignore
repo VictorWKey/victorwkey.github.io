@@ -19,3 +19,20 @@ pnpm-debug.log*
 
 # macOS-specific files
 .DS_Store
+
+# Windows downloaded-file metadata
+*:Zone.Identifier
+
+# Local CV sources, company-specific applications, and interview preparation
+/cv/
+/CV_*.docx
+/CV_*.pdf
+/empresa-*-vacante-info/
+/temp.md
+/important-general-ai-engineer-interview.md
+/llms-rag-y-agentes.md
+/practice/
+
+# Local previews and temporary artifacts
+/_qa/
+/tmp/

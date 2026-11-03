@@ -1,111 +1,47 @@
-import SkillsContainer from "./SkillsContainer.jsx";
-import JavaScript from "../icons/JavaScript.jsx";
-import HTML from "../icons/HTML.jsx";
-import CSS from "../icons/CSS.jsx";
-import ReactLogo from "../icons/ReactLogo.jsx";
-import NextJS from "../icons/NextJS.jsx";
-import AstroLogo from "../icons/AstroLogo.jsx";
-import Tailwind from "../icons/Tailwind.jsx";
-import TypeScript from "../icons/TypeScript.jsx";
-import FastAPI from "../icons/FastAPI.jsx";
-import Python from "../icons/Python.jsx";
-import Tensorflow from "../icons/Tensorflow.jsx";
-import Pytorch from "../icons/Pytorch.jsx";
-import LangChain from "../icons/LangChain.jsx";
-import Keras from "../icons/Keras.jsx";
-import AWS from "../icons/AWS.jsx";
-import HuggingFace from "../icons/HuggingFace.jsx";
-import SkLearn from "../icons/SkLearn.jsx";
-import SciPy from "../icons/SciPy.jsx";
-import Pandas from "../icons/Pandas.jsx";
-import NumPy from "../icons/NumPy.jsx";
-import Matplotlib from "../icons/Matplotlib.jsx";
-import Seaborn from "../icons/Seaborn.jsx";
-import MySQL from "../icons/MySQL.jsx";
-import PostgreSQL from "../icons/PostgreSQL.jsx";
-import MongoDB from "../icons/MongoDB.jsx";
-import Git from "../icons/Git.jsx";
-import Linux from "../icons/Linux.jsx";
-import NodeJS from "../icons/NodeJS.jsx";
-import ReactNative from "../icons/ReactNative.jsx";
-import Electron from "../icons/Electron.jsx";
 import { useTranslations } from '../i18n/index.js';
+import { skillGroups } from '../data/skills.js';
+import SkillIcon from './SkillIcon.jsx';
 
-import React from "react";
+function SkillList({ items, muted = false }) {
+  return (
+    <ul className="flex flex-wrap gap-2" role="list">
+      {items.map((item) => (
+        <li key={item} className={`inline-flex max-w-full items-center gap-2 rounded-lg px-3 py-1.5 text-sm leading-relaxed ${muted ? 'bg-white text-gray-600 dark:bg-night-raised dark:text-night-body' : 'bg-gray-100 text-gray-700 dark:bg-night-raised dark:text-night-body'}`}>
+          <SkillIcon label={item} />
+          <span className="min-w-0">{item}</span>
+        </li>
+      ))}
+    </ul>
+  );
+}
 
-
-const SKILLS = {
-  Python: { name: "Python", logo: () => <Python />, category: "ia" },
-  TensorFlow: { name: "TensorFlow", logo: () => <Tensorflow />, category: "ia" },
-  Keras: { name: "Keras", logo: () => <Keras />, category: "ia" },
-  Pytorch: { name: "PyTorch", logo: () => <Pytorch />, category: "ia" },
-  LangChain: { name: "LangChain", logo: () => <LangChain />, category: "ia" },
-  scikitlearn: { name: "scikit-learn", logo: () => <SkLearn />, category: "ia" },
-  SciPy: { name: "SciPy", logo: () => <SciPy />, category: "ia" },
-  Pandas: { name: "Pandas", logo: () => <Pandas />, category: "ia" },
-  Numpy: { name: "NumPy", logo: () => <NumPy />, category: "ia" },
-  Matplotlib: { name: "Matplotlib", logo: () => <Matplotlib />, category: "ia" },
-  Seaborn: { name: "Seaborn", logo: () => <Seaborn />, category: "ia" },
-  AWS: { name: "AWS", logo: () => <AWS />, category: "ia" },
-  HuggingFace: { name: "Hugging Face", logo: () => <HuggingFace />, category: "ia" },
-  JavaScript: { name: "JavaScript", logo: () => <JavaScript />, category: "web" },
-  HTML: { name: "HTML", logo: () => <HTML />, category: "web" },
-  CSS: { name: "CSS", logo: () => <CSS />, category: "web" },
-  React: { name: "React", logo: () => <ReactLogo />, category: "web" },
-  NextJS: { name: "Next.js", logo: () => <NextJS />, category: "web" },
-  Tailwind: { name: "Tailwind", logo: () => <Tailwind />, category: "web" },
-  TypeScript: { name: "TypeScript", logo: () => <TypeScript />, category: "web" },
-  FastAPI: { name: "FastAPI", logo: () => <FastAPI />, category: "web" },
-  Astro: { name: "Astro", logo: () => <AstroLogo />, category: "web" },
-  MySQL: { name: "MySQL", logo: () => <MySQL />, category: "web" },
-  PostgreSQL: { name: "PostgreSQL", logo: () => <PostgreSQL />, category: "web" },
-  MongoDB: { name: "MongoDB", logo: () => <MongoDB />, category: "web" },
-  Git: { name: "Git", logo: () => <Git />, category: "web" },
-  Linux: { name: "Linux", logo: () => <Linux />, category: "web" },
-  NodeJS: { name: "Node.js", logo: () => <NodeJS />, category: "web" },
-  ReactNative: { name: "React Native", logo: () => <ReactNative />, category: "web" },
-  Electron: { name: "Electron", logo: () => <Electron />, category: "web" }
-};
-
-const SkillsSection = ({ lang = 'en' }) => {
+export default function Skills({ lang = 'en' }) {
   const t = useTranslations(lang);
+  const groups = skillGroups[lang] || skillGroups.en;
+  const practicalGroups = groups.filter((group) => group.id !== 'familiar');
+  const familiarGroup = groups.find((group) => group.id === 'familiar');
 
   return (
-    <section id="skills" className="w-full flex flex-col items-center py-20 px-6 scroll-mt-20 bg-white dark:bg-gray-950">
-      <div className="w-full max-w-4xl">
-        <h2 className="section-heading text-3xl sm:text-4xl text-center mb-3 text-gray-900 dark:text-white">{t.skills.sectionTitle}</h2>
-        <p className="section-subheading text-center mb-10 text-gray-600 dark:text-gray-300">
-          {t.skills.sectionSubtitle} <span className="text-primary">{t.skills.ai}</span> {t.skills.and} <span className="text-primary">{t.skills.webDev}</span>
-        </p>
-        
-        <div className="space-y-8">
-          <SkillsContainer title={t.skills.aiCategory}>
-            {Object.entries(SKILLS).filter(([_, skill]) => skill.category === "ia").map(([name, skill]) => (
-              <div
-                key={skill.name}
-                className="border border-gray-200 dark:border-gray-700 rounded-xl w-24 h-24 flex flex-col items-center justify-center gap-1.5 hover:border-primary/40 transition-colors duration-200 p-3"
-              >
-                <div className="w-7 h-7 flex-shrink-0">{skill.logo()}</div>
-                <p className="text-xs text-gray-700 dark:text-gray-200 text-center font-medium leading-tight">{skill.name}</p>
-              </div>
-            ))}
-          </SkillsContainer>
-
-          <SkillsContainer title={t.skills.webCategory}>
-            {Object.entries(SKILLS).filter(([_, skill]) => skill.category === "web").map(([name, skill]) => (
-              <div
-                key={skill.name}
-                className="border border-gray-200 dark:border-gray-700 rounded-xl w-24 h-24 flex flex-col items-center justify-center gap-1.5 hover:border-primary/40 transition-colors duration-200 p-3"
-              >
-                <div className="w-7 h-7 flex-shrink-0">{skill.logo()}</div>
-                <p className="text-xs text-gray-700 dark:text-gray-200 text-center font-medium leading-tight">{skill.name}</p>
-              </div>
-            ))}
-          </SkillsContainer>
+    <section id="skills" aria-labelledby="skills-title" className="w-full py-20 px-6 scroll-mt-20 bg-white dark:bg-night-canvas">
+      <div className="mx-auto w-full max-w-4xl">
+        <h2 id="skills-title" className="section-heading text-center mb-3 text-gray-900 dark:text-night-heading">{t.skills.sectionTitle}</h2>
+        <p className="section-subheading text-center mb-10">{t.skills.sectionSubtitle}</p>
+        <div className="grid gap-4 md:grid-cols-2">
+          {practicalGroups.map((group) => (
+            <article key={group.id} aria-labelledby={`skill-group-${group.id}`} className={`rounded-2xl border p-5 sm:p-6 ${group.id === 'generative-ai' ? 'md:col-span-2 border-primary-200 bg-primary-50/40 dark:border-night-accent/45 dark:bg-night-surface' : 'border-gray-200 bg-white dark:border-night-line dark:bg-night-surface'}`}>
+              <h3 id={`skill-group-${group.id}`} className="flex items-center gap-2.5 text-base font-semibold mb-4 text-gray-900 dark:text-night-heading">
+                <span aria-hidden="true" className={`h-2 w-2 shrink-0 rounded-full ${group.id === 'generative-ai' ? 'bg-primary dark:bg-night-accent' : 'bg-gray-400 dark:bg-night-muted'}`} />
+                {group.title}
+              </h3>
+              <SkillList items={group.items} />
+            </article>
+          ))}
+        </div>
+        <div className="mt-5 rounded-2xl bg-gray-50 dark:bg-night-surface p-5 sm:p-6" aria-labelledby="skill-group-familiar">
+          <h3 id="skill-group-familiar" className="text-base font-semibold text-gray-700 dark:text-night-body mb-4">{familiarGroup.title}</h3>
+          <SkillList items={familiarGroup.items} muted />
         </div>
       </div>
     </section>
   );
-};
-
-export default SkillsSection;
+}
