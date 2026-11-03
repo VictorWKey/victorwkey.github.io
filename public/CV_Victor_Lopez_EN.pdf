@@ -36,7 +36,7 @@ endobj
 << /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R /F4 6 0 R >> >> /Annots [7 0 R 8 0 R 9 0 R 10 0 R 11 0 R] /Contents 13 0 R >>
 endobj
 13 0 obj
-<< /Length 5717 >>
+<< /Length 5774 >>
 stream
 BT /F2 18.00 Tf 187.98 738.00 Td (Victor Angel Lopez Romero) Tj ET
 BT /F1 11.20 Tf 223.00 724.80 Td (Software Developer | AI Engineer) Tj ET
@@ -46,8 +46,8 @@ BT /F1 10.00 Tf 160.73 688.80 Td (Irapuato, Guanajuato, Mexico | Target location
 BT /F2 10.50 Tf 36.00 667.30 Td (PROFESSIONAL SUMMARY) Tj ET
 0.4 w 36.00 665.30 m 576.00 665.30 l S
 BT /F1 10.00 Tf 36.00 651.30 Td (Software developer specializing in AI engineering, with over one year of professional experience building conversational) Tj ET
-BT /F1 10.00 Tf 36.00 639.50 Td (agents, RAG systems, and LLM workflows for a business platform. Focused on understanding how users work and) Tj ET
-BT /F1 10.00 Tf 36.00 627.70 Td (applying AI to save time, simplify tasks, and reduce costs.) Tj ET
+BT /F1 10.00 Tf 36.00 639.50 Td (agents, RAG systems, and LLM workflows for a business platform. I develop AI solutions by first seeking to understand) Tj ET
+BT /F1 10.00 Tf 36.00 627.70 Td (how the people who will use them work, with the aim of simplifying tasks, saving time, and reducing costs.) Tj ET
 BT /F2 10.50 Tf 36.00 606.40 Td (SKILLS) Tj ET
 0.4 w 36.00 604.40 m 576.00 604.40 l S
 BT /F2 10.00 Tf 36.00 590.40 Td (Generative AI: ) Tj ET
@@ -131,5 +131,5 @@ xref
 trailer
 << /Size 14 /Root 1 0 R >>
 startxref
-7267
+7324
 %%EOF

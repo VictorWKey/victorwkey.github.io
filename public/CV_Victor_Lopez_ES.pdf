@@ -30,13 +30,13 @@ endobj
 << /Type /Annot /Subtype /Link /Rect [322.58 697.60 426.50 708.30] /Border [0 0 0] /A << /S /URI /URI (https://github.com/VictorWKey) >> >>
 endobj
 11 0 obj
-<< /Type /Annot /Subtype /Link /Rect [222.75 287.00 319.98 297.70] /Border [0 0 0] /A << /S /URI /URI (https://github.com/TourlyAI) >> >>
+<< /Type /Annot /Subtype /Link /Rect [222.75 275.20 319.98 285.90] /Border [0 0 0] /A << /S /URI /URI (https://github.com/TourlyAI) >> >>
 endobj
 12 0 obj
 << /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R /F4 6 0 R >> >> /Annots [7 0 R 8 0 R 9 0 R 10 0 R 11 0 R] /Contents 13 0 R >>
 endobj
 13 0 obj
-<< /Length 5975 >>
+<< /Length 6056 >>
 stream
 BT /F2 18.00 Tf 187.98 738.00 Td (Victor Angel Lopez Romero) Tj ET
 BT /F1 11.20 Tf 223.00 724.80 Td (Software Developer | AI Engineer) Tj ET
@@ -47,71 +47,72 @@ BT /F2 10.50 Tf 36.00 667.30 Td (RESUMEN PROFESIONAL) Tj ET
 0.4 w 36.00 665.30 m 576.00 665.30 l S
 BT /F1 10.00 Tf 36.00 651.30 Td (Desarrollador de software especializado en ingeniería de IA, con más de un año de experiencia profesional en el) Tj ET
 BT /F1 10.00 Tf 36.00 639.50 Td (desarrollo de agentes conversacionales, sistemas RAG y workflows con LLMs para una plataforma empresarial.) Tj ET
-BT /F1 10.00 Tf 36.00 627.70 Td (Enfocado en entender cómo trabaja el usuario y aplicar IA para ahorrar tiempo, simplificar tareas y reducir costos.) Tj ET
-BT /F2 10.50 Tf 36.00 606.40 Td (HABILIDADES) Tj ET
-0.4 w 36.00 604.40 m 576.00 604.40 l S
-BT /F2 10.00 Tf 36.00 590.40 Td (IA generativa: ) Tj ET
-BT /F1 10.00 Tf 104.91 590.40 Td (RAG, agentes de IA, tool calling, LangChain, embeddings, bases de datos vectoriales, salidas) Tj ET
-BT /F1 10.00 Tf 36.00 578.60 Td (estructuradas, OpenAI, Ollama) Tj ET
-BT /F2 10.00 Tf 36.00 564.80 Td (ML y NLP: ) Tj ET
-BT /F1 10.00 Tf 87.67 564.80 Td (PyTorch, Hugging Face, scikit-learn, pandas, NumPy, fine-tuning de BERT,) Tj ET
-BT /F1 10.00 Tf 36.00 553.00 Td (evaluación de modelos, BERTopic) Tj ET
-BT /F2 10.00 Tf 36.00 539.20 Td (Programación y APIs: ) Tj ET
-BT /F1 10.00 Tf 142.70 539.20 Td (Python, TypeScript, JavaScript, Node.js, Express, APIs REST) Tj ET
-BT /F2 10.00 Tf 36.00 525.40 Td (Datos y mensajería: ) Tj ET
-BT /F1 10.00 Tf 133.26 525.40 Td (SQL, PostgreSQL, Qdrant, Redis, BullMQ) Tj ET
-BT /F2 10.00 Tf 36.00 511.60 Td (Frontend y herramientas: ) Tj ET
-BT /F1 10.00 Tf 159.36 511.60 Td (React, Electron, Docker, Git) Tj ET
-BT /F2 10.00 Tf 36.00 497.80 Td (Familiaridad técnica: ) Tj ET
-BT /F1 10.00 Tf 138.26 497.80 Td (Context engineering, prompt engineering, patrones multiagente \(agents-as-tools, swarm\),) Tj ET
-BT /F1 10.00 Tf 36.00 486.00 Td (evaluación de agentes, LangGraph, MCP, A2A) Tj ET
-BT /F2 10.50 Tf 36.00 464.70 Td (EXPERIENCIA LABORAL) Tj ET
-0.4 w 36.00 462.70 m 576.00 462.70 l S
-BT /F2 10.00 Tf 36.00 446.70 Td (Vortice Coaching) Tj ET
-BT /F1 10.00 Tf 486.51 446.70 Td (Oct 2025 - Presente) Tj ET
-BT /F3 10.00 Tf 36.00 434.90 Td (Ingeniero de Software IA) Tj ET
-BT /F1 10.00 Tf 36.00 421.10 Td (-) Tj ET
-BT /F1 10.00 Tf 46.00 421.10 Td (Desarrollé un agente conversacional con tool calling para consultar información mediante APIs de la aplicación.) Tj ET
-BT /F1 10.00 Tf 36.00 407.30 Td (-) Tj ET
-BT /F1 10.00 Tf 46.00 407.30 Td (Implementé funcionalidades RAG para responder preguntas a partir de documentos, con recuperación semántica y) Tj ET
-BT /F1 10.00 Tf 46.00 395.50 Td (referencias a las fuentes.) Tj ET
-BT /F1 10.00 Tf 36.00 381.70 Td (-) Tj ET
-BT /F1 10.00 Tf 46.00 381.70 Td (Desarrollé workflows con LLMs para análisis de información, generación de resúmenes y salidas estructuradas.) Tj ET
-BT /F1 10.00 Tf 36.00 367.90 Td (-) Tj ET
-BT /F1 10.00 Tf 46.00 367.90 Td (Construí servicios backend y APIs con validación de datos, control de acceso y persistencia.) Tj ET
-BT /F1 10.00 Tf 36.00 354.10 Td (-) Tj ET
-BT /F1 10.00 Tf 46.00 354.10 Td (Implementé funcionalidades de gestión de procesos e integraciones entre servicios. Participé en ajustes de interfaces e) Tj ET
-BT /F1 10.00 Tf 46.00 342.30 Td (interacción.) Tj ET
-BT /F1 10.00 Tf 36.00 328.50 Td (-) Tj ET
-BT /F1 10.00 Tf 46.00 328.50 Td (Reduje 42% el consumo de tokens frente al baseline existente, medido en pruebas de desarrollo.) Tj ET
-BT /F2 10.50 Tf 36.00 307.20 Td (PROYECTOS ACADÉMICOS) Tj ET
-0.4 w 36.00 305.20 m 576.00 305.20 l S
-BT /F2 10.00 Tf 36.00 289.20 Td (TourlyAI: NLP para reseñas turísticas | github.com/TourlyAI) Tj ET
-BT /F1 10.00 Tf 482.06 289.20 Td (Sep 2025 - Mar 2026) Tj ET
-BT /F3 10.00 Tf 36.00 277.40 Td (Proyecto académico | Desarrollo de software y fine-tuning de modelos) Tj ET
-BT /F1 10.00 Tf 36.00 263.60 Td (-) Tj ET
-BT /F1 10.00 Tf 46.00 263.60 Td (Construí un pipeline NLP de 9 fases para reseñas turísticas, combinando análisis de sentimiento, descubrimiento de) Tj ET
-BT /F1 10.00 Tf 46.00 251.80 Td (temas con BERTopic y generación de resúmenes e insights con LLMs.) Tj ET
-BT /F1 10.00 Tf 36.00 238.00 Td (-) Tj ET
-BT /F1 10.00 Tf 46.00 238.00 Td (Ajusté y evalué 2 modelos BERT con PyTorch y Hugging Face: clasificación multi-etiqueta en 12 categorías \(80% F1) Tj ET
-BT /F1 10.00 Tf 46.00 226.20 Td (ponderado\) y detección de subjetividad \(77% F1\).) Tj ET
-BT /F1 10.00 Tf 36.00 212.40 Td (-) Tj ET
-BT /F1 10.00 Tf 46.00 212.40 Td (Integré el pipeline en una aplicación de escritorio con Electron, React y Python, dashboards interactivos y reportes) Tj ET
-BT /F1 10.00 Tf 46.00 200.60 Td (PDF, usando LangChain para inferencia local con Ollama e integración opcional con OpenAI.) Tj ET
-BT /F2 10.50 Tf 36.00 179.30 Td (EDUCACIÓN) Tj ET
-0.4 w 36.00 177.30 m 576.00 177.30 l S
-BT /F2 10.00 Tf 36.00 161.30 Td (Universidad de Guanajuato) Tj ET
-BT /F1 10.00 Tf 384.81 161.30 Td (Ago 2023 - Nov 2026 \(finalización prevista\)) Tj ET
-BT /F3 10.00 Tf 36.00 149.50 Td (Ingeniería de Datos e Inteligencia Artificial \(en curso\)) Tj ET
-BT /F2 10.50 Tf 36.00 128.20 Td (CERTIFICACIONES) Tj ET
-0.4 w 36.00 126.20 m 576.00 126.20 l S
-BT /F2 10.00 Tf 36.00 110.20 Td (AWS Certified Developer - Associate) Tj ET
-BT /F1 10.00 Tf 537.64 110.20 Td (oct 2026) Tj ET
-BT /F2 10.00 Tf 36.00 96.40 Td (AWS Certified AI Practitioner) Tj ET
-BT /F1 10.00 Tf 534.86 96.40 Td (nov 2026) Tj ET
-BT /F2 10.50 Tf 36.00 77.10 Td (IDIOMAS) Tj ET
-0.4 w 36.00 75.10 m 576.00 75.10 l S
-BT /F1 10.00 Tf 36.00 61.10 Td (Español: Nativo | Inglés: B1 \(Intermedio\)) Tj ET
+BT /F1 10.00 Tf 36.00 627.70 Td (Desarrollo soluciones de IA buscando entender primero cómo trabajan las personas que las van a usar, para simplificar) Tj ET
+BT /F1 10.00 Tf 36.00 615.90 Td (tareas, ahorrar tiempo y reducir costos.) Tj ET
+BT /F2 10.50 Tf 36.00 594.60 Td (HABILIDADES) Tj ET
+0.4 w 36.00 592.60 m 576.00 592.60 l S
+BT /F2 10.00 Tf 36.00 578.60 Td (IA generativa: ) Tj ET
+BT /F1 10.00 Tf 104.91 578.60 Td (RAG, agentes de IA, tool calling, LangChain, embeddings, bases de datos vectoriales, salidas) Tj ET
+BT /F1 10.00 Tf 36.00 566.80 Td (estructuradas, OpenAI, Ollama) Tj ET
+BT /F2 10.00 Tf 36.00 553.00 Td (ML y NLP: ) Tj ET
+BT /F1 10.00 Tf 87.67 553.00 Td (PyTorch, Hugging Face, scikit-learn, pandas, NumPy, fine-tuning de BERT,) Tj ET
+BT /F1 10.00 Tf 36.00 541.20 Td (evaluación de modelos, BERTopic) Tj ET
+BT /F2 10.00 Tf 36.00 527.40 Td (Programación y APIs: ) Tj ET
+BT /F1 10.00 Tf 142.70 527.40 Td (Python, TypeScript, JavaScript, Node.js, Express, APIs REST) Tj ET
+BT /F2 10.00 Tf 36.00 513.60 Td (Datos y mensajería: ) Tj ET
+BT /F1 10.00 Tf 133.26 513.60 Td (SQL, PostgreSQL, Qdrant, Redis, BullMQ) Tj ET
+BT /F2 10.00 Tf 36.00 499.80 Td (Frontend y herramientas: ) Tj ET
+BT /F1 10.00 Tf 159.36 499.80 Td (React, Electron, Docker, Git) Tj ET
+BT /F2 10.00 Tf 36.00 486.00 Td (Familiaridad técnica: ) Tj ET
+BT /F1 10.00 Tf 138.26 486.00 Td (Context engineering, prompt engineering, patrones multiagente \(agents-as-tools, swarm\),) Tj ET
+BT /F1 10.00 Tf 36.00 474.20 Td (evaluación de agentes, LangGraph, MCP, A2A) Tj ET
+BT /F2 10.50 Tf 36.00 452.90 Td (EXPERIENCIA LABORAL) Tj ET
+0.4 w 36.00 450.90 m 576.00 450.90 l S
+BT /F2 10.00 Tf 36.00 434.90 Td (Vortice Coaching) Tj ET
+BT /F1 10.00 Tf 486.51 434.90 Td (Oct 2025 - Presente) Tj ET
+BT /F3 10.00 Tf 36.00 423.10 Td (Ingeniero de Software IA) Tj ET
+BT /F1 10.00 Tf 36.00 409.30 Td (-) Tj ET
+BT /F1 10.00 Tf 46.00 409.30 Td (Desarrollé un agente conversacional con tool calling para consultar información mediante APIs de la aplicación.) Tj ET
+BT /F1 10.00 Tf 36.00 395.50 Td (-) Tj ET
+BT /F1 10.00 Tf 46.00 395.50 Td (Implementé funcionalidades RAG para responder preguntas a partir de documentos, con recuperación semántica y) Tj ET
+BT /F1 10.00 Tf 46.00 383.70 Td (referencias a las fuentes.) Tj ET
+BT /F1 10.00 Tf 36.00 369.90 Td (-) Tj ET
+BT /F1 10.00 Tf 46.00 369.90 Td (Desarrollé workflows con LLMs para análisis de información, generación de resúmenes y salidas estructuradas.) Tj ET
+BT /F1 10.00 Tf 36.00 356.10 Td (-) Tj ET
+BT /F1 10.00 Tf 46.00 356.10 Td (Construí servicios backend y APIs con validación de datos, control de acceso y persistencia.) Tj ET
+BT /F1 10.00 Tf 36.00 342.30 Td (-) Tj ET
+BT /F1 10.00 Tf 46.00 342.30 Td (Implementé funcionalidades de gestión de procesos e integraciones entre servicios. Participé en ajustes de interfaces e) Tj ET
+BT /F1 10.00 Tf 46.00 330.50 Td (interacción.) Tj ET
+BT /F1 10.00 Tf 36.00 316.70 Td (-) Tj ET
+BT /F1 10.00 Tf 46.00 316.70 Td (Reduje 42% el consumo de tokens frente al baseline existente, medido en pruebas de desarrollo.) Tj ET
+BT /F2 10.50 Tf 36.00 295.40 Td (PROYECTOS ACADÉMICOS) Tj ET
+0.4 w 36.00 293.40 m 576.00 293.40 l S
+BT /F2 10.00 Tf 36.00 277.40 Td (TourlyAI: NLP para reseñas turísticas | github.com/TourlyAI) Tj ET
+BT /F1 10.00 Tf 482.06 277.40 Td (Sep 2025 - Mar 2026) Tj ET
+BT /F3 10.00 Tf 36.00 265.60 Td (Proyecto académico | Desarrollo de software y fine-tuning de modelos) Tj ET
+BT /F1 10.00 Tf 36.00 251.80 Td (-) Tj ET
+BT /F1 10.00 Tf 46.00 251.80 Td (Construí un pipeline NLP de 9 fases para reseñas turísticas, combinando análisis de sentimiento, descubrimiento de) Tj ET
+BT /F1 10.00 Tf 46.00 240.00 Td (temas con BERTopic y generación de resúmenes e insights con LLMs.) Tj ET
+BT /F1 10.00 Tf 36.00 226.20 Td (-) Tj ET
+BT /F1 10.00 Tf 46.00 226.20 Td (Ajusté y evalué 2 modelos BERT con PyTorch y Hugging Face: clasificación multi-etiqueta en 12 categorías \(80% F1) Tj ET
+BT /F1 10.00 Tf 46.00 214.40 Td (ponderado\) y detección de subjetividad \(77% F1\).) Tj ET
+BT /F1 10.00 Tf 36.00 200.60 Td (-) Tj ET
+BT /F1 10.00 Tf 46.00 200.60 Td (Integré el pipeline en una aplicación de escritorio con Electron, React y Python, dashboards interactivos y reportes) Tj ET
+BT /F1 10.00 Tf 46.00 188.80 Td (PDF, usando LangChain para inferencia local con Ollama e integración opcional con OpenAI.) Tj ET
+BT /F2 10.50 Tf 36.00 167.50 Td (EDUCACIÓN) Tj ET
+0.4 w 36.00 165.50 m 576.00 165.50 l S
+BT /F2 10.00 Tf 36.00 149.50 Td (Universidad de Guanajuato) Tj ET
+BT /F1 10.00 Tf 384.81 149.50 Td (Ago 2023 - Nov 2026 \(finalización prevista\)) Tj ET
+BT /F3 10.00 Tf 36.00 137.70 Td (Ingeniería de Datos e Inteligencia Artificial \(en curso\)) Tj ET
+BT /F2 10.50 Tf 36.00 116.40 Td (CERTIFICACIONES) Tj ET
+0.4 w 36.00 114.40 m 576.00 114.40 l S
+BT /F2 10.00 Tf 36.00 98.40 Td (AWS Certified Developer - Associate) Tj ET
+BT /F1 10.00 Tf 537.64 98.40 Td (oct 2026) Tj ET
+BT /F2 10.00 Tf 36.00 84.60 Td (AWS Certified AI Practitioner) Tj ET
+BT /F1 10.00 Tf 534.86 84.60 Td (nov 2026) Tj ET
+BT /F2 10.50 Tf 36.00 65.30 Td (IDIOMAS) Tj ET
+0.4 w 36.00 63.30 m 576.00 63.30 l S
+BT /F1 10.00 Tf 36.00 49.30 Td (Español: Nativo | Inglés: B1 \(Intermedio\)) Tj ET
 endstream
 endobj
 xref
@@ -133,5 +134,5 @@ xref
 trailer
 << /Size 14 /Root 1 0 R >>
 startxref
-7525
+7606
 %%EOF
