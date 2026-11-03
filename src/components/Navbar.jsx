@@ -7,19 +7,12 @@ import { useTranslations, languages } from '../i18n/index.js';
 const focusStyle = 'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary dark:focus-visible:ring-night-accent focus-visible:ring-offset-2 dark:focus-visible:ring-offset-night-canvas';
 
 function ThemeToggle({ label }) {
-  const [dark, setDark] = useState(true);
-  useEffect(() => {
-    setDark(document.documentElement.classList.contains('dark'));
-  }, []);
+  // Each page visit starts in light mode; switching applies to this page only.
+  const [dark, setDark] = useState(false);
   const toggle = () => {
     const next = !dark;
     setDark(next);
     document.documentElement.classList.toggle('dark', next);
-    try {
-      localStorage.setItem('theme', next ? 'dark' : 'light');
-    } catch {
-      // Theme switching remains available when browser storage is disabled.
-    }
   };
   return (
     <button type="button" onClick={toggle} className={`p-2.5 rounded-lg text-gray-600 dark:text-night-body hover:bg-gray-100 dark:hover:bg-night-raised transition-colors ${focusStyle}`} aria-label={label} aria-pressed={dark} title={label}>

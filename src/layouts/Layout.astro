@@ -26,15 +26,6 @@ const socialImage = new URL('/fb-image.png', Astro.site).href;
 		<link rel="icon" type="image/png" href="/img/pp-official-circular.png" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
-		<script is:inline>
-			// Apply saved theme before render to prevent flash
-			(function() {
-				let saved;
-				try { saved = localStorage.getItem('theme'); } catch {}
-				const dark = saved ? saved === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches;
-				document.documentElement.classList.toggle('dark', dark);
-			})();
-		</script>
 	</head>
 	<body class="min-h-screen">
 		<a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100] focus:rounded-lg focus:bg-white focus:text-gray-950 focus:px-4 focus:py-3">{lang === 'es' ? 'Saltar al contenido' : 'Skip to content'}</a>
